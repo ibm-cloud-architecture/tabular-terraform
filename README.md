@@ -1,6 +1,6 @@
 # Terraformer for IBM Virtual Private Cloud
 
-Generates Terraform from spreadsheets for IBM Virtual Private Cloud:
+Automate creation of Terraform for IBM Virtual Private Cloud:
 
 ![TerraformerExample](/images/terraformerexample.png)
 

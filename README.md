@@ -34,4 +34,4 @@ terraform apply
 
 # Release Notes
 
-0.0.0.0.1TEST - Initial test release with limited functionality and no LB, VPN, ACLs, or secondary NICs.
+0.0.0.0.1TEST - Initial test release with limited functionality and no LB, VPN, ACLs, secondary volumes, secondary NICs.

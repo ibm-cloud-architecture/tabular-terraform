@@ -24,14 +24,15 @@ terraform apply
  
 # Implementation Notes
 
-1. Provided for Gen2 only as-is test stage for feedback while continuing testing and improving.
+1. Provided as-is for feedback while continuing testing and improving.
 2. Sheet format and columns are subject to change and no upgrade from previous sheets to changed sheets but changes will be documented.
 3. Rerunning after modifying a spreadsheet will regenerate and rely on the existing Terraform state to determine changes.
 4. Related resources are grouped together in generated files.
 5. Asterisk in column header is used to denote a required field.
 6. Some columns are set to not generate until testing is complete.
-7. Not implemented:  LB, VPN, ACLs, Secondary NICs
+7. Not implemented:  LB, VPN, ACLs, secondary volumes, secondary NICs
 
 # Release Notes
 
-0.0.0.0.1TEST - Initial test release with limited functionality and no LB, VPN, ACLs, secondary volumes, secondary NICs.
+0.0.0.0.2 - Gen1 and Gen2 with same features not implemented.
+0.0.0.0.1 - Gen2 only, no LB, VPN, ACLs, secondary volumes, secondary NICs.

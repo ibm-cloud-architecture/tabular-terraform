@@ -1,6 +1,6 @@
 # Terraformer for IBM Virtual Private Cloud
 
-Automate creation of Terraform for IBM Virtual Private Cloud:
+Automate creation of Terraform for IBM Virtual Private Cloud
 
 ![TerraformerExample](/images/terraformerexample.png)
 
@@ -26,11 +26,12 @@ terraform apply
 
 1. Provided as-is for feedback while continuing testing and improving.
 2. Sheet format and columns are subject to change and no upgrade from previous sheets to changed sheets but changes will be documented.
-3. Rerunning after modifying a spreadsheet will regenerate and rely on the existing Terraform state to determine changes.
-4. Related resources are grouped together in generated files.
-5. Asterisk in column header is used to denote a required field.
-6. Some columns are set to not generate until testing is complete.
-7. Not implemented:  LB, VPN, ACLs, secondary volumes, secondary NICs
+3. Rerunning after modifying a spreadsheet will regenerate and rely on Terraform to handle the changes.
+4. Floating IPs are designated on the NIC - to move same floating IP to another NIC just move the FIP name to another NIC and rely on Terraform to handle the change.
+5. Related resources are grouped together in generated files.
+6. Asterisk in column header is used to denote a required field.
+7. Some columns are set to not generate until testing is complete.
+8. Not implemented:  LB, VPN, ACLs, secondary volumes, secondary NICs
 
 # Release Notes
 

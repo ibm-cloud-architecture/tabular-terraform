@@ -13,7 +13,7 @@ export IAAS_CLASSIC_USERNAME="IBM Cloud Classic Infrastructure Username"
 
 2. Execute terraformer to output directory:\
 terraformer -h\
-terraformer -g 1 -r Dallas global.xlsx\
+terraformer -g 1 -r Dallas regional.xlsx\
 terraformer -g 1 -r Dallas vpc.xlsx
 
 3. Execute terraform in output directory:\

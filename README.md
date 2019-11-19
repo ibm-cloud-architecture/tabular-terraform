@@ -35,5 +35,5 @@ terraform apply
 
 # Release Notes
 
-0.0.0.0.2 - Gen1 and Gen2 with same features not implemented.
+0.0.0.0.2 - Gen1 and Gen2 with same unimplemented features.\
 0.0.0.0.1 - Gen2 only, no LB, VPN, ACLs, secondary volumes, secondary NICs.

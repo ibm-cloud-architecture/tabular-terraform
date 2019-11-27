@@ -37,5 +37,5 @@ terraform apply
 
 | Date | Version | Description |
 | --- | --- | --- |
-| 2019-11-19 | 0.0.0.0.2 | Gen1 and Gen2 with same unimplemented features. |
-| 2019-11-15 | 0.0.0.0.1 | Gen2 only, no LB, VPN, ACLs, secondary volumes, secondary NICs |
+| 2019-11-19 | 0.0.0.0.2 | Gen1 and Gen2 with same features. |
+| 2019-11-15 | 0.0.0.0.1 | Gen2 only, no LB, VPN, ACLs, secondary volumes, secondary NICs. |

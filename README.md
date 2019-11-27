@@ -25,7 +25,7 @@ terraform apply
 # Implementation Notes
 
 1. Provided as-is for feedback.
-2. Sheet format and columns are subject to change and no upgrade from previous sheets to changed sheets but changes will be documented.
+2. Sheet format and columns are subject to change and no upgrade from previous sheets to changed sheets.
 3. Related resources are grouped together in generated files.
 4. Asterisk in column header is used to denote a required field.
 5. Rerunning after modifying a spreadsheet will regenerate, overwriting existing generated files, and rely on Terraform to handle the changes.

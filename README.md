@@ -33,7 +33,7 @@ terraform apply
 | Floating IP | Created from FIP name on NIC or public gateway.  Move FIP to another NIC or public gateway by removing FIP from previous location and adding FIP to new location, then rerun terraformer and rely on Terraform to handle the change.  Mapping to FIP resource: name and target are utilized, but zone and timeouts are not utilized. |
 | Public Gateway | Created from Public Gateway on subnet.  Mapping to Public Gateway resource: name, vpc, zone, and floating_ip.id are utilized, but floating_ip.address, resource_controller_url and timeouts are not utilized. |
 | TBD | Empty columns in examples are currently disabled until testing is complete. |
-| TBD | LB, VPN, ACLs, Secondary Volumes, Secondary NICs. |
+| TBD | LB, VPN, ACLs, Secondary Volumes, and Secondary NICs are disabled until GA in Gen2. |
 
 # Release Notes
 

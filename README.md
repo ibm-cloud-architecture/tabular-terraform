@@ -20,7 +20,8 @@ terraformer -g 1 -r Dallas vpc.xlsx
 terraform fmt\
 terraform init\
 terraform plan\
-terraform apply
+terraform apply\
+terraform destroy
  
 # Implementation Notes
 
@@ -28,10 +29,11 @@ terraform apply
 | --- | --- |
 | Files | Related resources are grouped together in generated files, but individual files can be generated if desired by using -i command argument. |
 | Files | Rerunning after modifying a spreadsheet will regenerate, overwriting existing generated files, and rely on Terraform to handle the changes. |
-| Format | Asterisk in column name denotes a required field, and column names are generally same as resource arguments with some changes for spreadsheet clarity, uniqueness, etc.
-| Format | Columns are subject to change and no upgrade from previous sheets to changed sheets. |
-| Format | Most values are a single string, a colon separates multiple arguments, a comma separates list elements, and a semicolon separates array elements.
-| Format | Menus are provided where applicable for ease of use, utilizing UI names (e.g. Dallas 1) which are mapped to resource values (e.g. us-south-1).
+| Sheets | Sheets can be copied using a sheet name of the form basename-yourname where basename is the original sheet name (e.g. instances-group1). |
+| Sheets | Asterisk in column name denotes a required field, and column names are generally same as resource arguments with some changes for spreadsheet clarity, uniqueness, etc.
+| Sheets | Columns are subject to change and no upgrade from previous sheets to changed sheets. |
+| Sheets | Most values are a single string, a colon separates multiple arguments, a comma separates list elements, and a semicolon separates array elements.
+| Sheets | Menus are provided where applicable for ease of use, utilizing UI names (e.g. Dallas 1) which are mapped to resource values (e.g. us-south-1).
 | Floating IP | Created from FIP name on NIC or Public Gateway for ease of use.  Move FIP to another NIC or Public Gateway by removing FIP from previous location and adding FIP to new location, then rerun terraformer and rely on Terraform to handle the change.  Mapping to FIP resource: name and target are utilized, but zone and timeouts are not utilized. |
 | Public Gateway | Created from Public Gateway name (form is gatewayname:fipname where fipname is optional) on subnet for ease of use.  Mapping to Public Gateway resource: name, vpc, zone, and floating_ip.id are utilized, but floating_ip.address, resource_controller_url, and timeouts are not utilized. |
 | Rules | Header table is included to right of rules table for ease of use. |

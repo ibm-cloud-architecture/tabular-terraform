@@ -43,5 +43,6 @@ terraform destroy
 
 | Version | Released | Provider | Description |
 | --- | --- | --- | --- |
+| 0.0.0.0.3 | 2019-11-28 | 0.19.0 | Added gateway:fip to public_gateway on subnet and added -i command argument. |
 | 0.0.0.0.2 | 2019-11-19 | 0.19.0 | Gen1 added with same features as Gen2. |
 | 0.0.0.0.1 | 2019-11-15 | 0.19.0 | Gen2 only, no LB, VPN, ACLs, secondary volumes, secondary NICs. |

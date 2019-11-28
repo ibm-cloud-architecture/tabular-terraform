@@ -31,6 +31,8 @@ terraform apply
 | Format | Asterisk in column name denotes a required field. |
 | Format | Column names are generally same as resource arguments with some changes for spreadsheet clarity, uniqueness, etc.
 | Format | Columns are subject to change and no upgrade from previous sheets to changed sheets. |
+| Format | Most values are a single string, a colon separates values that contain multiple arguments, a comma separates list elements, and a semicolon separates array elements.
+| Format | Menus are provided for ease of use, utilizing UI-like names (e.g. Dallas 1)  and mapping internally to resource values (e.g. us-south-1).
 | Floating IP | Created from FIP name on NIC or Public Gateway for ease of use.  Move FIP to another NIC or Public Gateway by removing FIP from previous location and adding FIP to new location, then rerun terraformer and rely on Terraform to handle the change.  Mapping to FIP resource: name and target are utilized, but zone and timeouts are not utilized. |
 | Public Gateway | Created from Public Gateway name (form is gatewayname:fipname where fipname is optional) on subnet for ease of use.  Mapping to Public Gateway resource: name, vpc, zone, and floating_ip.id are utilized, but floating_ip.address, resource_controller_url, and timeouts are not utilized. |
 | Rules | Header table is included to right of rules table for ease of use. |

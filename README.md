@@ -26,10 +26,9 @@ terraform apply
 
 | Component | Description |
 | --- | --- |
-| Files | Related resources are grouped together in generated files or individual files by using -i on the command. |
+| Files | Related resources are grouped together in generated files, but individual files can be generated if desired by using -i command argument. |
 | Files | Rerunning after modifying a spreadsheet will regenerate, overwriting existing generated files, and rely on Terraform to handle the changes. |
-| Format | Asterisk in column name denotes a required field. |
-| Format | Column names are generally same as resource arguments with some changes for spreadsheet clarity, uniqueness, etc.
+| Format | Column names are generally same as resource arguments with some changes for spreadsheet clarity, uniqueness, etc, and asterisk in column name denotes a required field.
 | Format | Columns are subject to change and no upgrade from previous sheets to changed sheets. |
 | Format | Most values are a single string, a colon separates multiple arguments, a comma separates list elements, and a semicolon separates array elements.
 | Format | Menus are provided where applicable for ease of use, utilizing UI names (e.g. Dallas 1) which are mapped to resource values (e.g. us-south-1).

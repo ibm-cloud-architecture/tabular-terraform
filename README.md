@@ -26,10 +26,10 @@ terraform apply
 
 | Component | Description |
 | --- | --- |
-| Sheet Format | Columns are subject to change and no upgrade from previous sheets to changed sheets. |
-| Sheet Format | Asterisk in column header is used to denote a required field. |
-| File Structure | Related resources are grouped together in generated files. |
-| File Structure | Rerunning after modifying a spreadsheet will regenerate, overwriting existing generated files, and rely on Terraform to handle the changes. |
+| Format | Columns are subject to change and no upgrade from previous sheets to changed sheets. |
+| Format | Asterisk in column header is used to denote a required field. |
+| Files | Related resources are grouped together in generated files. |
+| Files | Rerunning after modifying a spreadsheet will regenerate, overwriting existing generated files, and rely on Terraform to handle the changes. |
 | Floating IP | Created from FIP name on NIC or public gateway.  Move FIP to another NIC or public gateway by removing FIP from previous location and adding FIP to new location, then rerun terraformer and rely on Terraform to handle the change.  Mapping to FIP resource: name and target are utilized, zone and timeouts are not utilized. |
 | Public Gateway | Created from Public Gateway on subnet.  Mapping to Public Gateway resource: name, vpc, zone, and floating_ip.id are utilized, floating_ip.address, resource_controller_url and timeouts are not utilized. |
 | TBD | Empty columns in examples are currently disabled until testing is complete. |

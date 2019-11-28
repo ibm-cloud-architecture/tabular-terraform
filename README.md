@@ -26,7 +26,7 @@ terraform apply
 
 | Component | Description |
 | --- | --- |
-| Files | Related resources are grouped together in generated files. |
+| Files | Related resources are grouped together in generated files or individual files by using -i on the command. |
 | Files | Rerunning after modifying a spreadsheet will regenerate, overwriting existing generated files, and rely on Terraform to handle the changes. |
 | Format | Asterisk in column name denotes a required field. |
 | Format | Column names are generally same as resource arguments with some changes for spreadsheet clarity, uniqueness, etc.

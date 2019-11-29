@@ -30,11 +30,11 @@ terraform destroy
 | Files | Related resources are grouped together in generated files, but individual files can be generated if desired by using -i command argument. |
 | Files | Rerunning after modifying a spreadsheet will regenerate, overwriting existing generated files, and rely on Terraform to handle the changes. |
 | Sheets | Sheets can be copied using a sheet name of the form basename-groupname where basename is the original sheet name (e.g. instances-group1). |
-| Sheets | Asterisk in column name denotes a required field, column names are generally same as resource arguments with some changes for spreadsheet clarity, and columns are subject to change as arguments are added or deprecated but there is no upgrade between sheet versions. |
-| Sheets | A colon in a value separates multiple arguments, a comma separates list elements, and a semicolon separates array elements.  These are subject to change to ensure best utilization of a spreadsheet.
+| Sheets | Asterisk in column name denotes a required field, column names are generally same as resource arguments with some changes for spreadsheet clarity, and columns are subject to change with product changes but there is no upgrade between sheet versions. |
+| Sheets | A colon in a value separates multiple structure arguments, a comma separates list elements, and a semicolon separates array elements.  Format is subject to change to ensure best spreadsheet utilization.
 | Floating IP | Created from FIP name on NIC or Public Gateway for ease of use.  Move FIP to another NIC or Public Gateway by removing FIP from previous location and adding FIP to new location, then rerun terraformer and rely on Terraform to handle the change.  Mapping to FIP resource: name and target are utilized, but zone and timeouts are not utilized. |
 | Public Gateway | Created from Public Gateway name (form is gatewayname:fipname where fipname is optional) on subnet for ease of use.  Mapping to Public Gateway resource: name, vpc, zone, and floating_ip.address are utilized, but floating_ip.id, resource_controller_url, and timeouts are not utilized. |
-| Rules | Header table is included to right of rules table for ease of use. |
+| Rules | Rules sheet includes a rules table on the left and a header table on the right to consolidate to a single sheet, prevent redundancy by specifying the header details once, and allow the possibility of product changes that might include additional arguments. |
 | Rules | Protocols are in the form icp:type:code or tcp:port_min:port_max or udp:port_min:port_max or if protocol is not specified the protocol is automatically defined as ALL by Terraform. Valid values: type is 0 to 254, code is 0 to 255, port_min is 1 to 65535, port_max is 1 to 65535. |
 | TBD | Empty columns in examples are currently disabled until testing is complete. |
 | TBD | LB, VPN, ACLs, Secondary Volumes, and Secondary NICs are disabled until GA in Gen2. |

@@ -31,7 +31,7 @@ terraform destroy
 | Files | Rerunning after modifying a spreadsheet will regenerate, overwriting existing generated files, and rely on Terraform to handle the changes. |
 | Sheets | Sheets can be copied using a sheet name of the form basename-yourname where basename is the original sheet name (e.g. instances-group1). |
 | Sheets | Asterisk in column name denotes a required field, column names are generally same as resource arguments with some changes for spreadsheet clarity, uniqueness, etc, and columns are subject to change as arguments are added or deprecated but there is no upgrade between sheet versions. |
-| Sheets | A colon in a value separates multiple arguments, a comma separates list elements, and a semicolon separates array elements.
+| Sheets | A colon in a value separates multiple arguments, a comma separates list elements, and a semicolon separates array elements.  These are subject to change to ensure best mapping to spreadsheet.
 | Floating IP | Created from FIP name on NIC or Public Gateway for ease of use.  Move FIP to another NIC or Public Gateway by removing FIP from previous location and adding FIP to new location, then rerun terraformer and rely on Terraform to handle the change.  Mapping to FIP resource: name and target are utilized, but zone and timeouts are not utilized. |
 | Public Gateway | Created from Public Gateway name (form is gatewayname:fipname where fipname is optional) on subnet for ease of use.  Mapping to Public Gateway resource: name, vpc, zone, and floating_ip.address are utilized, but floating_ip.id, resource_controller_url, and timeouts are not utilized. |
 | Rules | Header table is included to right of rules table for ease of use. |

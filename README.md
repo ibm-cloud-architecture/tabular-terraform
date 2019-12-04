@@ -12,12 +12,12 @@ export IAAS_CLASSIC_API_KEY="IBM Cloud Classic Infrastructure API Key"\
 export IAAS_CLASSIC_USERNAME="IBM Cloud Classic Infrastructure Username"
 
 2. Execute terraformer to output directory:\
-### *Display help:8
+*Display help:*\
 terraformer -h\
-### *Gen1, Dallas region, add prefix to names, one resource per file to gen1output directory:*
+*Gen1, Dallas region, add prefix to names, one resource per file to gen1output directory:*\
 terraformer -g 1 -r Dallas -p prefix -o gen1output -i regional.xlsx\
 terraformer -g 1 -r Dallas -p prefix -o gen1output -i vpc.xlsx\
-### *Gen2, Dallas region, add prefix to names, group related resources in files to output directory:*
+*Gen2, Dallas region, add prefix to names, group related resources in files to output directory:*\
 terraformer -g 2 -r Dallas -p prefix regional.xlsx\
 terraformer -g 2 -r Dallas -p prefix vpc.xlsx
 

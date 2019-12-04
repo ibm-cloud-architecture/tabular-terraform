@@ -11,13 +11,13 @@ export IC_API_KEY="IBM Cloud API Key"\
 export IAAS_CLASSIC_API_KEY="IBM Cloud Classic Infrastructure API Key"\
 export IAAS_CLASSIC_USERNAME="IBM Cloud Classic Infrastructure Username"
 
-2. Execute terraformer:\
+2. Execute terraformer:
 - *Display help:*\
-terraformer -h\
-- *Gen1, Dallas region, add prefix to names, one resource per file to gen1output directory:*\
+terraformer -h
+- *Use Gen1, Dallas region, add prefix to names, one resource per file to gen1output directory:*\
 terraformer -g 1 -r Dallas -p prefix -o gen1output -i regional.xlsx\
-terraformer -g 1 -r Dallas -p prefix -o gen1output -i vpc.xlsx\
-- *Gen2, Dallas region, add prefix to names, group related resources in files to output directory:*\
+terraformer -g 1 -r Dallas -p prefix -o gen1output -i vpc.xlsx
+- *Use Gen2, Dallas region, add prefix to names, group related resources in files to output directory:*\
 terraformer -g 2 -r Dallas -p prefix regional.xlsx\
 terraformer -g 2 -r Dallas -p prefix vpc.xlsx
 
@@ -48,6 +48,7 @@ terraform destroy
 
 | Version | Released | Provider | Description |
 | --- | --- | --- | --- |
-| 0.0.0.0.3 | 2019-11-28 | 0.19.0 | Added gateway:fip to public_gateway on subnet and added -i to command. |
+| 0.0.0.0.4 | 2019-12-03 | 0.19.0 | Fixed subnet/instance timeouts, added -p to command. |
+| 0.0.0.0.3 | 2019-11-28 | 0.19.0 | Added gateway:fip to public_gateway on subnet, added -i to command. |
 | 0.0.0.0.2 | 2019-11-19 | 0.19.0 | Gen1 added with same features as Gen2. |
 | 0.0.0.0.1 | 2019-11-15 | 0.19.0 | Gen2 only, no LB, VPN, ACLs, secondary volumes, secondary NICs. |

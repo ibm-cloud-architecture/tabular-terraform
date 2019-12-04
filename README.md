@@ -50,7 +50,7 @@ terraform destroy
 
 | Version | Released | Provider | Description |
 | --- | --- | --- | --- |
-| 0.0.0.0.4 | 2019-12-03 | 0.19.0 | Fixed subnet/instance timeouts, added -p to command. |
-| 0.0.0.0.3 | 2019-11-28 | 0.19.0 | Added gateway:fip to public_gateway on subnet, added -i to command. |
-| 0.0.0.0.2 | 2019-11-19 | 0.19.0 | Gen1 added with same features as Gen2. |
-| 0.0.0.0.1 | 2019-11-15 | 0.19.0 | Gen2 only, no LB, VPN, ACLs, secondary volumes, secondary NICs. |
+| 0.0.0.0.4 | 2019-12-03 | 0.19.0+ | Fixed subnet/instance timeouts, added -p to command. |
+| 0.0.0.0.3 | 2019-11-28 | 0.19.0+ | Added gateway:fip to public_gateway on subnet, added -i to command. |
+| 0.0.0.0.2 | 2019-11-19 | 0.19.0+ | Gen1 added with same features as Gen2. |
+| 0.0.0.0.1 | 2019-11-15 | 0.19.0+ | Gen2 only, no LB, VPN, ACLs, secondary volumes, secondary NICs. |

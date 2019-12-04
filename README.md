@@ -14,6 +14,8 @@ export IAAS_CLASSIC_USERNAME="IBM Cloud Classic Infrastructure Username"
 2. Execute terraformer:
 - *Display help:*\
 terraformer -h
+- *Display version:*\
+terraformer --version
 - *Use Gen1, Dallas region, add prefix to names, one resource per file to gen1output directory:*\
 terraformer -g 1 -r Dallas -p prefix -o gen1output -i regional.xlsx\
 terraformer -g 1 -r Dallas -p prefix -o gen1output -i vpc.xlsx

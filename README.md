@@ -60,5 +60,5 @@ terraform destroy
 
 | Number | Version | Sheet | Description |
 | --- | --- | --- | --- |
-| 1 | 0.0.0.0.5 | resourcegroups | Added sheet to common. |
-| | 0.0.0.0.5 | instances | Changed boot_volume to boot_volume_name and added boot_volume_encryption column. |
+| 0001 | 0.0.0.0.5 | resourcegroups | Added sheet to common. |
+| | | instances | Renamed column boot_volume to boot_volume_name and added column boot_volume_encryption. |

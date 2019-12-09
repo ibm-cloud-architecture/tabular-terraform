@@ -45,8 +45,7 @@ terraform destroy
 | Rules | Rules sheet includes a rules table on the left since rules vary and header table on right to prevent redundancy by specifying header details once and in case additional header arguments are added to the product. |
 | Rules | Protocols are in the form icp:type:code or tcp:port_min:port_max or udp:port_min:port_max or if protocol is not specified the protocol is automatically defined as ALL by Terraform. Valid values: type is 0 to 254, code is 0 to 255, port_min is 1 to 65535, port_max is 1 to 65535. |
 | Resource Groups | As mentioned in terraform docs, terraform destroy only removes the terraform state information for the resource group and does not delete the resource group.
-| TBD | LB, VPN, and Secondary NICs are disabled until GA in Gen2. |
-| TBD | ACLs are enabled in Gen1, ACLs are not enabled in Gen2 until ACLs are enabled in Terraform Gen2. |
+| TBD | LB, VPN, Secondary NICs, and Custom Images are not available for Gen1 or Gen2, and Network ACLs are available for Gen1 but not Gen2. |
 
 # Release Notes
 

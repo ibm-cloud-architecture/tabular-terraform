@@ -52,8 +52,9 @@ terraform destroy
 
 | Version | Released | Provider | Description |
 | --- | --- | --- | --- |
-| 0.0.0.0.6 | 2019-12-08 | 0.20.0+ | Added acls to shared.  |
-| 0.0.0.0.5 | 2019-12-07 | 0.20.0+ | Renamed regional to shared, added resourcegroups to shared, replaced column boot_volume with columns boot_volume_name and oot_volume_encryption. |
+| 0.0.0.0.7 | 2019-12-08 | 0.20.0+ | Added volumes sheet to vpc.  |
+| 0.0.0.0.6 | 2019-12-08 | 0.20.0+ | Added acls sheet to shared.  |
+| 0.0.0.0.5 | 2019-12-07 | 0.20.0+ | Renamed regional to shared, added resourcegroups sheet to shared, replaced column boot_volume with columns boot_volume_name and boot_volume_encryption in instances sheet. |
 | 0.0.0.0.4 | 2019-12-03 | 0.19.0+ | Fixed subnet/instance timeouts, added -p to command. |
 | 0.0.0.0.3 | 2019-11-28 | 0.19.0+ | Added gateway:fip to public_gateway on subnet, added -i to command. |
 | 0.0.0.0.2 | 2019-11-19 | 0.19.0+ | Gen1 added with limited features. |

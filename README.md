@@ -45,17 +45,17 @@ terraform destroy
 | Rules | Rules sheet includes a rules table on the left since rules vary and header table on right to prevent redundancy by specifying header details once and in case additional header arguments are added to the product. |
 | Rules | Protocols are in the form icp:type:code or tcp:port_min:port_max or udp:port_min:port_max or if protocol is not specified the protocol is automatically defined as ALL by Terraform. Valid values: type is 0 to 254, code is 0 to 255, port_min is 1 to 65535, port_max is 1 to 65535. |
 | Resource Groups | As mentioned in terraform docs, terraform destroy only removes the terraform state information for the resource group and does not delete the resource group.
-| TBD | LB, VPN, Secondary Volumes, and Secondary NICs are disabled until GA in Gen2. |
+| TBD | LB, VPN, and Secondary NICs are disabled until GA in Gen2. |
 | TBD | ACLs are enabled in Gen1, ACLs are not enabled in Gen2 until ACLs are enabled in Terraform Gen2. |
 
 # Release Notes
 
 | Version | Released | Provider | Description |
 | --- | --- | --- | --- |
-| 0.0.0.0.7 | 2019-12-08 | 0.20.0+ | Added volumes sheet to vpc.  |
-| 0.0.0.0.6 | 2019-12-08 | 0.20.0+ | Added acls sheet to shared.  |
-| 0.0.0.0.5 | 2019-12-07 | 0.20.0+ | Renamed regional to shared, added resourcegroups sheet to shared, replaced column boot_volume with columns boot_volume_name and boot_volume_encryption in instances sheet. |
+| 0.0.0.0.7 | 2019-12-08 | 0.20.0+ | Added vpc volumes sheet.  |
+| 0.0.0.0.6 | 2019-12-08 | 0.20.0+ | Added shared acls sheet.  |
+| 0.0.0.0.5 | 2019-12-07 | 0.20.0+ | Added shared resourcegroups sheet, updated vpc instances sheet by replacing column boot_volume with columns boot_volume_name and boot_volume_encryption. |
 | 0.0.0.0.4 | 2019-12-03 | 0.19.0+ | Fixed subnet/instance timeouts, added -p to command. |
-| 0.0.0.0.3 | 2019-11-28 | 0.19.0+ | Added gateway:fip to public_gateway on subnet, added -i to command. |
+| 0.0.0.0.3 | 2019-11-28 | 0.19.0+ | Updated vpc subnets implementation by adding gateway:fip to public_gateway, added -i to command. |
 | 0.0.0.0.2 | 2019-11-19 | 0.19.0+ | Gen1 added with limited features. |
-| 0.0.0.0.1 | 2019-11-15 | 0.19.0+ | Gen2 only, no LB, VPN, ACLs, secondary volumes, secondary NICs. |
+| 0.0.0.0.1 | 2019-11-15 | 0.19.0+ | Gen2 with limited features, no LB, VPN, ACLs, secondary volumes, secondary NICs. |

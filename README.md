@@ -51,6 +51,7 @@ terraform destroy
 
 | Version | Released | Provider | Description |
 | --- | --- | --- | --- |
+| 0.0.0.0.8 | 2019-12-09 | 0.20.0+ | Combined Gen 1 and Gen 2 examples, improved usability of image profiles menu.  |
 | 0.0.0.0.7 | 2019-12-08 | 0.20.0+ | Added vpc volumes sheet.  |
 | 0.0.0.0.6 | 2019-12-08 | 0.20.0+ | Added shared acls sheet.  |
 | 0.0.0.0.5 | 2019-12-07 | 0.20.0+ | Added shared resourcegroups sheet, updated vpc instances sheet by replacing column boot_volume with columns boot_volume_name and boot_volume_encryption. |

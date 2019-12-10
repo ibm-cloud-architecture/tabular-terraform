@@ -59,7 +59,7 @@ terraform destroy
 | | | | Updated vpc instances sheet by replacing column boot_volume with columns boot_volume_name and boot_volume_encryption. |
 | 0.0.0.0.4 | 2019-12-03 | 0.19.0+ | Fixed subnet/instance timeouts. |
 | | | | Added -p to command for including prefixes on names. |
-| 0.0.0.0.3 | 2019-11-28 | 0.19.0+ | Updated vpc subnets implementation by adding gateway:fip to public_gateway.
-| | | | Added -i to command to generate individual resource files excluding security groups. |
+| 0.0.0.0.3 | 2019-11-28 | 0.19.0+ | Updated vpc subnets sheet to allow gateway:fip on column public_gateway.
+| | | | Added -i to command to generate individual files excluding security groups. |
 | 0.0.0.0.2 | 2019-11-19 | 0.19.0+ | Gen1 added with limited features. |
 | 0.0.0.0.1 | 2019-11-15 | 0.19.0+ | Gen2 with limited features, no LB, VPN, ACLs, secondary volumes, secondary NICs. |

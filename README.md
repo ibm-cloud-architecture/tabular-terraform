@@ -34,7 +34,7 @@ terraform destroy
 
 | Component | Description |
 | --- | --- |
-| Files | Resources are separated between a vpc spreadsheet with resources for a single vpc and a shared spreadsheet with resources that are outside the scope of a single vpc. |
+| Files | Resources are separated between a vpc spreadsheet (resources for a single vpc) and a shared spreadsheet (resources outside a single vpc). |
 | Files | Related resources are grouped together in generated files or use -i command argument for one file per resource except security group rules, with one resource per rule, are still grouped together. |
 | Files | Rerunning after modifying a spreadsheet will regenerate, overwriting existing generated files, and rely on Terraform to handle the changes. |
 | Sheets | Sheets can be copied using a sheet name of the form basename-groupname where basename is the original sheet name (e.g. instances-group1). |

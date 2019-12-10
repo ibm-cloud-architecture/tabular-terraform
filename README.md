@@ -39,7 +39,7 @@ terraform destroy
 | | Rerunning after modifying a spreadsheet will regenerate, overwriting existing generated files, and rely on Terraform to handle the changes. |
 | Sheets | Sheets can be copied using a sheet name of the form basename-groupname where basename is the original sheet name (e.g. instances-group1). |
 | | Columns are subject to change but no upgrade between sheet versions. |
-| | Column names are generally same as resource arguments with some changes for spreadsheet clarity. |
+| | Column names are generally same as resource arguments with some changes for clarity. |
 | | Asterisk in column name denotes a required field. |
 | | A colon in a value separates structure arguments, a comma separates list elements, and a semicolon separates array elements, subject to change for best spreadsheet utilization.
 | Floating IP | Created from instance primary_nic_floating_ip (or secondary NICs) or subnet public_gateway. |

@@ -45,8 +45,8 @@ terraform destroy
 | | Move FIP to another NIC/Public Gateway and rely on Terraform to handle change. |
 | | Utilizes resource name and target, zone is not utilized. |
 | | Create and delete timeouts use Terraform default of 10 minutes. |
-| Public Gateway | Created from subnet public_gateway (gatewayname:optionalfipname). |  
-| | Utilizes name, vpc, and zone, resource_controller_url is not utilized. |
+| Public Gateway | Created from subnet public_gateway (e.g. gatewayname:optionalfipname). |  
+| | Utilizes resource name, vpc, and zone, resource_controller_url is not utilized. |
 | | Create and delete timeouts use Terraform default of 60 minutes. |
 | Rules | Rules sheet includes a rules table on the left since rules vary and header table on right to prevent redundancy by specifying header details once and in case additional header arguments are added to the product. |
 | | Protocols are in the form icp:type:code or tcp:port_min:port_max or udp:port_min:port_max or if protocol is not specified the protocol is automatically defined as ALL by Terraform. Valid values: type is 0 to 254, code is 0 to 255, port_min is 1 to 65535, port_max is 1 to 65535. |

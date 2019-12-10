@@ -41,8 +41,11 @@ terraform destroy
 | Sheets | Columns are subject to change but no upgrade between sheet versions. |
 | Sheets | Asterisk in column name denotes a required field, column names are generally same as resource arguments with some changes for spreadsheet clarity.
 | Sheets | A colon in a value separates structure arguments, a comma separates list elements, and a semicolon separates array elements, subject to change for best spreadsheet utilization.
-| Floating IP | Created from FIP name on NIC or Public Gateway for ease of use.  Move FIP to another NIC or Public Gateway by removing FIP from previous location and adding FIP to new location, then rerun terraformer and rely on Terraform to handle the change.  Mapping to FIP resource: name and target are utilized, but zone is not utilized, and create/delete timeouts use the Terraform default of 10 minutes. |
-| Public Gateway | Created from Public Gateway name (form is gatewayname:fipname where fipname is optional) on subnet for ease of use.  Mapping to Public Gateway resource: name, vpc, zone, and floating_ip.address are utilized, but floating_ip.id and resource_controller_url are not utilized, and create/delete timeouts use the Terraform default of 60 minutes. |
+| Floating IP | Created from instance primary_nic_floating_ip (or secondary NICs) or subnet public_gateway. |
+| | FIP name can be moved to another NIC or Public Gateway and rely on Terraform to handle the change. |
+| | Mapping to FIP resource: name and target are utilized, but zone is not utilized, and create/delete timeouts use the Terraform default of 10 minutes. |
+| Public Gateway | Created from subnet public_gateway - form is gatewayname:fipname where fipname is optional. |.  
+| | Mapping to Public Gateway resource: name, vpc, zone, and floating_ip.address are utilized, but floating_ip.id and resource_controller_url are not utilized, and create/delete timeouts use the Terraform default of 60 minutes. |
 | Rules | Rules sheet includes a rules table on the left since rules vary and header table on right to prevent redundancy by specifying header details once and in case additional header arguments are added to the product. |
 | Rules | Protocols are in the form icp:type:code or tcp:port_min:port_max or udp:port_min:port_max or if protocol is not specified the protocol is automatically defined as ALL by Terraform. Valid values: type is 0 to 254, code is 0 to 255, port_min is 1 to 65535, port_max is 1 to 65535. |
 | Resource Groups | As mentioned in terraform docs, terraform destroy only removes the terraform state information for the resource group and does not delete the resource group.

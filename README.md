@@ -49,10 +49,10 @@ terraform destroy
 | | Utilizes resource name, vpc, and zone, but resource_controller_url is not utilized. |
 | | Create and delete timeouts use Terraform default of 60 minutes. |
 | Rules | Rules sheet includes a rules table on the left since rules vary and header table on right to prevent redundancy by specifying header details once and in case additional header arguments are added to the product. |
-| | Protocol icp:type:code where type is 0 to 254 and code is 0 to 255. |
-| | Protocol tcp:port_min:port_max where port_min is 1 to 65535 and port_max is 1 to 65535. | 
-| | Protocol udp:port_min:port_max where port_min is 1 to 65535 and port_max is 1 to 65535. | 
-| | No protocol is automatically defined as ALL by Terraform. |
+| Rule Protocols | icp:type:code where type is 0 to 254 and code is 0 to 255. |
+| | tcp:port_min:port_max where port_min and port_max are 1 to 65535. | 
+| | udp:port_min:port_max where port_min and port_max are 1 to 65535. | 
+| | No protocol is defined as ALL by Terraform. |
 | Resource Groups | Terraform destroy only removes state information but does not delete resource group.
 | TBD | LB, VPN, Secondary NICs, and Custom Images are not available for Gen1 or Gen2. |
 | | Network ACLs are available for Gen1 but not Gen2. |

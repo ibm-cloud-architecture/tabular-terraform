@@ -61,5 +61,5 @@ terraform destroy
 | | | | Added -p to command to including prefixes on names. |
 | 0.0.0.0.3 | 2019-11-28 | 0.19.0+ | Updated vpc subnets to allow gateway:fip on public_gateway.
 | | | | Added -i to command to generate individual files excluding security groups. |
-| 0.0.0.0.2 | 2019-11-19 | 0.19.0+ | Gen 1 in sync with Gen2 features. |
+| 0.0.0.0.2 | 2019-11-19 | 0.19.0+ | Gen 1 in sync with Gen 2 features. |
 | 0.0.0.0.1 | 2019-11-15 | 0.19.0+ | Gen 2, no LB or VPN or ACLs or secondary volumes/NICs or custom images. |

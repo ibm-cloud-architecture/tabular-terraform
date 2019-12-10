@@ -61,6 +61,7 @@ terraform destroy
 
 | Version | Released | Provider | Description |
 | --- | --- | --- | --- |
+| 0.0.0.0.9 | 2019-12-10 | 0.20.0+ | Added lb spreadsheet. |
 | 0.0.0.0.8 | 2019-12-09 | 0.20.0+ | Combined Gen 1 and Gen 2 examples. |
 | | | | Updated vpc menus to improve image profiles readability.  |
 | 0.0.0.0.7 | 2019-12-08 | 0.20.0+ | Added vpc volumes sheet.  |

@@ -36,13 +36,13 @@ terraform destroy
 | --- | --- |
 | Files | Shared spreadsheet for non-specific and vpc spreadsheet for specific resources. |
 | | Related resources are grouped into generated files or use -i command argument. |
-| | Rerun after changes and rely on Terraform to handle the changes. |
+| | Rerun after changes and rely on Terraform to handle changes. |
 | Sheets | Use name of basename-groupname for copied sheets (e.g. instances-group1). |
 | | Columns are subject to change but no upgrade between sheet versions. |
 | | Column names are generally same as resource arguments with changes for clarity. |
 | | Asterisk in column name denotes a required field. |
 | Floating IP | Created from primary_nic_floating_ip or secondary NIC or subnet public_gateway. |
-| | FIP name can be moved to another NIC or Public Gateway and rely on Terraform to handle change. |
+| | Move FIP to another NIC/Public Gateway and rely on Terraform to handle change. |
 | | Resource name and target are utilized, but zone is not utilized. |
 | Create and delete timeouts use Terraform default of 10 minutes. |
 | Public Gateway | Created from subnet public_gateway - form is gatewayname:fipname where fipname is optional. |.  

@@ -58,7 +58,7 @@ terraform destroy
 | 0.0.0.0.5 | 2019-12-07 | 0.20.0+ | Added shared resourcegroups sheet. |
 | | | | Updated vpc instances to replace boot_volume with boot_volume_name and boot_volume_encryption. |
 | 0.0.0.0.4 | 2019-12-03 | 0.19.0+ | Fixed subnet/instance timeouts. |
-| | | | Added -p to command for including prefixes on names. |
+| | | | Added -p to command to including prefixes on names. |
 | 0.0.0.0.3 | 2019-11-28 | 0.19.0+ | Updated vpc subnets to allow gateway:fip on public_gateway.
 | | | | Added -i to command to generate individual files excluding security groups. |
 | 0.0.0.0.2 | 2019-11-19 | 0.19.0+ | Gen1 in sync with Gen2 features. |

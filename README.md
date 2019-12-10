@@ -43,8 +43,9 @@ terraform destroy
 | | Asterisk in column name denotes a required field. |
 | | A colon in a value separates structure arguments, a comma separates list elements, and a semicolon separates array elements, subject to change for best spreadsheet utilization.
 | Floating IP | Created from instance primary_nic_floating_ip (or secondary NICs) or subnet public_gateway. |
-| | FIP name can be moved to another NIC or Public Gateway and rely on Terraform to handle the change. |
-| | Mapping to FIP resource: name and target are utilized, but zone is not utilized, and create/delete timeouts use the Terraform default of 10 minutes. |
+| | FIP name can be moved to another NIC or Public Gateway and rely on Terraform to handle change. |
+| | Resource name and target are utilized, but zone is not utilized. |
+| Create and delete timeouts use Terraform default of 10 minutes. |
 | Public Gateway | Created from subnet public_gateway - form is gatewayname:fipname where fipname is optional. |.  
 | | Mapping to Public Gateway resource: name, vpc, zone, and floating_ip.address are utilized, but floating_ip.id and resource_controller_url are not utilized, and create/delete timeouts use the Terraform default of 60 minutes. |
 | Rules | Rules sheet includes a rules table on the left since rules vary and header table on right to prevent redundancy by specifying header details once and in case additional header arguments are added to the product. |

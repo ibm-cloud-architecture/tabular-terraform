@@ -52,14 +52,14 @@ terraform destroy
 | Version | Released | Provider | Description |
 | --- | --- | --- | --- |
 | 0.0.0.0.8 | 2019-12-09 | 0.20.0+ | Combined Gen 1 and Gen 2 examples. |
-| | | | Updated vpc menus sheet to improve image profiles.  |
+| | | | Updated vpc menus sheet to improve image profiles readability.  |
 | 0.0.0.0.7 | 2019-12-08 | 0.20.0+ | Added vpc volumes sheet.  |
 | 0.0.0.0.6 | 2019-12-08 | 0.20.0+ | Added shared acls sheet.  |
 | 0.0.0.0.5 | 2019-12-07 | 0.20.0+ | Added shared resourcegroups sheet. |
-| | | | Updated vpc instances sheet by replacing column boot_volume with columns boot_volume_name and boot_volume_encryption. |
+| | | | Updated vpc instances sheet to replace boot_volume with boot_volume_name and boot_volume_encryption. |
 | 0.0.0.0.4 | 2019-12-03 | 0.19.0+ | Fixed subnet/instance timeouts. |
 | | | | Added -p to command for including prefixes on names. |
-| 0.0.0.0.3 | 2019-11-28 | 0.19.0+ | Updated vpc subnets sheet to allow gateway:fip on column public_gateway.
+| 0.0.0.0.3 | 2019-11-28 | 0.19.0+ | Updated vpc subnets to allow gateway:fip on public_gateway.
 | | | | Added -i to command to generate individual files excluding security groups. |
-| 0.0.0.0.2 | 2019-11-19 | 0.19.0+ | Gen1 added with limited features. |
-| 0.0.0.0.1 | 2019-11-15 | 0.19.0+ | Gen2 with limited features, no LB, VPN, ACLs, secondary volumes, secondary NICs. |
+| 0.0.0.0.2 | 2019-11-19 | 0.19.0+ | Gen1 in sync with Gen2 features. |
+| 0.0.0.0.1 | 2019-11-15 | 0.19.0+ | Gen2, no LB or VPN or ACLs or secondary volumes/NICs or custom images. |

@@ -49,7 +49,7 @@ terraform destroy
 | | Utilizes resource name, vpc, and zone, but resource_controller_url is not utilized. |
 | | Create and delete timeouts use Terraform default of 60 minutes. |
 | Rules | Rules table on left for variability and header table on right. |
-| | Protocol icp:type:code where type range is 0 to 254 and code irange is 0 to 255. |
+| | Protocol icp:type:code where type range is 0 to 254 and code range is 0 to 255. |
 | | Protocol tcp:port_min:port_max where port_min and port_max range is 1 to 65535. | 
 | | Protocol udp:port_min:port_max where port_min and port_max range is 1 to 65535. | 
 | | No protocol is defined as ALL by Terraform. |

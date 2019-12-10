@@ -42,7 +42,7 @@ terraform destroy
 | | Column names are generally same as resource arguments with changes for clarity. |
 | | Asterisk in column name denotes a required field. |
 | | A colon in a value separates structure arguments, a comma separates list elements, and a semicolon separates array elements, subject to change for best spreadsheet utilization.
-| Floating IP | Created from instance primary_nic_floating_ip or secondary NIC or subnet public_gateway. |
+| Floating IP | Created from primary_nic_floating_ip or secondary NIC or subnet public_gateway. |
 | | FIP name can be moved to another NIC or Public Gateway and rely on Terraform to handle change. |
 | | Resource name and target are utilized, but zone is not utilized. |
 | Create and delete timeouts use Terraform default of 10 minutes. |

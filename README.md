@@ -52,7 +52,7 @@ terraform destroy
 | Version | Released | Provider | Description |
 | --- | --- | --- | --- |
 | 0.0.0.0.8 | 2019-12-09 | 0.20.0+ | Combined Gen 1 and Gen 2 examples. |
-| | | | Updated vpc menus sheet to improve image profiles readability.  |
+| | | | Updated vpc menus to improve image profiles readability.  |
 | 0.0.0.0.7 | 2019-12-08 | 0.20.0+ | Added vpc volumes sheet.  |
 | 0.0.0.0.6 | 2019-12-08 | 0.20.0+ | Added shared acls sheet.  |
 | 0.0.0.0.5 | 2019-12-07 | 0.20.0+ | Added shared resourcegroups sheet. |

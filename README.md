@@ -60,6 +60,6 @@ terraform destroy
 | 0.0.0.0.4 | 2019-12-03 | 0.19.0+ | Fixed subnet/instance timeouts. |
 | | | | Added -p to command to include prefixes on names for shared accounts. |
 | 0.0.0.0.3 | 2019-11-28 | 0.19.0+ | Updated vpc subnets to allow gateway:fip on public_gateway.
-| | | | Added -i to command to generate individual files excluding security groups. |
+| | | | Added -i to command to generate individual files excluding security group. |
 | 0.0.0.0.2 | 2019-11-19 | 0.19.0+ | Gen 1 in sync with Gen 2 features. |
 | 0.0.0.0.1 | 2019-11-15 | 0.19.0+ | Gen 2, no LB or VPN or ACLs or secondary volumes/NICs or custom images. |

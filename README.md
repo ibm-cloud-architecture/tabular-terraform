@@ -34,7 +34,7 @@ terraform destroy
 
 | Component | Description |
 | --- | --- |
-| Files | Shared spreadsheet for non-specific and vpc spreadsheet for vpc resources. |
+| Files | Shared spreadsheet for non-specific and vpc spreadsheet for specific resources. |
 | | Related resources are grouped into generated files or use -i command argument. |
 | | Rerun after changes and rely on Terraform to handle the changes. |
 | Sheets | Use name of basename-groupname for copied sheets (e.g. instances-group1). |

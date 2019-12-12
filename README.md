@@ -49,18 +49,17 @@ terraform destroy
 | | Utilizes resource name, vpc, and zone, but resource_controller_url is not utilized. |
 | | Create and delete timeouts use Terraform default of 60 minutes. |
 | Rules | Rules table on left for variability with corresponding header table on right. |
-| | Protocol icp:type:code where type range is 0 to 254 and code range is 0 to 255. |
-| | Protocol tcp:port_min:port_max where port_min and port_max range is 1 to 65535. | 
-| | Protocol udp:port_min:port_max where port_min and port_max range is 1 to 65535. | 
-| | No protocol is defined as ALL by Terraform. |
+| | Protocols are icp:type:code or tcp:port_min:port_max or udp:port_min:port_max or empty for ALL. | 
 | Resource Groups | Terraform destroy only removes state information but does not delete resource group.
-| TBD | VPN, Secondary NICs, and Custom Images are not available for Gen1 or Gen2. |
-| | Network ACLs are available for Gen1 but not Gen2. |
+| TBD | VPN and Custom Images are not available for Gen1 or Gen2. |
+| | Network ACLs and Secondary NICs are available for Gen1 but not Gen2. |
 
 # Release Notes
 
 | Version | Released | Provider | Description |
 | --- | --- | --- | --- |
+| 0.0.0.0.10 | 2019-12-12 | 0.20.0+ | Added vpc networkinterfaces sheet to include primary and secondary. |
+| | | 0.20.0+ | Updated vpc instances to replace primary_nic columns with named primary_network_interface. |
 | 0.0.0.0.9 | 2019-12-10 | 0.20.0+ | Added lb spreadsheet. |
 | 0.0.0.0.8 | 2019-12-09 | 0.20.0+ | Combined Gen 1 and Gen 2 examples. |
 | | | | Updated vpc menus to improve image profiles readability.  |

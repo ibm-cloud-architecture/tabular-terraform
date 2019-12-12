@@ -59,14 +59,14 @@ terraform destroy
 | Version | Released | Provider | Description |
 | --- | --- | --- | --- |
 | 0.0.0.0.10 | 2019-12-12 | 0.20.0+ | Added vpc networkinterfaces sheet to include primary and secondary. |
-| | | 0.20.0+ | Updated vpc instances to replace primary_nic columns with named primary_network_interface. |
+| | | 0.20.0+ | Updated vpc instances to replace primary_nic columns with required primary_network_interface column. |
 | 0.0.0.0.9 | 2019-12-10 | 0.20.0+ | Added lb spreadsheet. |
 | 0.0.0.0.8 | 2019-12-09 | 0.20.0+ | Combined Gen 1 and Gen 2 examples. |
 | | | | Updated vpc menus to improve image profiles readability.  |
 | 0.0.0.0.7 | 2019-12-08 | 0.20.0+ | Added vpc volumes sheet.  |
 | 0.0.0.0.6 | 2019-12-08 | 0.20.0+ | Added shared acls sheet.  |
 | 0.0.0.0.5 | 2019-12-07 | 0.20.0+ | Added shared resourcegroups sheet. |
-| | | | Updated vpc instances to replace boot_volume with boot_volume_name and boot_volume_encryption. |
+| | | | Updated vpc instances to replace boot_volume with optional boot_volume_name and boot_volume_encryption columns. |
 | 0.0.0.0.4 | 2019-12-03 | 0.19.0+ | Fixed subnet/instance timeouts. |
 | | | | Added -p to command to include prefixes on names for shared accounts. |
 | 0.0.0.0.3 | 2019-11-28 | 0.19.0+ | Updated vpc subnets to allow gateway:fip on public_gateway.

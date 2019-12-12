@@ -59,7 +59,7 @@ terraform destroy
 | Version | Released | Provider | Description |
 | --- | --- | --- | --- |
 | 0.0.0.0.10 | 2019-12-12 | 0.20.0+ | Added vpc networkinterfaces sheet to include primary and secondary. |
-| | | 0.20.0+ | Updated vpc instances to replace primary_nic columns with required primary_network_interface column. |
+| | | 0.20.0+ | Updated vpc instances to replace primary_nic columns with single primary_network_interface column. |
 | 0.0.0.0.9 | 2019-12-10 | 0.20.0+ | Added lb spreadsheet. |
 | 0.0.0.0.8 | 2019-12-09 | 0.20.0+ | Combined Gen 1 and Gen 2 examples. |
 | | | | Updated vpc menus to improve image profiles readability.  |

@@ -41,7 +41,7 @@ terraform destroy
 | | Columns are subject to change but no upgrade between sheet versions. |
 | | Column names are generally same as resource arguments with changes for clarity. |
 | | Asterisk in column name denotes a required field. |
-| | Resources with # headers are #acl, #sg:vpc:optionalrg, and #vpn:subnet:optionalrg.
+| | Resource headers are #acl, #sg:vpc:optionalrg, and #vpn:subnet:optionalrg.
 | Floating IP | Created from primary_nic_floating_ip or secondary NIC or subnet public_gateway. |
 | | Move FIP to another NIC/Public Gateway and rely on Terraform to handle change. |
 | | Utilizes resource name and target, but zone is not utilized. |

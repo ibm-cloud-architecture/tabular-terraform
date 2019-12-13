@@ -58,6 +58,8 @@ terraform destroy
 
 | Version | Released | Provider | Description |
 | --- | --- | --- | --- |
+| 0.0.0.0.11 | 2019-12-13 | 0.20.0+ | Added rules spreadsheet that includes ACLs and security groups. |
+| | | | Changed to use header tags (#) with one table per sheet for portability. |
 | 0.0.0.0.10 | 2019-12-12 | 0.20.0+ | Added vpc networkinterfaces sheet to include primary and secondary. |
 | | | 0.20.0+ | Updated vpc instances to replace primary_nic columns with single primary_network_interface column. |
 | 0.0.0.0.9 | 2019-12-10 | 0.20.0+ | Added lb spreadsheet. |

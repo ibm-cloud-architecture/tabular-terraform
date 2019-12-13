@@ -34,13 +34,14 @@ terraform destroy
 
 | Component | Description |
 | --- | --- |
-| Files | Shared (non-specific) spreadsheet, vpc spreadsheet, and lb spreadsheet. |
+| Files | Example spreadsheets include shared, rules, vpc, and vpn. |
 | | Related resources are grouped into generated files or use -i command argument. |
 | | Rerun after changes and rely on Terraform to handle changes. |
 | Sheets | Use name of basename-groupname for copied sheets (e.g. instances-group1). |
 | | Columns are subject to change but no upgrade between sheet versions. |
 | | Column names are generally same as resource arguments with changes for clarity. |
 | | Asterisk in column name denotes a required field. |
+| | Resources that use # headers include #acl or #sg:vpc:optionalrg or #vpn:subnet:optionalrg.
 | Floating IP | Created from primary_nic_floating_ip or secondary NIC or subnet public_gateway. |
 | | Move FIP to another NIC/Public Gateway and rely on Terraform to handle change. |
 | | Utilizes resource name and target, but zone is not utilized. |
@@ -48,8 +49,7 @@ terraform destroy
 | Public Gateway | Created from subnet public_gateway (e.g. gatewayname:optionalfipname). |  
 | | Utilizes resource name, vpc, and zone, but resource_controller_url is not utilized. |
 | | Create and delete timeouts use Terraform default of 60 minutes. |
-| Rules | Rules table on left for variability with corresponding header table on right. |
-| | Protocols are icp:type:code or tcp:port_min:port_max or udp:port_min:port_max or empty for ALL. | 
+| Rules | Protocols are icp:type:code or tcp:port_min:port_max or udp:port_min:port_max or empty for ALL. | 
 | Resource Groups | Terraform destroy only removes state information but does not delete resource group.
 | TBD | VPN and Custom Images are not available for Gen1 or Gen2. |
 | | Network ACLs and Secondary NICs are available for Gen1 but not Gen2. |

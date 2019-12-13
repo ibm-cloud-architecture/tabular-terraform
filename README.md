@@ -49,7 +49,7 @@ terraform destroy
 | Public Gateway | Created from subnet public_gateway (e.g. gatewayname:optionalfipname). |  
 | | Utilizes resource name, vpc, and zone, but resource_controller_url is not utilized. |
 | | Create and delete timeouts use Terraform default of 60 minutes. |
-| Rules | Protocols are icp:type:code or tcp:port_min:port_max or udp:port_min:port_max or empty for ALL. | 
+| Rules | Protocols are icp:type:code or tcp:port_min:port_max or udp:port_min:port_max or empty. | 
 | Resource Groups | Terraform destroy only removes state information but does not delete resource group.
 | TBD | VPN and Custom Images are not available for Gen1 or Gen2. |
 | | Network ACLs and Secondary NICs are available for Gen1 but not Gen2. |

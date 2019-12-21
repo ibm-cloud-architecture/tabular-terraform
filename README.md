@@ -35,7 +35,7 @@ terraform destroy
 
 | Component | Description |
 | --- | --- |
-| Files | Example spreadsheets include shared, rules, vpc, and vpn. |
+| Files | Example spreadsheets include vpc, rules, lb, vpn, and shared. |
 | | Related resources are grouped into generated files or use -i command argument. |
 | | Rerun after changes and rely on Terraform to handle changes. |
 | Sheets | Use name of basename-groupname for copied sheets (e.g. instances-group1). |

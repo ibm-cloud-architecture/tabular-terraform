@@ -2,7 +2,8 @@
 
 Automate creation of Terraform for IBM Virtual Private Cloud
 
-![TerraformerExample](/images/terraformerexample.png)
+![TerraformerInputExample](/images/terraformerinputexample.png)
+![TerraformerOutputExample](/images/terraformeroutputexample.png)
 
 # Usage Steps
 

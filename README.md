@@ -39,9 +39,8 @@ terraform destroy
 | | Rerun after changes and rely on Terraform to handle changes. |
 | Sheets | Use name of basename-groupname for copied sheets (e.g. instances-group1). |
 | | Columns are subject to change but no upgrade between sheet versions. |
-| | Column names are generally same as resource arguments with changes for clarity. |
+| | Column names are generally same as resource arguments. |
 | | Asterisk in column name denotes a required field. |
-| | Resource headers are #acl, #sg:vpc:optionalrg, and #vpn:subnet:optionalrg.
 | Floating IP | Created from primary_nic_floating_ip or secondary NIC or subnet public_gateway. |
 | | Move FIP to another NIC/Public Gateway and rely on Terraform to handle change. |
 | | Utilizes resource name and target, but zone is not utilized. |
@@ -58,20 +57,22 @@ terraform destroy
 
 | Version | Released | Provider | Description |
 | --- | --- | --- | --- |
+| 0.0.0.0.12 | 2019-12-20 | 0.21.0+ | Added address_prefix_management to vpc. |
+| | | | Added header sheet/name to rules. |
+| | | | Added multiple vpc capability to vpc. |
 | 0.0.0.0.11 | 2019-12-13 | 0.20.0+ | Added rules spreadsheet that includes ACLs and security groups. |
-| | | | Changed to use header tags (#) with one table per sheet for portability. |
-| 0.0.0.0.10 | 2019-12-12 | 0.20.0+ | Added vpc networkinterfaces sheet to include primary and secondary. |
-| | | 0.20.0+ | Updated vpc instances to replace primary_nic columns with single primary_network_interface column. |
+| 0.0.0.0.10 | 2019-12-12 | 0.20.0+ | Added networkinterfaces sheet to include primary and secondary. |
+| | | 0.20.0+ | Updated instances to replace primary_nic columns with single primary_network_interface column. |
 | 0.0.0.0.9 | 2019-12-10 | 0.20.0+ | Added lb spreadsheet. |
 | 0.0.0.0.8 | 2019-12-09 | 0.20.0+ | Combined Gen 1 and Gen 2 examples. |
-| | | | Updated vpc menus to improve image profiles readability.  |
-| 0.0.0.0.7 | 2019-12-08 | 0.20.0+ | Added vpc volumes sheet.  |
-| 0.0.0.0.6 | 2019-12-08 | 0.20.0+ | Added shared acls sheet.  |
-| 0.0.0.0.5 | 2019-12-07 | 0.20.0+ | Added shared resourcegroups sheet. |
-| | | | Updated vpc instances to replace boot_volume with optional boot_volume_name and boot_volume_encryption columns. |
+| | | | Updated menus to improve image profiles readability.  |
+| 0.0.0.0.7 | 2019-12-08 | 0.20.0+ | Added volumes sheet.  |
+| 0.0.0.0.6 | 2019-12-08 | 0.20.0+ | Added acls sheet.  |
+| 0.0.0.0.5 | 2019-12-07 | 0.20.0+ | Added resourcegroups sheet. |
+| | | | Updated instances to replace boot_volume with optional boot_volume_name and boot_volume_encryption columns. |
 | 0.0.0.0.4 | 2019-12-03 | 0.19.0+ | Fixed subnet/instance timeouts. |
 | | | | Added -p to command to include prefixes on names for shared accounts. |
-| 0.0.0.0.3 | 2019-11-28 | 0.19.0+ | Updated vpc subnets to allow gateway:fip on public_gateway.
+| 0.0.0.0.3 | 2019-11-28 | 0.19.0+ | Updated subnets to allow gateway:fip on public_gateway.
 | | | | Added -i to command to generate individual files excluding security group. |
 | 0.0.0.0.2 | 2019-11-19 | 0.19.0+ | Gen 1 in sync with Gen 2 features. |
 | 0.0.0.0.1 | 2019-11-15 | 0.19.0+ | Gen 2, no LB or VPN or ACLs or secondary volumes/NICs or custom images. |

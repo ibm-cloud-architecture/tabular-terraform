@@ -58,6 +58,7 @@ terraform destroy
 
 | Version | Released | Provider | Description |
 | --- | --- | --- | --- |
+| 0.0.0.0.13 | 2019-12-21 | 0.21.0+ | Added vpn spreadsheet. |
 | 0.0.0.0.12 | 2019-12-20 | 0.21.0+ | Added address_prefix_management to vpc. |
 | | | | Added header sheet/name to rules. |
 | | | | Added multiple vpc capability to vpc. |

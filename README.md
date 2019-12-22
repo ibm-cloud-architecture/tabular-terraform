@@ -67,7 +67,7 @@ terraform destroy
 | | | | Added multiple vpc capability to vpc. |
 | 0.0.0.0.11 | 2019-12-13 | 0.20.0 | Added rules spreadsheet that includes ACLs and security groups. |
 | 0.0.0.0.10 | 2019-12-12 | 0.20.0 | Added networkinterfaces sheet to include primary and secondary. |
-| | | 0.20.0+ | Updated instances to replace primary_nic columns with single primary_network_interface column. |
+| | | 0.20.0 | Updated instances to replace primary_nic columns with single primary_network_interface column. |
 | 0.0.0.0.9 | 2019-12-10 | 0.20.0 | Added lb spreadsheet. |
 | 0.0.0.0.8 | 2019-12-09 | 0.20.0 | Combined Gen 1 and Gen 2 examples. |
 | | | | Updated menus to improve image profiles readability.  |

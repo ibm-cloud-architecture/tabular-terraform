@@ -35,7 +35,7 @@ terraform destroy
 
 | Component | Description |
 | --- | --- |
-| Terraform | Terraform v0.11 and v0.12 with -t command argument. |
+| Terraform | Supports Terraform v0.11 and v0.12 with -t command argument. |
 | | Provision tested with Terraform v0.11, syntax tested with Terraform v0.12. |
 | Files | Example spreadsheets include vpc, rules, lb, vpn, and shared. |
 | | Related resources are grouped into generated files or use -i command argument. |

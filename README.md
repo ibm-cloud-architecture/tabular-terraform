@@ -49,7 +49,7 @@ terraform destroy
 | --- | --- |
 | Terraform | Supports Terraform v0.11 and v0.12 with -t command argument. |
 | | Provision tested with Terraform v0.11, syntax tested with Terraform v0.12. |
-| Files | Example spreadsheets include vpc, rules, lb, vpn, and shared. |
+| Files | Example spreadsheets include access, lb, vpc, and vpn. |
 | | Related resources are grouped into generated files or use -i command argument. |
 | | Rerun after changes and rely on Terraform to handle changes. |
 | Sheets | Use name of basename-groupname for copied sheets (e.g. instances-group1). |

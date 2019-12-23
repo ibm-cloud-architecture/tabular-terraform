@@ -30,6 +30,29 @@ terraform init\
 terraform plan\
 terraform apply\
 terraform destroy
+
+# Image Profiles
+
+| Name | Family | vCPUs | Memory (GB) | Other |
+| bx2-2x8 | Balanced | 2 | 8 | |
+| bx2-4x16 | Balanced | 4 | 16 | Gen 1 only. |
+| bx2-8x32 | Balanced | 8 | 32 | |
+| bx2-16x64 | Balanced | 16 | 64 | |
+| bx2-32x128 | Balanced | 32 | 128 | |
+| bx2-48x192 | Balanced | 48 | 192 | |
+| bx2-62x248 | Balanced | 62 | 248 | Gen 1 only. |
+| cx2-2x4 | Compute | 2 | 4 | |
+| cx2-4x8 | Compute | 4 | 8 | |
+| cx2-8x16 | Compute | 8 | 16 | |
+| cx2-16x32 | Compute | 16 | 32 | |
+| cx2-32x64 | Compute | 32 | 64 | |
+| mx2-2x4 | Memory | 2 | 4 | |
+| mx2-4x8 | Memory | 4 | 8 | |
+| mx2-8x16 | Memory | 8 | 16 | |
+| mx2-16x32 | Memory | 16 | 32 | |
+| mx2-32x64 | Memory | 32 | 64 | |
+
+Note: Names are Gen 2 style and automatically converted to Gen 1 style if using Gen 1, or use Gen 1 style names explicitly.
  
 # Implementation Notes
 
@@ -44,6 +67,11 @@ terraform destroy
 | | Columns are subject to change but no upgrade between sheet versions. |
 | | Column names are generally same as resource arguments. |
 | | Asterisk in column name denotes a required field. |
+| Image | Balanced profiles are bx2-2x8, bx2-4x16 (Gen 1), bx2-8x32, bx2-16x64, bx2-32x128, bx2-48x192, bx2-62x248 (Gen 1). |
+| | Compute profiles are cx2-2x4, cx2-4x8, cx2-8x16, cx2-16x32, cx2-32x64. |
+| | Memory profiles are mx2-2x16, mx2-4x32, mx2-8x64, mx2-16x128, mx2-32x256. |
+| Volume | Profiles are 10iops-tier, 5iops-tier, general-purpose, and custom. |
+| Zone | Zones are Dallas 1-3, Frankfurt 1-3, London 1-3, Sydney 1-3, Tokyo 1-3. |
 | Floating IP | Created from primary_nic_floating_ip or secondary NIC or subnet public_gateway. |
 | | Move FIP to another NIC/Public Gateway and rely on Terraform to handle change. |
 | | Utilizes resource name and target, but zone is not utilized. |

@@ -34,6 +34,7 @@ terraform destroy
 # Images (IBM-provided)
 
 | Name | Description | Other |
+| --- | --- | --- |
 | ibm-centos7-amd64 | CentOS 7.x - Minimal Install | |
 | ibm-debian9-amd64 | Debian GNU/Linux 9.x - Minimal Install | |
 | ibm-redhat7-amd64 | Red Hat Enterprise Linux 7.x - Minimal Install | Gen 1 only. |

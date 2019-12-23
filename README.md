@@ -31,6 +31,36 @@ terraform plan\
 terraform apply\
 terraform destroy
 
+# Regions
+
+| Name | Internal | Other | 
+| --- | --- | --- |
+| Dallas | us-south | |
+| Frankfurt | eu-de | Gen 1 only. |
+| London | eu-gb | Gen 1 only. |
+| Sydney | au-syd | Gen 1 only. |
+| Tokyo | jp-tok | Gen 1 only. |
+
+# Zones
+
+| Name | Internal | Other | 
+| --- | --- | --- |
+| Dallas 1 | us-south-1 | |
+| Dallas 2 | us-south-2 | |
+| Dallas 3 | us-south-3 | |
+| Frankfurt 1 | eu-de-1 | Gen 1 only. |
+| Frankfurt 2 | eu-de-2 | Gen 1 only. |
+| Frankfurt 3 | eu-de-3 | Gen 1 only. |
+| London 1 | eu-gb-1 | Gen 1 only. |
+| London 2 | eu-gb-2 | Gen 1 only. |
+| London 3 | eu-gb-3 | Gen 1 only. |
+| Sydney 1 | au-syd-1 | Gen 1 only. |
+| Sydney 2 | au-syd-2 | Gen 1 only. |
+| Sydney 3 | au-syd-3 | Gen 1 only. |
+| Tokyo 1 | jp-tok-1 | Gen 1 only. |
+| Tokyo 2 | jp-tok-2 | Gen 1 only. |
+| Tokyo 3 | jp-tok-3 | Gen 1 only. |
+
 # Images (IBM-provided)
 
 | Name | Description | Other |
@@ -67,6 +97,15 @@ terraform destroy
 
 Note: Names are Gen 2 style and automatically converted to Gen 1 style if using Gen 1, or use Gen 1 style names explicitly.
  
+# Volume Profiles
+
+| Name | Family | Description |
+| --- | --- | --- |
+| general-purpose | tiered | 3 IOPS/GB |
+| 5iops-tier | tiered | 5 IOPS/GB |
+| 10iops-tier | tiered | 10 IOPS/GB |
+| custom | custom  | Custom IOPS |
+
 # Implementation Notes
 
 | Component | Description |

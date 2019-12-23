@@ -119,8 +119,6 @@ Note: Names are Gen 2 style and automatically converted to Gen 1 style if using 
 | | Columns are subject to change but no upgrade between sheet versions. |
 | | Column names are generally same as resource arguments. |
 | | Asterisk in column name denotes a required field. |
-| Volume | Profiles are 10iops-tier, 5iops-tier, general-purpose, and custom. |
-| Zone | Zones are Dallas 1-3, Frankfurt 1-3, London 1-3, Sydney 1-3, Tokyo 1-3. |
 | Floating IP | Created from primary_nic_floating_ip or secondary NIC or subnet public_gateway. |
 | | Move FIP to another NIC/Public Gateway and rely on Terraform to handle change. |
 | | Utilizes resource name and target, but zone is not utilized. |

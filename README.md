@@ -56,8 +56,8 @@ terraform destroy
 | | Columns are subject to change but no upgrade between sheet versions. |
 | | Column names are generally same as resource arguments. |
 | | Asterisk in column name denotes a required field. |
-| Regions | Specify using UI name or internal name (e.g. Dallas or us-south). |
-| Zones | Specify using UI name or internal name (e.g. Dallas 1 or us-south-1). |
+| Regions | Names are UI style or internal name (e.g. Dallas or us-south). |
+| Zones | Names are UI style or internal name (e.g. Dallas 1 or us-south-1). |
 | Image Profiles | Names are Gen 1 or Gen 2 names, or use Gen 2 only which is converted to Gen 1. |
 | Volume Profiles | Names are general-purpose (3iops-tier), 5iops-tier, 10iops-tier, or custom. |
 | Floating IP | Created from primary_nic_floating_ip or secondary NIC or subnet public_gateway. |

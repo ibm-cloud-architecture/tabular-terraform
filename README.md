@@ -31,36 +31,6 @@ terraform plan\
 terraform apply\
 terraform destroy
 
-# Regions
-
-| Name | Internal | Other | 
-| --- | --- | --- |
-| Dallas | us-south | |
-| Frankfurt | eu-de | Gen 1 only. |
-| London | eu-gb | Gen 1 only. |
-| Sydney | au-syd | Gen 1 only. |
-| Tokyo | jp-tok | Gen 1 only. |
-
-# Zones
-
-| Name | Internal | Other | 
-| --- | --- | --- |
-| Dallas 1 | us-south-1 | |
-| Dallas 2 | us-south-2 | |
-| Dallas 3 | us-south-3 | |
-| Frankfurt 1 | eu-de-1 | Gen 1 only. |
-| Frankfurt 2 | eu-de-2 | Gen 1 only. |
-| Frankfurt 3 | eu-de-3 | Gen 1 only. |
-| London 1 | eu-gb-1 | Gen 1 only. |
-| London 2 | eu-gb-2 | Gen 1 only. |
-| London 3 | eu-gb-3 | Gen 1 only. |
-| Sydney 1 | au-syd-1 | Gen 1 only. |
-| Sydney 2 | au-syd-2 | Gen 1 only. |
-| Sydney 3 | au-syd-3 | Gen 1 only. |
-| Tokyo 1 | jp-tok-1 | Gen 1 only. |
-| Tokyo 2 | jp-tok-2 | Gen 1 only. |
-| Tokyo 3 | jp-tok-3 | Gen 1 only. |
-
 # Images (IBM-provided)
 
 | Name | Arch | Description | Other |
@@ -72,39 +42,6 @@ terraform destroy
 | ibm-windows2012-amd64 | amd64 | Windows Server 2012 Standard Edition | Gen 1 only. |
 | ibm-windows2012r2-amd64 | amd64 | Windows Server 2012 R2 Standard Edition | Gen 1 only. |
 | ibm-windows2016-amd64 | amd64 | Windows Server 2016 Standard Edition | Gen 1 only. |
-
-# Image Profiles
-
-| Name | Family | vCPUs | Memory | Other |
-| --- | --- | --- | --- | --- |
-| bx2-2x8 | Balanced | 2 | 8 | |
-| bx2-4x16 | Balanced | 4 | 16 | Gen 1 only. |
-| bx2-8x32 | Balanced | 8 | 32 | |
-| bx2-16x64 | Balanced | 16 | 64 | |
-| bx2-32x128 | Balanced | 32 | 128 | |
-| bx2-48x192 | Balanced | 48 | 192 | |
-| bx2-62x248 | Balanced | 62 | 248 | Gen 1 only. |
-| cx2-2x4 | Compute | 2 | 4 | |
-| cx2-4x8 | Compute | 4 | 8 | |
-| cx2-8x16 | Compute | 8 | 16 | |
-| cx2-16x32 | Compute | 16 | 32 | |
-| cx2-32x64 | Compute | 32 | 64 | |
-| mx2-2x4 | Memory | 2 | 4 | |
-| mx2-4x8 | Memory | 4 | 8 | |
-| mx2-8x16 | Memory | 8 | 16 | |
-| mx2-16x32 | Memory | 16 | 32 | |
-| mx2-32x64 | Memory | 32 | 64 | |
-
-Note: Names are Gen 2 style and automatically converted to Gen 1 style if using Gen 1, or use Gen 1 style names explicitly.
- 
-# Volume Profiles
-
-| Name | Family | Description |
-| --- | --- | --- |
-| general-purpose | tiered | 3 IOPS/GB |
-| 5iops-tier | tiered | 5 IOPS/GB |
-| 10iops-tier | tiered | 10 IOPS/GB |
-| custom | custom  | Custom IOPS |
 
 # Implementation Notes
 
@@ -119,6 +56,10 @@ Note: Names are Gen 2 style and automatically converted to Gen 1 style if using 
 | | Columns are subject to change but no upgrade between sheet versions. |
 | | Column names are generally same as resource arguments. |
 | | Asterisk in column name denotes a required field. |
+| Regions | Specify using UI name or internal name (e.g. Dallas or us-south). |
+| Zones | Specify using UI name or internal name (e.g. Dallas 1 or us-south-1). |
+| Image Profiles | Names are Gen 1 style or Gen 2 style.  Gen 2 names are converted Gen 1 names if using Gen 1. |
+| Volume Profiles | Names are general-purpose (3iops-tier), 5iops-tier, 10iops-tier, or custom. |
 | Floating IP | Created from primary_nic_floating_ip or secondary NIC or subnet public_gateway. |
 | | Move FIP to another NIC/Public Gateway and rely on Terraform to handle change. |
 | | Utilizes resource name and target, but zone is not utilized. |

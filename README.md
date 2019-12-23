@@ -58,7 +58,7 @@ terraform destroy
 | | Asterisk in column name denotes a required field. |
 | Regions | Specify using UI name or internal name (e.g. Dallas or us-south). |
 | Zones | Specify using UI name or internal name (e.g. Dallas 1 or us-south-1). |
-| Image Profiles | Names are Gen 1 style or Gen 2 style.  Gen 2 names are converted Gen 1 names if using Gen 1. |
+| Image Profiles | Names are Gen 1 or Gen 2 names, or use Gen 2 only which is converted to Gen 1. |
 | Volume Profiles | Names are general-purpose (3iops-tier), 5iops-tier, 10iops-tier, or custom. |
 | Floating IP | Created from primary_nic_floating_ip or secondary NIC or subnet public_gateway. |
 | | Move FIP to another NIC/Public Gateway and rely on Terraform to handle change. |

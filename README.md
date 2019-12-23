@@ -17,12 +17,15 @@ export IAAS_CLASSIC_USERNAME="IBM Cloud Classic Infrastructure Username"
 terraformer -h
 - *Display version:*\
 terraformer --version
-- *Use Gen1, Dallas region, add prefix to names, one resource per file to gen1output directory:*\
-terraformer -g 1 -r Dallas -p prefix -o gen1output -i regional.xlsx\
-terraformer -g 1 -r Dallas -p prefix -o gen1output -i vpc.xlsx
-- *Use Gen2, Dallas region, add prefix to names, group related resources in files to output directory:*\
-terraformer -g 2 -r Dallas -p prefix regional.xlsx\
-terraformer -g 2 -r Dallas -p prefix vpc.xlsx
+- *Use Gen1, gen1output directory, add prefix, Dallas region, Terraform v0.11:*\
+terraformer -g 1 -o gen1output -p prefix -r Dallas access.xlsx\
+terraformer -g 1 -o gen1output -p prefix -r Dallas vpc.xlsx
+- *Use Gen2, gen2output directory, add prefix, Dallas region, Terraform v0.11:*\
+terraformer -g 2 -o gen2output -p prefix -r Dallas access.xlsx\
+terraformer -g 2 -o gen2output -p prefix -r Dallas vpc.xlsx
+- *Use Gen2, gen2output directory, add prefix, Dallas region, Terraform v0.12:*\
+terraformer -g 2 -o gen2output -p prefix -r Dallas -t 12 regional.xlsx\
+terraformer -g 2 -o gen2output -p prefix -r Dallas -t 12 vpc.xlsx
 
 3. Execute terraform in specified output directory:\
 terraform fmt\
@@ -47,9 +50,7 @@ terraform destroy
 
 | Component | Description |
 | --- | --- |
-| Terraform | Supports Terraform v0.11 and v0.12 with -t command argument. |
-| | Provision tested with Terraform v0.11, syntax tested with Terraform v0.12. |
-| Files | Example spreadsheets include access, lb, vpc, and vpn. |
+| Files | Example spreadsheets include access, lb, and vpc. |
 | | Related resources are grouped into generated files or use -i command argument. |
 | | Rerun after changes and rely on Terraform to handle changes. |
 | Sheets | Use name of basename-groupname for copied sheets (e.g. instances-group1). |

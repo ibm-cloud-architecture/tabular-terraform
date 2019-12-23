@@ -76,7 +76,7 @@ terraform destroy
 
 | Version | Released | Provider | Description |
 | --- | --- | --- | --- |
-| 0.0.0.0.15 | 2019-12-23 | 0.21.0/1.0.0 | Added images sheet for custom images. |
+| 0.0.0.0.15 | 2019-12-23 | 0.21.0/1.0.0 | Added images sheet and removed menus sheet to enable custom images. |
 | 0.0.0.0.14 | 2019-12-21 | 0.21.0/1.0.0 | Added -t to command to generate Terraform v0.11 or v0.12. |
 | 0.0.0.0.13 | 2019-12-21 | 0.21.0 | Added vpn spreadsheet. |
 | 0.0.0.0.12 | 2019-12-20 | 0.21.0 | Added address_prefix_management to vpc. |

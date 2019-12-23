@@ -63,15 +63,15 @@ terraform destroy
 
 # Images (IBM-provided)
 
-| Name | Description | Other |
-| --- | --- | --- |
-| ibm-centos7-amd64 | CentOS 7.x - Minimal Install | |
-| ibm-debian9-amd64 | Debian GNU/Linux 9.x - Minimal Install | |
-| ibm-redhat7-amd64 | Red Hat Enterprise Linux 7.x - Minimal Install | Gen 1 only. |
-| ibm-ubuntu18-amd64 | Ubuntu Linux 18.04 LTS - Minimal Install | |
-| ibm-windows2012-amd64 | Windows Server 2012 Standard Edition | Gen 1 only. |
-| ibm-windows2012r2-amd64 | Windows Server 2012 R2 Standard Edition | Gen 1 only. |
-| ibm-windows2016-amd64 | Windows Server 2016 Standard Edition | Gen 1 only. |
+| Name | Arch | Description | Other |
+| --- | --- | --- | --- |
+| ibm-centos7-amd64 | amd64 | CentOS 7.x - Minimal Install | |
+| ibm-debian9-amd64 | amd64 | Debian GNU/Linux 9.x - Minimal Install | |
+| ibm-redhat7-amd64 | amd64 | Red Hat Enterprise Linux 7.x - Minimal Install | Gen 1 only. |
+| ibm-ubuntu18-amd64 | amd64 | Ubuntu Linux 18.04 LTS - Minimal Install | |
+| ibm-windows2012-amd64 | amd64 | Windows Server 2012 Standard Edition | Gen 1 only. |
+| ibm-windows2012r2-amd64 | amd64 | Windows Server 2012 R2 Standard Edition | Gen 1 only. |
+| ibm-windows2016-amd64 | amd64 | Windows Server 2016 Standard Edition | Gen 1 only. |
 
 # Image Profiles
 

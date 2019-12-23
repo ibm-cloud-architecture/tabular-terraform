@@ -31,6 +31,17 @@ terraform plan\
 terraform apply\
 terraform destroy
 
+# Images (IBM-provided)
+
+| Name | Description | Other |
+| ibm-centos7-amd64 | CentOS 7.x - Minimal Install | |
+| ibm-debian9-amd64 | Debian GNU/Linux 9.x - Minimal Install | |
+| ibm-redhat7-amd64 | Red Hat Enterprise Linux 7.x - Minimal Install | Gen 1 only. |
+| ibm-ubuntu18-amd64 | Ubuntu Linux 18.04 LTS - Minimal Install | |
+| ibm-windows2012-amd64 | Windows Server 2012 Standard Edition | Gen 1 only. |
+| ibm-windows2012r2-amd64 | Windows Server 2012 R2 Standard Edition | Gen 1 only. |
+| ibm-windows2016-amd64 | Windows Server 2016 Standard Edition | Gen 1 only. |
+
 # Image Profiles
 
 | Name | Family | vCPUs | Memory | Other |
@@ -68,9 +79,6 @@ Note: Names are Gen 2 style and automatically converted to Gen 1 style if using 
 | | Columns are subject to change but no upgrade between sheet versions. |
 | | Column names are generally same as resource arguments. |
 | | Asterisk in column name denotes a required field. |
-| Image | Balanced profiles are bx2-2x8, bx2-4x16 (Gen 1), bx2-8x32, bx2-16x64, bx2-32x128, bx2-48x192, bx2-62x248 (Gen 1). |
-| | Compute profiles are cx2-2x4, cx2-4x8, cx2-8x16, cx2-16x32, cx2-32x64. |
-| | Memory profiles are mx2-2x16, mx2-4x32, mx2-8x64, mx2-16x128, mx2-32x256. |
 | Volume | Profiles are 10iops-tier, 5iops-tier, general-purpose, and custom. |
 | Zone | Zones are Dallas 1-3, Frankfurt 1-3, London 1-3, Sydney 1-3, Tokyo 1-3. |
 | Floating IP | Created from primary_nic_floating_ip or secondary NIC or subnet public_gateway. |

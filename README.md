@@ -69,19 +69,20 @@ terraform destroy
 | | Create and delete timeouts use Terraform default of 60 minutes. |
 | Rules | Protocols are icp:type:code, tcp:port_min:port_max, udp:port_min:port_max, or empty. | 
 | Resource Groups | Terraform destroy only removes state information but does not delete resource group.
-| TBD | is_image, is_vpc_route, is_security_group_network_interface_attachment are not available. |
+| TBD | is_vpc_route, is_security_group_network_interface_attachment are not available. |
 | | is_network_acl and is_instance/network_interfaces are available for Gen1 but not Gen2. |
 
 # Release Notes
 
 | Version | Released | Provider | Description |
 | --- | --- | --- | --- |
+| 0.0.0.0.15 | 2019-12-23 | 0.21.0/1.0.0 | Added images sheet for custom images. |
 | 0.0.0.0.14 | 2019-12-21 | 0.21.0/1.0.0 | Added -t to command to generate Terraform v0.11 or v0.12. |
 | 0.0.0.0.13 | 2019-12-21 | 0.21.0 | Added vpn spreadsheet. |
 | 0.0.0.0.12 | 2019-12-20 | 0.21.0 | Added address_prefix_management to vpc. |
 | | | | Added header sheet/name to rules. |
 | | | | Added multiple vpc capability to vpc. |
-| 0.0.0.0.11 | 2019-12-13 | 0.20.0 | Added rules spreadsheet that includes ACLs and security groups. |
+| 0.0.0.0.11 | 2019-12-13 | 0.20.0 | Added access spreadsheet that includes ACLs and security groups sheets. |
 | 0.0.0.0.10 | 2019-12-12 | 0.20.0 | Added networkinterfaces sheet to include primary and secondary. |
 | | | 0.20.0 | Updated instances to replace primary_nic columns with single primary_network_interface column. |
 | 0.0.0.0.9 | 2019-12-10 | 0.20.0 | Added lb spreadsheet. |

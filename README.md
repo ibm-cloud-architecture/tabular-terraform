@@ -56,7 +56,6 @@ terraform destroy
 | | Rerun after changes and rely on Terraform to handle changes. |
 | Sheets | Use name of basename-groupname for copied sheets (e.g. instances-group1). |
 | | Columns are subject to change but no upgrade between sheet versions. |
-| | Column names are generally same as resource arguments. |
 | | Asterisk in column name denotes a required field. |
 | Regions | Names are UI style or internal name (e.g. Dallas or us-south). |
 | Zones | Names are UI style or internal name (e.g. Dallas 1 or us-south-1). |

@@ -1,6 +1,6 @@
 # Terraformer for IBM Virtual Private Cloud
 
-Automate creation of Terraform for IBM Virtual Private Cloud
+Automate creation of Terraform for IBM Virtual Private Cloud.
 
 ![TerraformerInputExample](/images/terraformerinputexample.png)
 ![TerraformerOutputExample](/images/terraformeroutputexample11.png)

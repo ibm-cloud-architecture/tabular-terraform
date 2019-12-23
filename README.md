@@ -34,6 +34,7 @@ terraform destroy
 # Image Profiles
 
 | Name | Family | vCPUs | Memory (GB) | Other |
+| --- | --- | --- | --- | --- |
 | bx2-2x8 | Balanced | 2 | 8 | |
 | bx2-4x16 | Balanced | 4 | 16 | Gen 1 only. |
 | bx2-8x32 | Balanced | 8 | 32 | |

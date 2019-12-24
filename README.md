@@ -70,13 +70,14 @@ terraform destroy
 | | Create and delete timeouts use Terraform default of 60 minutes. |
 | Rules | Protocols are icp:type:code, tcp:port_min:port_max, udp:port_min:port_max, or empty. | 
 | Resource Groups | Terraform destroy only removes state information but does not delete resource group.
-| TBD | is_vpc_route, is_security_group_network_interface_attachment are not available. |
-| | is_network_acl and is_instance/network_interfaces are available for Gen1 but not Gen2. |
+| TBD | is_security_group_network_interface_attachment not available. |
+| | is_vpc-route, is_network_acl and is_instance/network_interfaces available for Gen1 only. |
 
 # Release Notes
 
 | Version | Released | Provider | Description |
 | --- | --- | --- | --- |
+| 0.0.0.0.16 | 2019-12-24 | 0.21.0/1.0.0 | Added vpcroutes sheet. |
 | 0.0.0.0.15 | 2019-12-23 | 0.21.0/1.0.0 | Added images sheet and removed menus sheet to enable custom images. |
 | 0.0.0.0.14 | 2019-12-21 | 0.21.0/1.0.0 | Added -t to command to generate Terraform v0.11 or v0.12. |
 | 0.0.0.0.13 | 2019-12-21 | 0.21.0 | Added vpn spreadsheet. |

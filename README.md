@@ -76,8 +76,8 @@ terraform destroy
 
 | Version | Released | Provider | Description |
 | --- | --- | --- | --- |
-| 0.0.0.0.18 | 2019-12-26 | 0.21.0/1.0.0 | Optional boot_volume column for boot volume name in instances. |
-| | | | Added instance and attachment_type columns to volumes. |
+| 0.0.0.0.18 | 2019-12-26 | 0.21.0/1.0.0 | Replaced with boot_volume column in instances. |
+| | | | Added instance and attachment_type columns in volumes. |
 | 0.0.0.0.17 | 2019-12-25 | 0.21.0/1.0.0 | Use any value for all fields and do all data validation in code. |
 | | | | Fixed empty field check due to initial then add then delete has different empty value. |
 | 0.0.0.0.16 | 2019-12-24 | 0.21.0/1.0.0 | Added vpcroutes sheet. |

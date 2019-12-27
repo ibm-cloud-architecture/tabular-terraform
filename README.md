@@ -57,7 +57,7 @@ terraform destroy
 | Sheets | Use name of basename-groupname for copied sheets (e.g. instances-group1). |
 | | Columns are subject to change but no upgrade between sheet versions. |
 | | Asterisk in column name denotes a required field. |
-| Images | Image names are Gen 1 or Gen 2 names - Gen 2 are converted to Gen 1. |
+| Images | Image names are Gen 1 or Gen 2 names - Gen 2 names are converted to Gen 1 names. |
 | Regions | Names are UI style or internal name (e.g. Dallas or us-south). |
 | Volumes | Profile names are general-purpose, 5iops-tier, 10iops-tier, or custom. |
 | | Boot and data volumes use same sheet but only name and encryption are valid for boot volumes. |

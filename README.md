@@ -3,8 +3,8 @@
 Automate creation of Terraform for IBM Virtual Private Cloud.
 
 ![TerraformerInputExample](/images/terraformerinputexample.png)
-![TerraformerOutputExample11](/images/terraformeroutputexample11.png)
 ![TerraformerOutputExample12](/images/terraformeroutputexample12.png)
+![TerraformerOutputExample11](/images/terraformeroutputexample11.png)
 
 # Usage Steps
 
@@ -76,8 +76,9 @@ terraform destroy
 
 | Version | Released | Provider | Description |
 | --- | --- | --- | --- |
-| 0.0.0.0.18 | 2019-12-26 | 0.21.0/1.0.0 | Replaced with boot_volume column in instances. |
-| | | | Added instance and attachment_type columns in volumes. |
+| 0.0.0.0.19 | 2019-12-27 | 0.21.0/1.0.0 | Added interface_type in network_interfaces. |
+| 0.0.0.0.18 | 2019-12-26 | 0.21.0/1.0.0 | Added boot_volume and removed previous boot_volume columns in instances. |
+| | | | Added instance and attachment_type in volumes. |
 | 0.0.0.0.17 | 2019-12-25 | 0.21.0/1.0.0 | Use any value for all fields and do all data validation in code. |
 | | | | Fixed empty field check due to initial then add then delete has different empty value. |
 | 0.0.0.0.16 | 2019-12-24 | 0.21.0/1.0.0 | Added vpcroutes sheet. |
@@ -89,14 +90,14 @@ terraform destroy
 | | | | Added multiple vpc capability to vpc. |
 | 0.0.0.0.11 | 2019-12-13 | 0.20.0 | Added access spreadsheet that includes ACLs and security groups sheets. |
 | 0.0.0.0.10 | 2019-12-12 | 0.20.0 | Added networkinterfaces sheet to include primary and secondary. |
-| | | 0.20.0 | Updated instances to replace primary_nic columns with single primary_network_interface column. |
+| | | 0.20.0 | Added primary_network_interface and removed previous primary__nic columns in instances. |
 | 0.0.0.0.9 | 2019-12-10 | 0.20.0 | Added lb spreadsheet. |
 | 0.0.0.0.8 | 2019-12-09 | 0.20.0 | Combined Gen 1 and Gen 2 examples. |
 | | | | Updated menus to improve image profiles readability.  |
 | 0.0.0.0.7 | 2019-12-08 | 0.20.0 | Added volumes sheet.  |
 | 0.0.0.0.6 | 2019-12-08 | 0.20.0 | Added acls sheet.  |
 | 0.0.0.0.5 | 2019-12-07 | 0.20.0 | Added resourcegroups sheet. |
-| | | | Updated instances to replace boot_volume with optional boot_volume_name and boot_volume_encryption columns. |
+| | | | Added boot_volume columns in instances. |
 | 0.0.0.0.4 | 2019-12-03 | 0.19.0 | Fixed subnet/instance timeouts. |
 | | | | Added -p to command to include prefixes on names for shared accounts. |
 | 0.0.0.0.3 | 2019-11-28 | 0.19.0 | Updated subnets to allow gateway:fip on public_gateway.

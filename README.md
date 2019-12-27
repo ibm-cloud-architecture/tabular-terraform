@@ -52,15 +52,16 @@ terraform destroy
 | Component | Description |
 | --- | --- |
 | Files | Example spreadsheets include access, lb, and vpc. |
-| | Related resources are grouped into generated files or use -i command argument. |
+| | Related resources are grouped into generated files. |
 | | Rerun after changes and rely on Terraform to handle changes. |
 | Sheets | Use name of basename-groupname for copied sheets (e.g. instances-group1). |
 | | Columns are subject to change but no upgrade between sheet versions. |
 | | Asterisk in column name denotes a required field. |
 | Regions | Names are UI style or internal name (e.g. Dallas or us-south). |
 | Zones | Names are UI style or internal name (e.g. Dallas 1 or us-south-1). |
-| Image Profiles | Names are Gen 1 or Gen 2 names, or use Gen 2 only which is converted to Gen 1. |
-| Volume Profiles | Names are general-purpose (3iops-tier), 5iops-tier, 10iops-tier, or custom. |
+| Images | Image names are Gen 1 or Gen 2 names - Gen 2 are converted to Gen 1. |
+| Volumes | Profile names are general-purpose, 5iops-tier, 10iops-tier, or custom. |
+| | Boot and data volumes are grouped together but only name and encryption are used for boot volumes |
 | Floating IP | Created from primary_nic_floating_ip or secondary NIC or subnet public_gateway. |
 | | Move FIP to another NIC/Public Gateway and rely on Terraform to handle change. |
 | | Utilizes resource name and target, but zone is not utilized. |

@@ -57,20 +57,20 @@ terraform destroy
 | Sheets | Use name of basename-groupname for copied sheets (e.g. instances-group1). |
 | | Columns are subject to change but no upgrade between sheet versions. |
 | | Asterisk in column name denotes a required field. |
-| Images | Image names are Gen 1 or Gen 2 names - Gen 2 names are converted to Gen 1 names. |
-| Regions | Names are UI style or internal name (e.g. Dallas or us-south). |
-| Volumes | Profile names are general-purpose, 5iops-tier, 10iops-tier, or custom. |
-| | Boot and data volumes use same sheet but only name and encryption are valid for boot volumes. |
-| Zones | Names are UI style or internal name (e.g. Dallas 1 or us-south-1). |
 | Floating IP | Created from primary_nic_floating_ip or secondary NIC or subnet public_gateway. |
 | | Move FIP to another NIC/Public Gateway and rely on Terraform to handle change. |
 | | Utilizes resource name and target, but zone is not utilized. |
 | | Create and delete timeouts use Terraform default of 10 minutes. |
+| Images | Profile names are Gen 1 or Gen 2 style - Gen 2 names are converted to Gen 1 names. |
 | Public Gateway | Created from subnet public_gateway (e.g. gatewayname:optionalfipname). |  
 | | Utilizes resource name, vpc, and zone, but resource_controller_url is not utilized. |
 | | Create and delete timeouts use Terraform default of 60 minutes. |
-| Rules | Protocols are icp:type:code, tcp:port_min:port_max, udp:port_min:port_max, or empty. | 
+| Regions | Names are UI style or internal name (e.g. Dallas or us-south). |
 | Resource Groups | Terraform destroy only removes state information but does not delete resource group.
+| Rules | Protocols are icp:type:code, tcp:port_min:port_max, udp:port_min:port_max, or empty. | 
+| Volumes | Profile names are general-purpose, 5iops-tier, 10iops-tier, or custom. |
+| | Only name and encryption are valid for boot volumes. |
+| Zones | Names are UI style or internal name (e.g. Dallas 1 or us-south-1). |
 | TBD | is_vpc_route, is_network_acl and is_instance/network_interfaces available for Gen1 only. |
 
 # Release Notes

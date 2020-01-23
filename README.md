@@ -8,10 +8,8 @@ Automate creation of Terraform for IBM Virtual Private Cloud.
 
 # Usage Steps
 
-1. Export API credential tokens as environment variables:\
-export IC_API_KEY="IBM Cloud API Key"\
-export IAAS_CLASSIC_API_KEY="IBM Cloud Classic Infrastructure API Key"\
-export IAAS_CLASSIC_USERNAME="IBM Cloud Classic Infrastructure Username"
+1. Export API credential token as an environment variable:\
+export IC_API_KEY="IBM Cloud API Key"
 
 2. Execute terraformer:
 - *Display help:*\

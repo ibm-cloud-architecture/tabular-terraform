@@ -15,15 +15,14 @@ export IC_API_KEY="IBM Cloud API Key"
 terraformer -h
 - *Display version:*\
 terraformer --version
-- *Use Gen1, gen1output directory, add prefix, Dallas region, Terraform v0.11:*\
+- *Use Gen2, gen2output directory, add prefix, Dallas region:*\
+terraformer -o gen2output -p prefix -r Dallas access.xlsx\
+terraformer -o gen2output -p prefix -r Dallas lb.xlsx\
+terraformer -o gen2output -p prefix -r Dallas vpc.xlsx
+- *Use Gen1, gen1output directory, add prefix, Dallas region:*\
 terraformer -g 1 -o gen1output -p prefix -r Dallas access.xlsx\
+terraformer -g 1 -o gen1output -p prefix -r Dallas lp.xlsx\
 terraformer -g 1 -o gen1output -p prefix -r Dallas vpc.xlsx
-- *Use Gen2, gen2output directory, add prefix, Dallas region, Terraform v0.11:*\
-terraformer -g 2 -o gen2output -p prefix -r Dallas access.xlsx\
-terraformer -g 2 -o gen2output -p prefix -r Dallas vpc.xlsx
-- *Use Gen2, gen2output directory, add prefix, Dallas region, Terraform v0.12:*\
-terraformer -g 2 -o gen2output -p prefix -r Dallas -t 12 regional.xlsx\
-terraformer -g 2 -o gen2output -p prefix -r Dallas -t 12 vpc.xlsx
 
 3. Execute terraform in specified output directory:\
 terraform fmt\

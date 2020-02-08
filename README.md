@@ -75,31 +75,4 @@ terraform destroy
 
 | Version | Released | Provider | Description |
 | --- | --- | --- | --- |
-| 0.0.0.0.19 | 2019-12-27 | 0.21.0/1.0.0 | Added interface_type in network_interfaces. |
-| 0.0.0.0.18 | 2019-12-26 | 0.21.0/1.0.0 | Added boot_volume and removed previous boot_volume columns in instances. |
-| | | | Added instance and attachment_type in volumes. |
-| 0.0.0.0.17 | 2019-12-25 | 0.21.0/1.0.0 | Use any value for all fields and do all data validation in code. |
-| | | | Fixed empty field check due to initial then add then delete has different empty value. |
-| 0.0.0.0.16 | 2019-12-24 | 0.21.0/1.0.0 | Added vpcroutes sheet. |
-| 0.0.0.0.15 | 2019-12-23 | 0.21.0/1.0.0 | Added images sheet and removed menus sheet to enable custom images. |
-| 0.0.0.0.14 | 2019-12-21 | 0.21.0/1.0.0 | Added -t to command to generate Terraform v0.11 or v0.12. |
-| 0.0.0.0.13 | 2019-12-21 | 0.21.0 | Added vpn spreadsheet. |
-| 0.0.0.0.12 | 2019-12-20 | 0.21.0 | Added address_prefix_management to vpc. |
-| | | | Added header sheet/name to rules. |
-| | | | Added multiple vpc capability to vpc. |
-| 0.0.0.0.11 | 2019-12-13 | 0.20.0 | Added access spreadsheet that includes ACLs and security groups sheets. |
-| 0.0.0.0.10 | 2019-12-12 | 0.20.0 | Added networkinterfaces sheet to include primary and secondary. |
-| | | 0.20.0 | Added primary_network_interface and removed previous primary__nic columns in instances. |
-| 0.0.0.0.9 | 2019-12-10 | 0.20.0 | Added lb spreadsheet. |
-| 0.0.0.0.8 | 2019-12-09 | 0.20.0 | Combined Gen 1 and Gen 2 examples. |
-| | | | Updated menus to improve image profiles readability.  |
-| 0.0.0.0.7 | 2019-12-08 | 0.20.0 | Added volumes sheet.  |
-| 0.0.0.0.6 | 2019-12-08 | 0.20.0 | Added acls sheet.  |
-| 0.0.0.0.5 | 2019-12-07 | 0.20.0 | Added resourcegroups sheet. |
-| | | | Added boot_volume columns in instances. |
-| 0.0.0.0.4 | 2019-12-03 | 0.19.0 | Fixed subnet/instance timeouts. |
-| | | | Added -p to command to include prefixes on names for shared accounts. |
-| 0.0.0.0.3 | 2019-11-28 | 0.19.0 | Updated subnets to allow gateway:fip on public_gateway.
-| | | | Added -i to command to generate individual files excluding security group. |
-| 0.0.0.0.2 | 2019-11-19 | 0.19.0 | Gen 1 in sync with Gen 2 features. |
-| 0.0.0.0.1 | 2019-11-15 | 0.19.0 | Gen 2, no LB or VPN or ACLs or secondary volumes/NICs or custom images. |
+| 1.2.0.0 | 2020-02-08 | 1.2.0 | Initial release with all resources now in provider. |

@@ -66,10 +66,10 @@ terraform destroy
 | Regions | Names are UI style or internal name (e.g. Dallas or us-south). |
 | Resource Groups | Terraform destroy only removes state information but does not delete resource group.
 | Rules | Protocols are icp:type:code, tcp:port_min:port_max, udp:port_min:port_max, or empty. | 
+| | Protocols are problematic in 1.2.0 provider so access.xlsx has empty values for these until fixed. | 
 | Volumes | Profile names are general-purpose, 5iops-tier, 10iops-tier, or custom. |
 | | Only name and encryption are valid for boot volumes. |
 | Zones | Names are UI style or internal name (e.g. Dallas 1 or us-south-1). |
-| TBD | is_vpc_route, is_network_acl and is_instance/network_interfaces available for Gen1 only. |
 
 # Release Notes
 

@@ -21,7 +21,7 @@ terraformer -o gen2output -p prefix -r Dallas lb.xlsx\
 terraformer -o gen2output -p prefix -r Dallas vpc.xlsx
 - *Use Gen1, gen1output directory, add prefix, Dallas region:*\
 terraformer -g 1 -o gen1output -p prefix -r Dallas access.xlsx\
-terraformer -g 1 -o gen1output -p prefix -r Dallas lp.xlsx\
+terraformer -g 1 -o gen1output -p prefix -r Dallas lb.xlsx\
 terraformer -g 1 -o gen1output -p prefix -r Dallas vpc.xlsx
 
 3. Execute terraform in specified output directory:\

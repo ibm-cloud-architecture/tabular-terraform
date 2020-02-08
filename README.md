@@ -75,4 +75,4 @@ terraform destroy
 
 | Version | Released | Provider | Description |
 | --- | --- | --- | --- |
-| 1.2.0.0 | 2020-02-08 | 1.2.0 | Initial release with all VPC Gen2 resources now in provider. |
+| 1.2.0.0 | 2020-02-08 | 1.2.0 | Initial release with all VPC Gen2 resources in provider. |

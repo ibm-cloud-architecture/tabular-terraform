@@ -73,4 +73,5 @@ terraform destroy
 
 | Version | Released | Provider | Description |
 | --- | --- | --- | --- |
+| 1.2.0.1 | 2020-02-10 | 1.2.0 | Added fip and public gateway sheets for the remaining arguments. |
 | 1.2.0.0 | 2020-02-08 | 1.2.0 | Initial release with all VPC Gen2 resources in provider. |

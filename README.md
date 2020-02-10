@@ -55,12 +55,10 @@ terraform destroy
 | | Asterisk in column name denotes a required field. |
 | Floating IP | Created from primary_nic_floating_ip or secondary NIC or subnet public_gateway. |
 | | Move FIP to another NIC/Public Gateway and rely on Terraform to handle change. |
-| | Utilizes resource name and target, but zone is not utilized. |
-| | Create and delete timeouts use Terraform default of 10 minutes. |
+| | Use floatingips sheet to set additional arguments. |
 | Images | Profile names are Gen 1 or Gen 2 style - Gen 2 names are converted to Gen 1 names. |
 | Public Gateway | Created from subnet public_gateway (e.g. gatewayname:optionalfipname). |  
-| | Utilizes resource name, vpc, and zone, but resource_controller_url is not utilized. |
-| | Create and delete timeouts use Terraform default of 60 minutes. |
+| | Use publicgateways sheet to set additional arguments. |
 | Regions | Names are UI style or internal name (e.g. Dallas or us-south). |
 | Resource Groups | Terraform destroy only removes state information but does not delete resource group.
 | Rules | Protocols are icp:type:code, tcp:port_min:port_max, udp:port_min:port_max, or empty. | 

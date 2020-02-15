@@ -61,8 +61,6 @@ terraform destroy
 | | Use publicgateways sheet to set additional arguments. |
 | Regions | Names are UI style or internal name (e.g. Dallas or us-south). |
 | Resource Groups | Terraform destroy only removes state information but does not delete resource group.
-| Rules | Protocols are icp:type:code, tcp:port_min:port_max, udp:port_min:port_max, or empty. | 
-| | Protocols for ACLs in access.xlsx are currently empty values until issue #1074 is fixed. | 
 | Volumes | Profile names are general-purpose, 5iops-tier, 10iops-tier, or custom. |
 | | Only name and encryption are valid for boot volumes. |
 | Zones | Names are UI style or internal name (e.g. Dallas 1 or us-south-1). |
@@ -71,5 +69,5 @@ terraform destroy
 
 | Version | Released | Provider | Description |
 | --- | --- | --- | --- |
-| 1.2.0.1 | 2020-02-10 | 1.2.0 | Added fip and public gateway sheets for the remaining arguments. |
+| 1.2.1.0 | 2020-02-14 | 1.2.1 | See provider for new fields and deprecated field. |
 | 1.2.0.0 | 2020-02-08 | 1.2.0 | Initial release with all VPC Gen2 resources in provider. |

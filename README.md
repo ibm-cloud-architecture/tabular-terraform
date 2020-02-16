@@ -5,6 +5,8 @@ Automate creation of Terraform for IBM Virtual Private Cloud.
 ![TerraformerInputExample](/images/terraformerinputexample.png)
 ![TerraformerOutputExample12](/images/terraformeroutputexample12.png)
 
+[Release Notes](releases.md)
+
 # Usage Steps
 
 1. Export API credential token as an environment variable:\
@@ -64,11 +66,3 @@ terraform destroy
 | Volumes | Profile names are general-purpose, 5iops-tier, 10iops-tier, or custom. |
 | | Only name and encryption are valid for boot volumes. |
 | Zones | Names are UI style or internal name (e.g. Dallas 1 or us-south-1). |
-
-# Release Notes
-
-| Version | Released | Provider | Description |
-| --- | --- | --- | --- |
-| 1.2.1.0 | 2020-02-14 | 1.2.1 | See provider for new fields and deprecated field. |
-| 1.2.0.1 | 2020-02-10 | 1.2.0 | Added floatingips and publicgateways sheets. |
-| 1.2.0.0 | 2020-02-08 | 1.2.0 | All VPC Gen2 resources now in provider. |

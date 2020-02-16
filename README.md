@@ -2,6 +2,9 @@
 
 Automate creation of Terraform for IBM Virtual Private Cloud.
 
+Current Terraformer Release: 1.2.1.0
+Current Terraform Release: 1.2.1
+
 [Release Notes](releases.md)
 
 # Example

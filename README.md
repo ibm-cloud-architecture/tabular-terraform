@@ -5,12 +5,12 @@ Automate creation of Terraform for IBM Virtual Private Cloud.
 Terraformer v1.2.1.0 ([Terraformer Release Notes](releases.md))\
 IBM Cloud Terraform Provider v1.2.1 ([Provider Release Notes](https://github.com/IBM-Cloud/terraform-provider-ibm/releases))
 
-Current State: 
+Current state: 
 1. Only Terraform v0.12 supported.
 2. All current resources should be supported in Gen2 (x86 only) and Gen1.
 3. Not all fields and variations have been thoroughly tested.
 4. Additional fields for FIP and Public Gateway not yet supported.
-5. Columns are subject to change when changed in provider, but work is planned to alleviate this where possible.
+5. Columns are subject to change when changed in provider, but work is planned to help where possible.
 
 ![TerraformerInputExample](/images/terraformerinputexample.png)
 ![TerraformerOutputExample12](/images/terraformeroutputexample12.png)
@@ -20,7 +20,12 @@ Current State:
 1. Export API credential token as an environment variable:\
 export IC_API_KEY="IBM Cloud API Key"
 
-2. Execute terraformer:
+2. Install terraformer:
+- Copy mac/terraformer executable to Mac or windows/terraformer.exe to Windows.
+- Copy examples/*.xlsx locally too.
+- Update examples as needed run terraformer on the examples as described below.
+
+3. Execute terraformer:
 - *Display help:*\
 terraformer -h
 - *Display version:*\
@@ -34,7 +39,7 @@ terraformer -g 1 -o gen1output -p prefix -r Dallas access.xlsx\
 terraformer -g 1 -o gen1output -p prefix -r Dallas lb.xlsx\
 terraformer -g 1 -o gen1output -p prefix -r Dallas vpc.xlsx
 
-3. Execute terraform in specified output directory:\
+4. Execute terraform in specified output directory:\
 terraform fmt\
 terraform init\
 terraform plan\

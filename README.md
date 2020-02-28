@@ -23,7 +23,7 @@ export IC_API_KEY="IBM Cloud API Key"
 
 2. Install terraformer:
 - Copy mac/terraformer executable to Mac or windows/terraformer.exe to Windows.
-- Copy examples/*.xlsx to Mac or Windows and updated as needed.
+- Copy examples/*.xlsx to Mac or Windows and customize as desired.
 - Run terraformer on the examples as described below.
 
 3. Execute terraformer:

@@ -8,9 +8,10 @@ IBM Cloud Terraform Provider v1.2.1 ([Provider Release Notes](https://github.com
 Current state: 
 1. Only Terraform v0.12 supported.
 2. All current resources should be supported in Gen2 (x86 only) and Gen1.
-3. Not all fields and variations have been thoroughly tested.
+3. All fields and variations are continuing to be tested.
 4. Additional fields for FIP and Public Gateway not yet supported.
-5. Columns are subject to change when changed in provider, but plan to look at migrating spreadsheets.
+5. Additional resource fields such as count are planned to be added where appropriate.
+5. Plan to migrate sheets eventually when affected by changes to provider.
 
 ![TerraformerInputExample](/images/terraformerinputexample.png)
 ![TerraformerOutputExample12](/images/terraformeroutputexample12.png)

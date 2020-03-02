@@ -13,6 +13,8 @@ Current state:
 5. Additional resource fields such as count are planned to be added where appropriate.
 5. Plan to migrate sheets eventually when affected by changes to provider.
 
+For creating diagrams refer to ([Stencils for IBM Virtual Private Cloud](https://github.com/ibm-cloud-architecture/ibm-cloud-stencils))
+
 ![TerraformerInputExample](/images/terraformerinputexample.png)
 ![TerraformerOutputExample12](/images/terraformeroutputexample12.png)
 

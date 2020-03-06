@@ -23,7 +23,7 @@ To create diagrams for IBM Virtual Private Cloud refer to [IBM Cloud Stencils](h
 1. Export API credential token as an environment variable:\
 export IC_API_KEY="IBM Cloud API Key"
 
-2. Install Python 3.x on Mac or Windows from https://www.python.org/
+2. Install Python 3 on Mac or Windows from https://www.python.org/ and following libraries:
 - pip3 install numpy
 - pip3 install pandas
 - pip3 install xlrd

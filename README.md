@@ -6,13 +6,15 @@ Terraformer 1.2.3.1 ([Terraformer Release Notes](releases.md))\
 IBM Cloud Terraform Provider 1.2.3 ([Provider Release Notes](https://github.com/IBM-Cloud/terraform-provider-ibm/releases))\
 Python 3.8.2 ([Python Release Notes](https://www.python.org/downloads/release/python-382/))
 
+Note: Terraformer is provided as-is, spreadsheet format is subject to change with changes to provider, and best effort to fix issues.
+
 Current state: 
 1. Only Terraform v0.12 supported.
 2. Resources in provider should be supported in Gen2 (x86 only) and Gen1.
 3. All fields and variations are continuing to be tested.
 4. Additional fields for FIP and Public Gateway not yet supported.
 5. Additional resource fields such as count are planned to be added where appropriate.
-5. Plan to migrate sheets eventually when affected by changes to provider.
+5. Plan to look at migrating sheets when affected by changes to provider.
 
 To create diagrams for IBM Virtual Private Cloud refer to [IBM Cloud Stencils](https://github.com/ibm-cloud-architecture/ibm-cloud-stencils).
 

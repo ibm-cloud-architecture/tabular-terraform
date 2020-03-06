@@ -2,8 +2,9 @@
 
 Automate creation of Terraform for IBM Virtual Private Cloud.
 
-Terraformer v1.2.3.0 ([Terraformer Release Notes](releases.md))\
+Terraformer v1.2.3.1 ([Terraformer Release Notes](releases.md))\
 IBM Cloud Terraform Provider v1.2.3 ([Provider Release Notes](https://github.com/IBM-Cloud/terraform-provider-ibm/releases))
+Python 3.8.2 ([Python Release Notes](https://www.python.org/downloads/release/python-382/))
 
 Current state: 
 1. Only Terraform v0.12 supported.

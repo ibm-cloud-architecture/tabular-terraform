@@ -23,7 +23,10 @@ To create diagrams for IBM Virtual Private Cloud refer to [IBM Cloud Stencils](h
 1. Export API credential token as an environment variable:\
 export IC_API_KEY="IBM Cloud API Key"
 
-2. Install Python 3.x on Mac or Windows.  Mac includes Python 2.x so Python 3.x needs to be installed separately.
+2. Install Python 3.x on Mac or Windows from https://www.python.org/
+- pip3 install numpy
+- pip3 install pandas
+- pip3 install xlrd
 
 3. Install terraformer:
 - Copy mac/terraformer executable to Mac or windows/terraformer.exe to Windows.

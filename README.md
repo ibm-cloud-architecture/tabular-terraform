@@ -2,19 +2,18 @@
 
 Automate creation of Terraform for IBM Virtual Private Cloud.
 
-Current Versions:\
 Terraformer 1.2.3.1 ([Terraformer Release Notes](releases.md))\
 IBM Cloud Terraform Provider 1.2.3 ([Provider Release Notes](https://github.com/IBM-Cloud/terraform-provider-ibm/releases))\
 Python 3.8.2 ([Python Release Notes](https://www.python.org/downloads/release/python-382/))
 
-Overview Notes:\
-Terraformer is provided with no formal support and the format is subject to change.\
-Report problems and request missing features by opening a GitHub issue.\
-Resources in provider should be supported in Gen2 (x86 only) and Gen1.\
-All fields, custom images, and secondary NICs need further testing.\
-Additional fields for FIP and Public Gateway not yet supported.\
-Additional resource fields such as count are planned to be added where appropriate.\
-Plan to look at migrating sheets when format changes are required.
+Overview:
+1. Terraformer is provided with no formal support and the format is subject to change.
+2. Report problems and request missing features informally by opening a GitHub issue.
+3. Resources in provider should be supported in Gen2 (x86 only) and Gen1.
+4. All fields, custom images, and secondary NICs need further testing.
+5. Additional fields for FIP and Public Gateway not yet supported.
+6. Additional resource fields such as count are planned to be added where appropriate.
+7. Plan to look at migrating sheets when format changes are required.
 
 To create diagrams for IBM Virtual Private Cloud refer to [IBM Cloud Stencils](https://github.com/ibm-cloud-architecture/ibm-cloud-stencils).
 

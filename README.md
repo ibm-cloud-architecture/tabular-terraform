@@ -1,11 +1,5 @@
 # Terraformer for IBM Virtual Private Cloud
 
-Terraformer automates creation of Terraform for IBM Virtual Private Cloud.
-
-For new Terraform users, Terraformer helps to get on the Terraform bandwagon by learning Terraform without focusing on the Terraform syntax. 
-
-For experienced Terraform users, Terraformer helps to expedite the implementation of Terraform, or Terraformer can used to expedite specific parts of a Terraform implementation such as rules for ACLs and Security Groups.
-
 Terraformer 1.2.3.1 ([Terraformer Release Notes](releases.md))\
 IBM Cloud Terraform Provider 1.2.3 ([Provider Release Notes](https://github.com/IBM-Cloud/terraform-provider-ibm/releases))\
 Python 3.8.2 ([Python Release Notes](https://www.python.org/downloads/release/python-382/))
@@ -14,12 +8,15 @@ To create diagrams for IBM Virtual Private Cloud refer to [IBM Cloud Stencils](h
 
 # Overview
 
-1. Terraformer is provided with no formal support and the format is subject to change.
-2. Report problems informally by opening a GitHub issue.
-3. All fields, custom images, secondary NICs, and Power need further testing.
-4. Additional fields in floatingips and publicgateways sheets are not yet supported.
-5. Considering adding resource-specific fields such as count.
-6. Considering migrating sheets when format changes are required.
+1. Terraformer automates creation of Terraform for IBM Virtual Private Cloud.
+2. For new Terraform users, Terraformer helps to get on the Terraform bandwagon by learning Terraform without focusing on the Terraform syntax. 
+3. For experienced Terraform users, Terraformer helps to expedite the implementation of Terraform, or Terraformer can used to expedite specific parts of a Terraform implementation such as rules for ACLs and Security Groups.
+4. Terraformer is provided with no formal support and the format is subject to change.
+5. Report problems informally by opening a GitHub issue.
+6. All fields, custom images, secondary NICs, and Power need further testing.
+7. Additional fields in floatingips and publicgateways sheets are not yet supported.
+8. Considering adding resource-specific fields such as count.
+9. Considering migrating sheets when format changes are required.
 
 # Example
 

@@ -8,7 +8,7 @@ To create diagrams for IBM Virtual Private Cloud refer to [IBM Cloud Stencils](h
 
 # Overview
 
-- Terraformer handles the creation of Terraform syntax leaving the user to focus on the creation of simple spreadsheet data that is used by Terraformer to include with the Terraform syntax.
+- Terraformer handles the creation of Terraform syntax leaving the user to focus on the creation of simple spreadsheet data that is used by Terraformer in creating the Terraform files.
 - For new Terraform users, Terraformer helps to get on the Terraform bandwagon by using and learning Terraform without focusing on the Terraform syntax. 
 - For experienced Terraform users, Terraformer helps to expedite the implementation of Terraform, or Terraformer can used to expedite specific parts of a Terraform implementation such as the rules for ACLs and Security Groups.
 - Terraformer is provided with no formal support and the format is subject to change.

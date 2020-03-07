@@ -14,11 +14,6 @@ To create diagrams for IBM Virtual Private Cloud refer to [IBM Cloud Stencils](h
 - Terraformer is provided with no formal support and the format is subject to change.
 - Report problems informally by opening a GitHub issue.
 
-- All fields, custom images, secondary NICs, and Power need further testing.
-- Additional fields in floatingips and publicgateways sheets are not yet supported.
-- Considering adding resource-specific fields such as count.
-- Considering migrating sheets when format changes are required.
-
 # Example
 
 ![TerraformerInputExample](/images/terraformerinputexample.png)
@@ -76,6 +71,10 @@ terraform destroy
 
 | Component | Description |
 | --- | --- |
+| Overall |  All fields, custom images, secondary NICs, and Power need further testing. |
+| | Additional fields in floatingips and publicgateways sheets are not yet supported. |
+| | Considering adding resource-specific fields such as count. |
+| | Considering migrating sheets when format changes are required. |
 | Files | Example spreadsheets include access, lb, and vpc. |
 | | Related resources are grouped into generated files. |
 | | Rerun after changes and rely on Terraform to handle changes. |

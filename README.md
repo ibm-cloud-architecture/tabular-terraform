@@ -8,7 +8,7 @@ Python 3.8.2 ([Python Release Notes](https://www.python.org/downloads/release/py
 
 Overview:
 1. Terraformer is provided with no formal support and the format is subject to change.
-2. Report problems and request missing features informally by opening a GitHub issue.
+2. Report problems informally by opening a GitHub issue.
 3. Resources in provider should be supported in Gen2 (x86 only) and Gen1.
 4. All fields, custom images, and secondary NICs need further testing.
 5. Additional fields for FIP and Public Gateway not yet supported.

@@ -6,7 +6,10 @@ Terraformer 1.2.3.1 ([Terraformer Release Notes](releases.md))\
 IBM Cloud Terraform Provider 1.2.3 ([Provider Release Notes](https://github.com/IBM-Cloud/terraform-provider-ibm/releases))\
 Python 3.8.2 ([Python Release Notes](https://www.python.org/downloads/release/python-382/))
 
-Overview:
+To create diagrams for IBM Virtual Private Cloud refer to [IBM Cloud Stencils](https://github.com/ibm-cloud-architecture/ibm-cloud-stencils).
+
+# Overview
+
 1. Terraformer is provided with no formal support and the format is subject to change.
 2. Report problems informally by opening a GitHub issue.
 3. Resources in provider should be supported in Gen2 (x86 only) and Gen1.
@@ -15,12 +18,12 @@ Overview:
 6. Resource-specific fields such as count are planned to be added.
 7. Plan to look at migrating sheets when format changes are required.
 
-To create diagrams for IBM Virtual Private Cloud refer to [IBM Cloud Stencils](https://github.com/ibm-cloud-architecture/ibm-cloud-stencils).
+# Example
 
 ![TerraformerInputExample](/images/terraformerinputexample.png)
 ![TerraformerOutputExample12](/images/terraformeroutputexample12.png)
 
-# Usage Steps
+# Usage
 
 1. Export API credential token as an environment variable:\
 export IC_API_KEY="IBM Cloud API Key"
@@ -68,7 +71,7 @@ terraform destroy
 | ibm-windows2012r2-amd64 | amd64 | Windows Server 2012 R2 Standard Edition | Gen 1 only. |
 | ibm-windows2016-amd64 | amd64 | Windows Server 2016 Standard Edition | Gen 1 only. |
 
-# Implementation Notes
+# Notes
 
 | Component | Description |
 | --- | --- |

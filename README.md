@@ -1,7 +1,9 @@
 # Terraformer for IBM Virtual Private Cloud
 
-Terraformer automates creation of Terraform for IBM Virtual Private Cloud.\ 
-For new Terraform users, Terraformer helps to start learning and using Terraform.\
+Terraformer automates creation of Terraform for IBM Virtual Private Cloud.
+
+For new Terraform users, Terraformer helps to get on the Terraform bandwagon by learning and using Terraform.
+
 For experienced Terraform users, Terraformer helps to expedite the implementation of Terraform, or Terraformer can used to expedite specific parts of a Terraform implemention such as Access Control Lists and Security Groups.
 
 Terraformer 1.2.3.1 ([Terraformer Release Notes](releases.md))\

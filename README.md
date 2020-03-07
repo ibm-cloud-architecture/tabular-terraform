@@ -6,7 +6,7 @@ Terraformer 1.2.3.1 ([Terraformer Release Notes](releases.md))\
 IBM Cloud Terraform Provider 1.2.3 ([Provider Release Notes](https://github.com/IBM-Cloud/terraform-provider-ibm/releases))\
 Python 3.8.2 ([Python Release Notes](https://www.python.org/downloads/release/python-382/))
 
-Note: Terraformer is provided as-is, format is subject to change, best effort to fix issues, and thanks for your interest.
+Note: Terraformer is provided as-is, format is subject to change, and thanks for your interest.
 
 Current state: 
 1. Only Terraform v0.12 supported.

@@ -83,10 +83,10 @@ terraform destroy
 | | Asterisk in column name denotes a required field. |
 | Floating IP | Created from primary_nic_floating_ip or secondary NIC or subnet public_gateway. |
 | | Move FIP to another NIC/Public Gateway and rely on Terraform to handle change. |
-| | Use floatingips sheet to set additional arguments. |
+| | Use floatingips sheet to set additional arguments - not currently implemented. |
 | Images | Profile names are Gen 1 or Gen 2 style - Gen 2 names are converted to Gen 1 names. |
 | Public Gateway | Created from subnet public_gateway (e.g. gatewayname:optionalfipname). |  
-| | Use publicgateways sheet to set additional arguments. |
+| | Use publicgateways sheet to set additional arguments - not currently implemented. |
 | Regions | Names are UI style or internal name (e.g. Dallas or us-south). |
 | Resource Groups | Terraform destroy only removes state information but does not delete resource group.
 | Volumes | Profile names are general-purpose, 5iops-tier, 10iops-tier, or custom. |

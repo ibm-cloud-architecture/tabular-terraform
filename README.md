@@ -9,7 +9,7 @@ To create diagrams for IBM Virtual Private Cloud refer to [IBM Cloud Stencils](h
 # Overview
 
 1. Terraformer automates creation of Terraform for IBM Virtual Private Cloud.
-2. For new Terraform users, Terraformer helps to get on the Terraform bandwagon by learning Terraform without focusing on the Terraform syntax. 
+2. For new Terraform users, Terraformer helps to get on the Terraform bandwagon by using and learning Terraform without focusing on the Terraform syntax. 
 3. For experienced Terraform users, Terraformer helps to expedite the implementation of Terraform, or Terraformer can used to expedite specific parts of a Terraform implementation such as rules for ACLs and Security Groups.
 4. Terraformer is provided with no formal support and the format is subject to change.
 5. Report problems informally by opening a GitHub issue.

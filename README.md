@@ -11,8 +11,8 @@ Overview:
 2. Report problems informally by opening a GitHub issue.
 3. Resources in provider should be supported in Gen2 (x86 only) and Gen1.
 4. All fields, custom images, and secondary NICs need further testing.
-5. Additional fields for FIP and Public Gateway not yet supported.
-6. Additional resource fields such as count are planned to be added where appropriate.
+5. Additional fields for FIP and Public Gateway are not yet supported.
+6. Resource-specific fields such as count are planned to be added.
 7. Plan to look at migrating sheets when format changes are required.
 
 To create diagrams for IBM Virtual Private Cloud refer to [IBM Cloud Stencils](https://github.com/ibm-cloud-architecture/ibm-cloud-stencils).

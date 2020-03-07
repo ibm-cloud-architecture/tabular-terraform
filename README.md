@@ -13,7 +13,7 @@ Overview:
 4. All fields, custom images, and secondary NICs need further testing.
 5. Additional fields for FIP and Public Gateway not yet supported.
 6. Additional resource fields such as count are planned to be added where appropriate.
-7. Plan to look at migrating sheets when format is changed due to provider or other changes.
+7. Plan to look at migrating sheets when format changes are required.
 
 To create diagrams for IBM Virtual Private Cloud refer to [IBM Cloud Stencils](https://github.com/ibm-cloud-architecture/ibm-cloud-stencils).
 
@@ -26,9 +26,9 @@ To create diagrams for IBM Virtual Private Cloud refer to [IBM Cloud Stencils](h
 export IC_API_KEY="IBM Cloud API Key"
 
 2. Install Python 3.8.2 on Mac or Windows from https://www.python.org/ with following libraries:
-- pip3 install numpy
-- pip3 install pandas
-- pip3 install xlrd
+- pip install numpy
+- pip install pandas
+- pip install xlrd
 
 3. Install terraformer:
 - Copy mac/terraformer executable to Mac or windows/terraformer.exe to Windows.

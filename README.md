@@ -15,8 +15,8 @@ To create diagrams for IBM Virtual Private Cloud refer to [IBM Cloud Stencils](h
 3. Resources in provider are generally supported in Gen2 (x86 only) and Gen1.
 4. All fields, custom images, and secondary NICs need further testing.
 5. Additional fields for FIP and Public Gateway are not yet supported.
-6. Plan to look at adding resource-specific fields such as count.
-7. Plan to look at migrating sheets when format changes are required.
+6. Considering adding resource-specific fields such as count.
+7. Considering migrating sheets when format changes are required.
 
 # Example
 

@@ -2,7 +2,7 @@
 
 | Version | Released | Provider | Description |
 | --- | --- | --- | --- |
-| 1.2.3.2 | 2020-03-08 | 1.2.3 | Added -d command option. |
+| 1.2.3.2 | 2020-03-08 | 1.2.3 | Testing -d command option. |
 | 1.2.3.1 | 2020-03-05 | 1.2.3 | Rebuilt on Python 3.8.2. |
 | 1.2.3.0 | 2020-03-04 | 1.2.3 | Tested on 1.2.3 provider. |
 | 1.2.2.0 | 2020-02-29 | 1.2.2 | Tested on 1.2.2 provider. |

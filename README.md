@@ -67,7 +67,7 @@ terraform destroy
 | ibm-windows2012r2-amd64 | amd64 | Windows Server 2012 R2 Standard Edition | Gen 1 only. |
 | ibm-windows2016-amd64 | amd64 | Windows Server 2016 Standard Edition | Gen 1 only. |
 
-# Notes
+# Implementation
 
 | Component | Description |
 | --- | --- |

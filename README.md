@@ -8,36 +8,31 @@
 - Terraformer is provided with no formal support but problems can be reported by opening a GitHub issue.
 - Spreadsheet format is subject to change but a future consideration is to migrate sheets when format changes.
 
+![TerraformerInputExample](/images/terraformerinputexample.png)
+![TerraformerOutputExample12](/images/terraformeroutputexample12.png)
+
 To create diagrams for IBM Virtual Private Cloud refer to [IBM Cloud Stencils](https://github.com/ibm-cloud-architecture/ibm-cloud-stencils).
 
 ## Requirements
 
 - IBM Cloud Terraform Provider v1.2.3 ([Provider Release Notes](https://github.com/IBM-Cloud/terraform-provider-ibm/releases))
 - Terraform v0.12.23 ([Terraform Release Notes](https://www.terraform.io/downloads.html)
-- Python v3.8.2 ([Python Release Notes](https://www.python.org/downloads/release/python-382/))
+- Python v3.8.2 ([Python Release Notes](https://www.python.org/downloads/release/python-382/)) with libraries numpy, pandas, xlrd
 
 ## Installation
 
 1. [Download Terraformer](/releases/releases.md)
+2. Unzip the release archive to extract the executable and input samples.
+3. Export API credential token as environment variable: export IC_API_KEY="IBM CLOUD API Key"
 
-## Example
+## Usage
 
-![TerraformerInputExample](/images/terraformerinputexample.png)
-![TerraformerOutputExample12](/images/terraformeroutputexample12.png)
-
-# Usage
-
-2. Install Python 3.8.2 on Mac or Windows from https://www.python.org/ with following libraries:
-- pip install numpy
-- pip install pandas
-- pip install xlrd
-
-3. Install terraformer:
+1. Install terraformer:
 - Copy mac/terraformer executable to Mac or windows/terraformer.exe to Windows.
 - Copy contents of examples folder to Mac or Windows and customize as desired.
 - Run terraformer on the examples as described below.
 
-4. Execute terraformer:
+2. Execute terraformer:
 - Display help:\
 terraformer -h
 - Display version:\
@@ -51,14 +46,14 @@ terraformer -g 1 -o gen1output -p prefix -r Dallas access.xlsx\
 terraformer -g 1 -o gen1output -p prefix -r Dallas lb.xlsx\
 terraformer -g 1 -o gen1output -p prefix -r Dallas vpc.xlsx
 
-5. Execute terraform in specified output directory:\
+3. Execute terraform in specified output directory:\
 terraform fmt\
 terraform init\
 terraform plan\
 terraform apply\
 terraform destroy
 
-# Regions
+## Regions
 
 | Region | Zones | Notes |
 | --- | --- | --- |
@@ -69,7 +64,7 @@ terraform destroy
 | Tokyo | Tokyo 1 <br/> Tokyo 2 <br/> Tokyo 3 | Gen1 only. |
 | Washington DC | Washington DC 1 <br/> Washington DC 2 <br/> Washington DC 3 | |
 
-# Images (IBM-provided)
+## Images (IBM-provided)
 
 | Name | Arch | Description | Notes |
 | --- | --- | --- | --- |
@@ -85,7 +80,7 @@ terraform destroy
 | ibm-debian9-ppc64le | ppc64le | Debian GNU/Linux 9.x - Minimal Install | Gen2 only. |
 | ibm-ubuntu18-ppc64le | ppc64le | Ubuntu Linux 18.04 LTS - Minimal Install | Gen2 only. |
 
-# Implementation
+## Implementation
 
 | Component | Description |
 | --- | --- |

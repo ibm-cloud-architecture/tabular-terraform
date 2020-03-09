@@ -31,19 +31,19 @@ export IC_API_KEY="IBM Cloud API Key"
 
 3. Install terraformer:
 - Copy mac/terraformer executable to Mac or windows/terraformer.exe to Windows.
-- Copy examples/*.xlsx to Mac or Windows and customize as desired.
+- Copy contents of examples folder to Mac or Windows and customize as desired.
 - Run terraformer on the examples as described below.
 
 4. Execute terraformer:
-- *Display help:*\
+- Display help:\
 terraformer -h
-- *Display version:*\
+- Display version:\
 terraformer --version
-- *Use Gen2, gen2output directory, add prefix, Dallas region:*\
+- Use Gen2, gen2output directory, add prefix, Dallas region:\
 terraformer -o gen2output -p prefix -r Dallas access.xlsx\
 terraformer -o gen2output -p prefix -r Dallas lb.xlsx\
 terraformer -o gen2output -p prefix -r Dallas vpc.xlsx
-- *Use Gen1, gen1output directory, add prefix, Dallas region:*\
+- Use Gen1, gen1output directory, add prefix, Dallas region:\
 terraformer -g 1 -o gen1output -p prefix -r Dallas access.xlsx\
 terraformer -g 1 -o gen1output -p prefix -r Dallas lb.xlsx\
 terraformer -g 1 -o gen1output -p prefix -r Dallas vpc.xlsx
@@ -57,15 +57,19 @@ terraform destroy
 
 # Images (IBM-provided)
 
-| Name | Arch | Description | Other |
-| --- | --- | --- | --- |
-| ibm-centos7-amd64 | amd64 | CentOS 7.x - Minimal Install | |
-| ibm-debian9-amd64 | amd64 | Debian GNU/Linux 9.x - Minimal Install | |
-| ibm-redhat7-amd64 | amd64 | Red Hat Enterprise Linux 7.x - Minimal Install | Gen 1 only. |
-| ibm-ubuntu18-amd64 | amd64 | Ubuntu Linux 18.04 LTS - Minimal Install | |
-| ibm-windows2012-amd64 | amd64 | Windows Server 2012 Standard Edition | Gen 1 only. |
-| ibm-windows2012r2-amd64 | amd64 | Windows Server 2012 R2 Standard Edition | Gen 1 only. |
-| ibm-windows2016-amd64 | amd64 | Windows Server 2016 Standard Edition | Gen 1 only. |
+| Name | Arch | Description |
+| --- | --- | --- |
+| ibm-centos7-amd64 | amd64 | CentOS 7.x - Minimal Install |
+| ibm-debian9-amd64 | amd64 | Debian GNU/Linux 9.x - Minimal Install |
+| ibm-redhat7-amd64 | amd64 | Red Hat Enterprise Linux 7.x - Minimal Install |
+| ibm-ubuntu16-amd64 | amd64 | Ubuntu Linux 16.04 LTS - Minimal Install |
+| ibm-ubuntu18-amd64 | amd64 | Ubuntu Linux 18.04 LTS - Minimal Install |
+| ibm-windows2012-amd64 | amd64 | Windows Server 2012 Standard Edition |
+| ibm-windows2012r2-amd64 | amd64 | Windows Server 2012 R2 Standard Edition |
+| ibm-windows2016-amd64 | amd64 | Windows Server 2016 Standard Edition |
+| ibm-centos7-ppc64le | ppc64le | CentOS 7.x - Minimal Install |
+| ibm-debian9-ppc64le | ppc64le | Debian GNU/Linux 9.x - Minimal Install |
+| ibm-ubuntu18-ppc64le | ppc64le | Ubuntu Linux 18.04 LTS - Minimal Install |
 
 # Implementation
 

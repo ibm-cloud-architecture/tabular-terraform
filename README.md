@@ -11,8 +11,8 @@ To create diagrams for IBM Virtual Private Cloud refer to [IBM Cloud Stencils](h
 - Terraformer handles the creation of Terraform syntax leaving the user to focus on the creation of simple spreadsheet data that is used by Terraformer in creating the Terraform files.
 - For new Terraform users, Terraformer helps to get on the Terraform bandwagon by using and learning Terraform without focusing on the Terraform syntax. 
 - For experienced Terraform users, Terraformer helps to expedite the implementation of Terraform, or Terraformer can used to expedite specific parts of a Terraform implementation such as the rules for ACLs and Security Groups.
-- Terraformer is provided with no formal support and the format is subject to change.
-- Report problems informally by opening a GitHub issue.
+- Terraformer is provided with no formal support but problems can be reported by opening a GitHub issue.
+- Spreadsheet format is subject to change but a future consideration is to migrate sheets when format changes are required for resource or other changes.
 
 # Example
 
@@ -73,8 +73,7 @@ terraform destroy
 | --- | --- |
 | Overall |  All fields, custom images, secondary NICs, and Power need further testing. |
 | | Additional fields in floatingips and publicgateways sheets are not yet supported. |
-| | Considering adding resource-specific fields such as count. |
-| | Considering migrating sheets when format changes are required. |
+| | Additional resource-specific fields such as count are a future consideration. |
 | Files | Example spreadsheets include access, lb, and vpc. |
 | | Related resources are grouped into generated files. |
 | | Rerun after changes and rely on Terraform to handle changes. |

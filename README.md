@@ -27,10 +27,7 @@ To create diagrams for IBM Virtual Private Cloud refer to [IBM Cloud Stencils](h
 
 ## Usage
 
-1. Install terraformer:
-- Copy mac/terraformer executable to Mac or windows/terraformer.exe to Windows.
-- Copy contents of examples folder to Mac or Windows and customize as desired.
-- Run terraformer on the examples as described below.
+1. Customize input samples.
 
 2. Execute terraformer:
 - Display help:\
@@ -46,7 +43,7 @@ terraformer -g 1 -o gen1output -p prefix -r Dallas access.xlsx\
 terraformer -g 1 -o gen1output -p prefix -r Dallas lb.xlsx\
 terraformer -g 1 -o gen1output -p prefix -r Dallas vpc.xlsx
 
-3. Execute terraform in specified output directory:\
+3. Execute terraform in output directory:\
 terraform fmt\
 terraform init\
 terraform plan\

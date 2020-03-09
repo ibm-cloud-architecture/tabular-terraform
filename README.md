@@ -1,16 +1,6 @@
 # Terraformer for IBM Virtual Private Cloud
 
-[Download Terraformer](/releases/releases.md)
-
-# Requirements
-
-- IBM Cloud Terraform Provider 1.2.3 ([Provider Release Notes](https://github.com/IBM-Cloud/terraform-provider-ibm/releases))\
-- Terraform v0.12.23 ([Terraform Release Notes](https://www.terraform.io/downloads.html)
-- Python 3.8.2 ([Python Release Notes](https://www.python.org/downloads/release/python-382/))
-
-To create diagrams for IBM Virtual Private Cloud refer to [IBM Cloud Stencils](https://github.com/ibm-cloud-architecture/ibm-cloud-stencils).
-
-# Overview
+## Overview
 
 - Terraformer handles the creation of Terraform syntax leaving the user to focus on the creation of simple spreadsheet data that is used by Terraformer in creating the Terraform files.
 - For new Terraform users, Terraformer helps to get on the Terraform bandwagon by using and learning Terraform without focusing on the Terraform syntax. 
@@ -18,15 +8,24 @@ To create diagrams for IBM Virtual Private Cloud refer to [IBM Cloud Stencils](h
 - Terraformer is provided with no formal support but problems can be reported by opening a GitHub issue.
 - Spreadsheet format is subject to change but a future consideration is to migrate sheets when format changes.
 
-# Example
+To create diagrams for IBM Virtual Private Cloud refer to [IBM Cloud Stencils](https://github.com/ibm-cloud-architecture/ibm-cloud-stencils).
+
+## Requirements
+
+- IBM Cloud Terraform Provider v1.2.3 ([Provider Release Notes](https://github.com/IBM-Cloud/terraform-provider-ibm/releases))
+- Terraform v0.12.23 ([Terraform Release Notes](https://www.terraform.io/downloads.html)
+- Python v3.8.2 ([Python Release Notes](https://www.python.org/downloads/release/python-382/))
+
+## Installation
+
+1. [Download Terraformer](/releases/releases.md)
+
+## Example
 
 ![TerraformerInputExample](/images/terraformerinputexample.png)
 ![TerraformerOutputExample12](/images/terraformeroutputexample12.png)
 
 # Usage
-
-1. Export API credential token as an environment variable:\
-export IC_API_KEY="IBM Cloud API Key"
 
 2. Install Python 3.8.2 on Mac or Windows from https://www.python.org/ with following libraries:
 - pip install numpy

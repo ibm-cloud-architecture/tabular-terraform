@@ -23,7 +23,7 @@ To create diagrams for IBM Virtual Private Cloud refer to [IBM Cloud Stencils](h
 
 1. [Download Terraformer](/releases/releases.md)
 2. Unzip the release archive to extract the executable and input samples.
-3. Export API credential token as environment variable: export IC_API_KEY="IBM CLOUD API Key"
+3. Export API credential token as environment variable: export IC_API_KEY="IBM Cloud API Key"
 
 ## Usage
 

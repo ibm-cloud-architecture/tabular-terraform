@@ -4,8 +4,8 @@
 
 ### Enhancements
 
-- Added support for Washington DC on Gen1 and Gen2, and London on Gen2.
-- Added support for RedHat, Windows, and Power images on Gen2, and refreshed all images to latest.
+- Added support for Washington DC on Gen1 and Gen2, London on Gen2.
+- Added support for RedHat, Windows, Power images on Gen2, refreshed all images to latest.
 - Added -d command option (experimental).
 
 ### Assets

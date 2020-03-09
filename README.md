@@ -57,19 +57,19 @@ terraform destroy
 
 # Images (IBM-provided)
 
-| Name | Arch | Description |
-| --- | --- | --- |
-| ibm-centos7-amd64 | amd64 | CentOS 7.x - Minimal Install |
-| ibm-debian9-amd64 | amd64 | Debian GNU/Linux 9.x - Minimal Install |
-| ibm-redhat7-amd64 | amd64 | Red Hat Enterprise Linux 7.x - Minimal Install |
-| ibm-ubuntu16-amd64 | amd64 | Ubuntu Linux 16.04 LTS - Minimal Install |
-| ibm-ubuntu18-amd64 | amd64 | Ubuntu Linux 18.04 LTS - Minimal Install |
-| ibm-windows2012-amd64 | amd64 | Windows Server 2012 Standard Edition |
-| ibm-windows2012r2-amd64 | amd64 | Windows Server 2012 R2 Standard Edition |
-| ibm-windows2016-amd64 | amd64 | Windows Server 2016 Standard Edition |
-| ibm-centos7-ppc64le | ppc64le | CentOS 7.x - Minimal Install |
-| ibm-debian9-ppc64le | ppc64le | Debian GNU/Linux 9.x - Minimal Install |
-| ibm-ubuntu18-ppc64le | ppc64le | Ubuntu Linux 18.04 LTS - Minimal Install |
+| Name | Arch | Description | Notes |
+| --- | --- | --- | --- |
+| ibm-centos7-amd64 | amd64 | CentOS 7.x - Minimal Install | |
+| ibm-debian9-amd64 | amd64 | Debian GNU/Linux 9.x - Minimal Install | |
+| ibm-redhat7-amd64 | amd64 | Red Hat Enterprise Linux 7.x - Minimal Install | |
+| ibm-ubuntu16-amd64 | amd64 | Ubuntu Linux 16.04 LTS - Minimal Install | |
+| ibm-ubuntu18-amd64 | amd64 | Ubuntu Linux 18.04 LTS - Minimal Install | |
+| ibm-windows2012-amd64 | amd64 | Windows Server 2012 Standard Edition | |
+| ibm-windows2012r2-amd64 | amd64 | Windows Server 2012 R2 Standard Edition | |
+| ibm-windows2016-amd64 | amd64 | Windows Server 2016 Standard Edition | |
+| ibm-centos7-ppc64le | ppc64le | CentOS 7.x - Minimal Install | Gen2 only. |
+| ibm-debian9-ppc64le | ppc64le | Debian GNU/Linux 9.x - Minimal Install | Gen2 only. |
+| ibm-ubuntu18-ppc64le | ppc64le | Ubuntu Linux 18.04 LTS - Minimal Install | Gen2 only. |
 
 # Implementation
 

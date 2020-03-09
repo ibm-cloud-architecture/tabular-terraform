@@ -2,7 +2,11 @@
 
 ## Terraformer v1.2.3.4 (Latest)
 
-on Provider v1.2.3
+### Requirements
+
+- IBM Cloud Terraform Provider v1.2.3 ([Provider Release Notes](https://github.com/IBM-Cloud/terraform-provider-ibm/releases))\
+- Terraform v0.12.23 ([Terraform Release Notes](https://www.terraform.io/downloads.html)
+- Python 3.8.2 ([Python Release Notes](https://www.python.org/downloads/release/python-382/))
 
 ### Enhancements
 

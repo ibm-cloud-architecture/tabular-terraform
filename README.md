@@ -1,6 +1,6 @@
 # Terraformer for IBM Virtual Private Cloud
 
-([Download Terraformer](/releases/releases.md))
+[Download Terraformer(/releases/releases.md))
 
 IBM Cloud Terraform Provider 1.2.3 ([Provider Release Notes](https://github.com/IBM-Cloud/terraform-provider-ibm/releases))\
 Python 3.8.2 ([Python Release Notes](https://www.python.org/downloads/release/python-382/))

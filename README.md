@@ -16,7 +16,7 @@ To create diagrams for IBM Virtual Private Cloud refer to [IBM Cloud Stencils](h
 ## Requirements
 
 - IBM Cloud Terraform Provider v1.2.3 ([Provider Release Notes](https://github.com/IBM-Cloud/terraform-provider-ibm/releases))
-- Terraform v0.12.23 ([Terraform Release Notes](https://www.terraform.io/downloads.html)
+- Terraform v0.12.23 ([Terraform Release Notes](https://www.terraform.io/downloads.html))
 - Python v3.8.2 ([Python Release Notes](https://www.python.org/downloads/release/python-382/)) with libraries numpy, pandas, xlrd
 
 ## Installation

@@ -2,15 +2,13 @@
 
 ## Overview
 
+[Terraformer Example](/example/example.md).
+
 - Terraformer handles the creation of Terraform syntax leaving the user to focus on the creation of simple spreadsheet data that is used by Terraformer in creating the Terraform files.
 - For new Terraform users, Terraformer helps to get on the Terraform bandwagon by using and learning Terraform without focusing on the Terraform syntax. 
 - For experienced Terraform users, Terraformer helps to expedite the implementation of Terraform, or Terraformer can be used to expedite specific parts of a Terraform implementation such as the rules for ACLs and Security Groups.
 - Terraformer is provided with no formal support but problems can be reported by opening a GitHub issue.
 - Spreadsheet format is subject to change but a future consideration is to migrate sheets when format changes.
-
-[Terraformer Example](/example/example.md)
-
-[IBM Cloud Stencils](https://github.com/ibm-cloud-architecture/ibm-cloud-stencils)
 
 ## Requirements
 
@@ -26,9 +24,11 @@
 
 ## Usage
 
-1. Customize input samples.
+1. Design your VPC infrastructure using [IBM Cloud Stencils](https://github.com/ibm-cloud-architecture/ibm-cloud-stencils).
 
-2. Execute terraformer:
+2. Customize the input spreadsheets according to your design.
+
+3. Execute terraformer on your customized input spreadsheets:
 - Display help:\
 terraformer -h
 - Display version:\
@@ -42,7 +42,7 @@ terraformer -g 1 -o output -p prefix -r Dallas input/access.xlsx\
 terraformer -g 1 -o output -p prefix -r Dallas input/lb.xlsx\
 terraformer -g 1 -o output -p prefix -r Dallas input/vpc.xlsx
 
-3. Execute terraform in output directory:\
+4. Execute terraform in output directory to provision your VPC infrastructure:\
 terraform fmt\
 terraform init\
 terraform plan\

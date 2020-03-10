@@ -54,12 +54,12 @@ terraform destroy
 
 | Regions | Zones | Notes |
 | --- | --- | --- |
-| Dallas | Dallas 1/2/3 | |
-| Frankfurt | Frankfurt 1/2/3 | Gen1 only. |
-| London | London 1/2/3 | |
-| Sydney | Sydney 1/2/3 | Gen1 only. |
-| Tokyo | Tokyo 1/2/3 | Gen1 only. |
-| Washington DC | Washington DC 1/2/3 | |
+| Dallas | Dallas 1,2,3 | |
+| Frankfurt | Frankfurt 1,2,3 | Gen1 only. |
+| London | London 1,2,3 | |
+| Sydney | Sydney 1,2,3 | Gen1 only. |
+| Tokyo | Tokyo 1,2,3 | Gen1 only. |
+| Washington DC | Washington DC 1,2,3 | |
 
 ## Images (IBM-provided)
 

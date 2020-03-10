@@ -34,14 +34,14 @@ To create diagrams for IBM Virtual Private Cloud refer to [IBM Cloud Stencils](h
 terraformer -h
 - Display version:\
 terraformer --version
-- Use Gen2, gen2output directory, add prefix, Dallas region:\
-terraformer -o gen2output -p prefix -r Dallas input/access.xlsx\
-terraformer -o gen2output -p prefix -r Dallas input/lb.xlsx\
-terraformer -o gen2output -p prefix -r Dallas input/vpc.xlsx
-- Use Gen1, gen1output directory, add prefix, Dallas region:\
-terraformer -g 1 -o gen1output -p prefix -r Dallas input/access.xlsx\
-terraformer -g 1 -o gen1output -p prefix -r Dallas input/lb.xlsx\
-terraformer -g 1 -o gen1output -p prefix -r Dallas input/vpc.xlsx
+- Use Gen2, output directory, add prefix, Dallas region:\
+terraformer -o output -p prefix -r Dallas input/access.xlsx\
+terraformer -o output -p prefix -r Dallas input/lb.xlsx\
+terraformer -o output -p prefix -r Dallas input/vpc.xlsx
+- Use Gen1, output directory, add prefix, Dallas region:\
+terraformer -g 1 -o output -p prefix -r Dallas input/access.xlsx\
+terraformer -g 1 -o output -p prefix -r Dallas input/lb.xlsx\
+terraformer -g 1 -o output -p prefix -r Dallas input/vpc.xlsx
 
 3. Execute terraform in output directory:\
 terraform fmt\

@@ -8,7 +8,7 @@
 | [terraformer_windows_amd64.zip](https://github.com/ibm-cloud-architecture/terraformer/raw/master/releases/download/v1.2.3.5/terraformer_windows_amd64.zip) |
 
 Changes:
-- Handle all files from input directory with single command.
+- Process all files from input directory with single command.
 
 ### Terraformer v1.2.3.4
 

@@ -2,7 +2,7 @@
 
 ### Terraformer v1.2.3.4 (Latest)
 
-| Asset |
+| Assets |
 | --- |
 | [terraformer_darwin_amd64.zip](https://github.com/ibm-cloud-architecture/terraformer/raw/master/releases/download/v1.2.3.4/terraformer_darwin_amd64.zip) |
 | [terraformer_windows_amd64.zip](https://github.com/ibm-cloud-architecture/terraformer/raw/master/releases/download/v1.2.3.4/terraformer_windows_amd64.zip) |

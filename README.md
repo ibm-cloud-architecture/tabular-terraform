@@ -31,14 +31,10 @@
 terraformer -h
 - Display version:\
 terraformer --version
-- Use Gen2, output directory, add prefix, Dallas region:\
-terraformer -o output -p prefix -r Dallas input/access.xlsx\
-terraformer -o output -p prefix -r Dallas input/lb.xlsx\
-terraformer -o output -p prefix -r Dallas input/vpc.xlsx
-- Use Gen1, output directory, add prefix, Dallas region:\
-terraformer -g 1 -o output -p prefix -r Dallas input/access.xlsx\
-terraformer -g 1 -o output -p prefix -r Dallas input/lb.xlsx\
-terraformer -g 1 -o output -p prefix -r Dallas input/vpc.xlsx
+- Use Gen2, all files from sheets directory, output to resources directory:\
+terraformer -g 2 
+- Use Gen2, vpc.xlsx from sheets directory, output to resources directory:\
+terraformer -g 2 sheets/vpc.xlsx
 
 4. Execute terraform in output directory to provision your VPC infrastructure:\
 terraform fmt\

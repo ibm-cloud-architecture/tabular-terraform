@@ -8,10 +8,9 @@
 - Terraformer is provided with no formal support but problems can be reported by opening a GitHub issue.
 - Spreadsheet format is subject to change but a future consideration is to migrate sheets when format changes.
 
-![TerraformerInputExample](/images/terraformerinputexample.png)
-![TerraformerOutputExample12](/images/terraformeroutputexample12.png)
+[Terraformer Example](/example/example.md)
 
-To create diagrams for IBM Virtual Private Cloud refer to [IBM Cloud Stencils](https://github.com/ibm-cloud-architecture/ibm-cloud-stencils).
+[IBM Cloud Stencils](https://github.com/ibm-cloud-architecture/ibm-cloud-stencils).
 
 ## Requirements
 

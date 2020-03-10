@@ -10,7 +10,7 @@
 
 [Terraformer Example](/example/example.md)
 
-[IBM Cloud Stencils](https://github.com/ibm-cloud-architecture/ibm-cloud-stencils).
+[IBM Cloud Stencils](https://github.com/ibm-cloud-architecture/ibm-cloud-stencils)
 
 ## Requirements
 

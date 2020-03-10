@@ -35,13 +35,13 @@ terraformer -h
 - Display version:\
 terraformer --version
 - Use Gen2, gen2output directory, add prefix, Dallas region:\
-terraformer -o gen2output -p prefix -r Dallas access.xlsx\
-terraformer -o gen2output -p prefix -r Dallas lb.xlsx\
-terraformer -o gen2output -p prefix -r Dallas vpc.xlsx
+terraformer -o gen2output -p prefix -r Dallas input/access.xlsx\
+terraformer -o gen2output -p prefix -r Dallas input/lb.xlsx\
+terraformer -o gen2output -p prefix -r Dallas input/vpc.xlsx
 - Use Gen1, gen1output directory, add prefix, Dallas region:\
-terraformer -g 1 -o gen1output -p prefix -r Dallas access.xlsx\
-terraformer -g 1 -o gen1output -p prefix -r Dallas lb.xlsx\
-terraformer -g 1 -o gen1output -p prefix -r Dallas vpc.xlsx
+terraformer -g 1 -o gen1output -p prefix -r Dallas input/access.xlsx\
+terraformer -g 1 -o gen1output -p prefix -r Dallas input/lb.xlsx\
+terraformer -g 1 -o gen1output -p prefix -r Dallas input/vpc.xlsx
 
 3. Execute terraform in output directory:\
 terraform fmt\

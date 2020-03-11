@@ -4,8 +4,8 @@
 
 | Assets |
 | --- |
-| [terraformer_darwin_amd64.zip](https://github.com/ibm-cloud-architecture/terraformer/raw/master/releases/download/v1.2.3.5/terraformer_1.2.3.5_darwin_amd64.zip) |
-| [terraformer_windows_amd64.zip](https://github.com/ibm-cloud-architecture/terraformer/raw/master/releases/download/v1.2.3.5/terraformer_1.2.3.5_windows_amd64.zip) |
+| [macOS 64-bit](https://github.com/ibm-cloud-architecture/terraformer/raw/master/releases/download/v1.2.3.5/terraformer_1.2.3.5_darwin_amd64.zip) |
+| [Windows 64-bit](https://github.com/ibm-cloud-architecture/terraformer/raw/master/releases/download/v1.2.3.5/terraformer_1.2.3.5_windows_amd64.zip) |
 
 Changes:
 - Process all files from input directory with single command.
@@ -14,8 +14,8 @@ Changes:
 
 | Assets |
 | --- |
-| [terraformer_darwin_amd64.zip](https://github.com/ibm-cloud-architecture/terraformer/raw/master/releases/download/v1.2.3.4/terraformer_1.2.3.4_darwin_amd64.zip) |
-| [terraformer_windows_amd64.zip](https://github.com/ibm-cloud-architecture/terraformer/raw/master/releases/download/v1.2.3.4/terraformer_1.2.3.4_windows_amd64.zip) |
+| [macOS 64-bit](https://github.com/ibm-cloud-architecture/terraformer/raw/master/releases/download/v1.2.3.4/terraformer_1.2.3.4_darwin_amd64.zip) |
+| [Windows 64-bit](https://github.com/ibm-cloud-architecture/terraformer/raw/master/releases/download/v1.2.3.4/terraformer_1.2.3.4_windows_amd64.zip) |
 
 Changes:
 - Added support for Washington DC on Gen1 and Gen2, London on Gen2.

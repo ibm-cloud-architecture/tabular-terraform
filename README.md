@@ -30,7 +30,7 @@
 
 2. Customize the spreadsheets according to your design.
 
-3. Execute terraformer on your customized input spreadsheets:
+3. Execute terraformer on your customized spreadsheets:
 - Display help:\
 terraformer -h
 - Display version:\

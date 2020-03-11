@@ -16,14 +16,14 @@
 
 ## Installation
 
-1. [Download the latest Terraformer](/releases/releases.md).
+1. [Download latest Terraformer](/releases/releases.md).
 - Unzip the Terraformer archive to extract the executable and sheet samples.
-2. [Download the Terraform package](https://learn.hashicorp.com/terraform/getting-started/install.html).
+2. [Download Terraform](https://learn.hashicorp.com/terraform/getting-started/install.html).
 - Unzip the Terraform archive to extract the terraform binary.
-- Add location of terraform binary to PATH and verify installation. 
-3. [Download the IBM Cloud Terraform Provider](https://github.com/IBM-Cloud/terraform-provider-ibm/releases).
+- Add location of terraform binary to PATH. 
+3. [Download IBM Cloud Terraform Provider](https://github.com/IBM-Cloud/terraform-provider-ibm/releases).
 - Unzip the provider archive to extract the plugin binary.
-- Move the plugin binary into the Terraform plugins directory and verify installation.
+- Move the plugin binary into the Terraform plugins directory.
 - Export API credential token as environment variable: export IC_API_KEY="IBM Cloud API Key"
 
 ## Usage

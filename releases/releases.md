@@ -25,4 +25,6 @@ Changes:
 - Added support for RedHat, Windows, Power images on Gen2, refreshed all images to latest.
 - Added -d command option (experimental).
 
+---
+
 Return to [README](/README.md)

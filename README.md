@@ -17,7 +17,7 @@
 ## Installation
 
 1. [Download Terraformer](/releases/releases.md).
-- Unzip Terraformer archive to extract executable and sheet samples.
+- Unzip Terraformer archive to extract terraformer executable and sheet samples.
 2. [Download Terraform](https://learn.hashicorp.com/terraform/getting-started/install.html).
 - Unzip Terraform archive to extract terraform binary and add location to PATH. 
 3. [Download IBM Cloud Terraform Provider](https://github.com/IBM-Cloud/terraform-provider-ibm/releases).

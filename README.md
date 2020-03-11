@@ -74,8 +74,8 @@ terraform destroy
 
 | Component | Description |
 | --- | --- |
-| General |  All fields, custom images, and secondary NICs need further testing. |
-| | Additional fields in floatingips and publicgateways sheets are not yet supported. |
+| General |  All fields need further testing.
+| | Additional work needed on custom images, secondary NICs, Power, and additional fields in floatingips and publicgateways sheet. |
 | | Additional resource-specific fields such as count are a future consideration. |
 | Files | Example spreadsheets include access, lb, and vpc. |
 | | Related resources are grouped into generated files. |

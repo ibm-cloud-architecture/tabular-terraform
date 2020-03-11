@@ -32,9 +32,9 @@ terraformer -h
 - Display version:\
 terraformer --version
 - Use Gen2, all files from sheets directory, output to resources directory:\
-terraformer -g 2 sheets 
+terraformer sheets 
 - Use Gen2, vpc.xlsx from sheets directory, output to resources directory:\
-terraformer -g 2 sheets/vpc.xlsx
+terraformer sheets/vpc.xlsx
 
 4. Execute terraform in output directory to provision your VPC infrastructure:\
 terraform fmt\

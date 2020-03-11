@@ -16,7 +16,7 @@
 
 ## Installation
 
-1. [Download latest Terraformer](/releases/releases.md).
+1. [Download Terraformer](/releases/releases.md).
 - Unzip the Terraformer archive to extract the executable and sheet samples.
 2. [Download Terraform](https://learn.hashicorp.com/terraform/getting-started/install.html).
 - Unzip the Terraform archive to extract the terraform binary.

@@ -9,7 +9,7 @@
 
 Changes:
 - Upgraded to Provider v1.2.4.
-- Added new -i command option to process all files from input directory with single command.
+- Accept input directory to process all sheets with single command.
 
 ---
 

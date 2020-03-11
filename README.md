@@ -32,7 +32,7 @@ terraformer -h
 - Display version:\
 terraformer --version
 - Use Gen2, all files from sheets directory, output to resources directory:\
-terraformer -g 2 -i sheets 
+terraformer -g 2 sheets 
 - Use Gen2, vpc.xlsx from sheets directory, output to resources directory:\
 terraformer -g 2 sheets/vpc.xlsx
 

@@ -11,6 +11,8 @@ Changes:
 - Added new -i command option to process all files from input directory with single command.
 - Upgraded to Provider v1.2.4 but provider updates for Power are not available yet.
 
+---
+
 ### Terraformer v1.2.3.4
 
 | Assets |

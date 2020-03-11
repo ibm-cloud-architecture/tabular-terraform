@@ -8,8 +8,8 @@
 | [Windows 64-bit](https://github.com/ibm-cloud-architecture/terraformer/raw/master/releases/download/v1.2.4.0/terraformer_1.2.4.0_windows_amd64.zip) |
 
 Changes:
-- Process all files from input directory with single command.
-- Upgraded to Provider v1.2.4 but provider updates for Power not available yet.
+- Added new -i command option to pProcess all files from input directory with single command.
+- Upgraded to Provider v1.2.4 but provider updates for Power are not available yet.
 
 ### Terraformer v1.2.3.4
 

@@ -17,14 +17,14 @@
 ## Installation
 
 1. [Download the latest Terraformer.](/releases/releases.md)
-2. Unzip the release archive to extract the executable and input samples.
+2. Unzip the release archive to extract the executable and sheet samples.
 3. Export API credential token as environment variable: export IC_API_KEY="IBM Cloud API Key"
 
 ## Usage
 
 1. Design your VPC infrastructure using [IBM Cloud Stencils](https://github.com/ibm-cloud-architecture/ibm-cloud-stencils).
 
-2. Customize the input spreadsheets according to your design.
+2. Customize the spreadsheets according to your design.
 
 3. Execute terraformer on your customized input spreadsheets:
 - Display help:\

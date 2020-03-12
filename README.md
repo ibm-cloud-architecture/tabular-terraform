@@ -10,19 +10,22 @@
 
 ## Requirements
 
-- IBM Cloud Terraform Provider v1.2.4 ([Provider Release Notes](https://github.com/IBM-Cloud/terraform-provider-ibm/releases)).
-- Terraform v0.12.23 ([Terraform Release Notes](https://www.terraform.io/downloads.html)).
-- Python v3.8.2 ([Python Release Notes](https://www.python.org/downloads/release/python-382/)) with libraries numpy, pandas, and xlrd.
+- IBM Cloud Terraform Provider v1.2.4
+- Terraform v0.12.23
+- Python v3.8.2
 
 ## Installation
 
 1. [Download Terraformer](/releases/releases.md).
 - Unzip Terraformer archive to extract terraformer executable and sheet samples.
-2. [Download Terraform](https://learn.hashicorp.com/terraform/getting-started/install.html).
+2. [Download and install Terraform](https://www.terraform.io/downloads.html).
 - Unzip Terraform archive to extract terraform binary and add location to PATH. 
-3. [Download IBM Cloud Terraform Provider](https://github.com/IBM-Cloud/terraform-provider-ibm/releases).
+3. [Download and install IBM Cloud Terraform Provider](https://github.com/IBM-Cloud/terraform-provider-ibm/releases).
 - Unzip provider archive to extract plugin binary and move to Terraform plugins directory.
 - Export API credential token as environment variable: export IC_API_KEY="IBM Cloud API Key"
+4. [Download and install Python 3](https://www.python.org/downloads/).
+- Mac comes with Python 2 by default so Python 3 needs to be installed separately.
+- Install libraries numpy, pandas, and xlrd after Python 3 is installed.
 
 ## Usage
 

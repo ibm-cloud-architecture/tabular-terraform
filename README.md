@@ -25,10 +25,7 @@
 - Export API credential token as environment variable: export IC_API_KEY="IBM Cloud API Key"
 4. [Download and install Python 3](https://www.python.org/downloads/).
 - Mac comes with Python 2 by default so Python 3 needs to be installed separately.
-- Install libraries numpy and pandas.
-- For xlsx install xlrd.
-- For ods install odfpy.
-- For yaml install pyyaml.
+- Install numpy, pandas, xlrd (xlsx support), odfpy (ods support), and pyyaml (yaml support).
 
 ## Usage
 

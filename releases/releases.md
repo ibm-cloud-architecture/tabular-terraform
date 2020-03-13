@@ -1,6 +1,18 @@
 # Terraformer Releases
 
-### Terraformer v1.2.4.0 (Latest)
+### Terraformer v1.2.4.1 (Latest)
+
+| Assets |
+| --- |
+| [macOS 64-bit](https://github.com/ibm-cloud-architecture/terraformer/raw/master/releases/download/v1.2.4.1/terraformer_1.2.4.1_darwin_amd64.zip) |
+| [Windows 64-bit](https://github.com/ibm-cloud-architecture/terraformer/raw/master/releases/download/v1.2.4.1/terraformer_1.2.4.1_windows_amd64.zip) |
+
+Changes:
+- Added support for ods and yaml.
+
+---
+
+### Terraformer v1.2.4.0
 
 | Assets |
 | --- |

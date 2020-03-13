@@ -2,7 +2,7 @@
 
 ## Overview
 
-- Terraformer handles the creation of Terraform syntax leaving the user to focus on the creation of simple spreadsheet data that is used by Terraformer in creating the Terraform files.  See [Terraformer Example](/example/example.md).
+- Terraformer handles the creation of Terraform syntax leaving the user to focus on the creation of data that is used by Terraformer in creating the Terraform files.  See [Terraformer Example](/example/example.md).
 - For new Terraform users, Terraformer helps to get on the Terraform bandwagon by using and learning Terraform without focusing on the Terraform syntax. 
 - For experienced Terraform users, Terraformer helps to expedite the implementation of Terraform, or Terraformer can be used on individual parts of a Terraform implementation such as the rules for ACLs and Security Groups.
 - Terraformer is provided with no formal support but problems can be reported by opening a GitHub issue.
@@ -25,23 +25,24 @@
 - Export API credential token as environment variable: export IC_API_KEY="IBM Cloud API Key"
 4. [Download and install Python 3](https://www.python.org/downloads/).
 - Mac comes with Python 2 by default so Python 3 needs to be installed separately.
-- Install libraries numpy, pandas, and xlrd after Python 3 is installed.
+- Install libraries numpy, pandas, pyyaml (for yaml), and xlrd (for xslx) after Python 3 is installed.
 
 ## Usage
 
 1. Design your VPC infrastructure using [IBM Cloud Stencils](https://github.com/ibm-cloud-architecture/ibm-cloud-stencils).
 
-2. Customize the spreadsheets according to your design.
+2. Customize the data according to your design.
 
-3. Execute terraformer on your customized spreadsheets:
-- Display help:\
-terraformer -h
-- Display version:\
-terraformer --version
-- Use Gen2, all files from sheets directory, output to resources directory:\
-terraformer sheets 
-- Use Gen2, vpc.xlsx from sheets directory, output to resources directory:\
-terraformer sheets/vpc.xlsx
+3. To display command options: terraformer -h
+
+4. Execute terraformer on your customized data:
+
+- For xlsx to use Gen2 with all files from data/xslx directory and output to resources directory:\
+terraformer data/xslx
+- For ods to use Gen2 with all files from data/ods directory and output to resources directory:\
+terraformer data/ods
+- For yaml to use Gen2 with all files from data/yaml directory and output to resources directory:\
+terraformer data/yaml
 
 4. Execute terraform in output directory to provision your VPC infrastructure:\
 terraform fmt\
@@ -83,7 +84,7 @@ terraform apply
 | General |  All fields need further testing.
 | | Additional work needed on custom images, secondary NICs, Power, and additional fields in floatingips and publicgateways sheet. |
 | | Additional resource-specific fields such as count are a future consideration. |
-| Files | Example spreadsheets include access, lb, and vpc. |
+| Files | Sample data includes access, lb, and vpc. |
 | | Related resources are grouped into generated files. |
 | | Rerun after changes and rely on Terraform to handle changes. |
 | Sheets | Use name of basename-groupname for copied sheets (e.g. instances-group1). |

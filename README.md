@@ -17,7 +17,7 @@
 ## Installation
 
 1. [Download Terraformer](/releases/releases.md).
-- Unzip Terraformer archive to extract terraformer executable and sheet samples.
+- Unzip Terraformer archive to extract terraformer executable and sample data.
 2. [Download and install Terraform](https://www.terraform.io/downloads.html).
 - Unzip Terraform archive to extract terraform binary and add location to PATH. 
 3. [Download and install IBM Cloud Terraform Provider](https://github.com/IBM-Cloud/terraform-provider-ibm/releases).
@@ -82,20 +82,20 @@ terraform apply
 | Component | Description |
 | --- | --- |
 | General |  All fields need further testing.
-| | Additional work needed on custom images, secondary NICs, Power, and additional fields in floatingips and publicgateways sheet. |
+| | Additional work needed on custom images, secondary NICs, Power, and additional fields in floatingips and publicgateways data. |
 | | Additional resource-specific fields such as count are a future consideration. |
 | Files | Sample data includes access, lb, and vpc. |
 | | Related resources are grouped into generated files. |
 | | Rerun after changes and rely on Terraform to handle changes. |
-| Sheets | Use name of basename-groupname for copied sheets (e.g. instances-group1). |
-| | Columns are subject to change but no upgrade between sheet versions. |
+| Sheets | Use name of basename-groupname for copied data (e.g. instances-group1). |
+| | Columns are subject to change but no upgrade between data versions. |
 | | Asterisk in column name denotes a required field. |
 | Floating IP | Created from primary_nic_floating_ip or secondary NIC or subnet public_gateway. |
 | | Move FIP to another NIC/Public Gateway and rely on Terraform to handle change. |
-| | Use floatingips sheet to set additional arguments - not currently implemented. |
+| | Use floatingips data to set additional arguments - not currently implemented. |
 | Images | Profile names are Gen 1 or Gen 2 style - Gen 2 names are converted to Gen 1 names. |
 | Public Gateway | Created from subnet public_gateway (e.g. gatewayname:optionalfipname). |  
-| | Use publicgateways sheet to set additional arguments - not currently implemented. |
+| | Use publicgateways data to set additional arguments - not currently implemented. |
 | Regions | Names are UI style or internal name (e.g. Dallas or us-south). |
 | Resource Groups | Terraform destroy only removes state information but does not delete resource group.
 | Volumes | Profile names are general-purpose, 5iops-tier, 10iops-tier, or custom. |

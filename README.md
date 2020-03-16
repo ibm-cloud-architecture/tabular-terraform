@@ -24,8 +24,8 @@
 - Unzip provider archive to extract plugin binary and move to Terraform plugins directory.
 - Export API credential token as environment variable: export IC_API_KEY="IBM Cloud API Key"
 4. [Download and install Python 3](https://www.python.org/downloads/).
-- Mac comes with Python 2 by default so Python 3 needs to be installed separately.
 - Install numpy, pandas, xlrd (xlsx support), odfpy (ods support), and pyyaml (yaml support).
+- Note: Mac comes with Python 2 by default so Python 3 needs to be installed separately from python.org - installing with brew, pipenv, or pyenv installs libraries into different directories that won't work with Terraformer.
 
 ## Usage
 

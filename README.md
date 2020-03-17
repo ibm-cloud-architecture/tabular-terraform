@@ -2,7 +2,7 @@
 
 ## Overview
 
-- Terraformer handles the creation of Terraform syntax leaving the user to focus on the creation of data that is used by Terraformer in creating the Terraform files.  See [Terraformer Example](/example/example.md).
+- Terraformer handles the creation of Terraform syntax leaving the user to focus on the creation of data (json, ods, xlsx, or yaml) that is used by Terraformer in creating the Terraform files.  See [Terraformer Example](/example/example.md).
 - For new Terraform users, Terraformer helps to get on the Terraform bandwagon by using and learning Terraform without focusing on the Terraform syntax. 
 - For experienced Terraform users, Terraformer helps to expedite the implementation of Terraform, or Terraformer can be used on individual parts of a Terraform implementation such as the rules for ACLs and Security Groups.
 - Terraformer is provided with no formal support but problems can be reported by opening a GitHub issue.
@@ -18,6 +18,7 @@
 
 1. [Download Terraformer](/releases/releases.md).
 - Unzip Terraformer archive to extract terraformer executable and sample data.
+- Select which simple data to use (json, ods, xlsx, or yaml) and copy to be directly under /data or other directory.
 2. [Download and install Terraform](https://www.terraform.io/downloads.html).
 - Unzip Terraform archive to extract terraform binary and add location to PATH. 
 3. [Download and install IBM Cloud Terraform Provider](https://github.com/IBM-Cloud/terraform-provider-ibm/releases).

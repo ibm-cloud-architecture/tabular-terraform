@@ -1,6 +1,18 @@
 # Terraformer Releases
 
-### Terraformer v1.2.4.1 (Latest)
+### Terraformer v1.2.4.2 (Latest)
+
+| Assets |
+| --- |
+| [macOS 64-bit](https://github.com/ibm-cloud-architecture/terraformer/raw/master/releases/download/v1.2.4.2/terraformer_1.2.4.2_darwin_amd64.zip) |
+| Windows 64-bit TBD |
+
+Changes:
+- Added support for json.
+
+---
+
+### Terraformer v1.2.4.1
 
 | Assets |
 | --- |

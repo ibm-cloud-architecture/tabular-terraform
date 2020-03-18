@@ -38,7 +38,7 @@
 
 4. Execute terraformer on your customized data:
 
-- Use Gen2 with all files from data direcxtory (json, ods, xlsx, or yaml) and output to resources directory:\
+- Use Gen2 with all files from data directory (json, ods, xlsx, or yaml) and output to resources directory:\
 terraformer data
 
 4. Execute terraform in output directory to provision your VPC infrastructure:\

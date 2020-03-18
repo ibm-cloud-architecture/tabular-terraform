@@ -32,9 +32,9 @@
 
 1. Design your VPC infrastructure using [IBM Cloud Stencils](https://github.com/ibm-cloud-architecture/ibm-cloud-stencils).
 
-2. Copy sample files from provided json, ods, xlsx, or yaml folder to data folder.
+2. Copy sample files from provided json, ods, xlsx, or yaml folder to your data folder.
 
-3. Customize the data according to your design.
+3. Customize sample files according to your design.
 
 4. To display command options:  terraformer -h
 

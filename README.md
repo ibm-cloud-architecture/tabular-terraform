@@ -38,7 +38,7 @@
 
 4. To display command options:  terraformer -h
 
-5. To generate Terraform with input from data and output to resources:  terraformer data
+5. To generate with input from data and output to resources:  terraformer data
 
 6. Execute terraform in output directory to provision your VPC infrastructure:\
 terraform fmt\

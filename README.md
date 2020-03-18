@@ -32,16 +32,15 @@
 
 1. Design your VPC infrastructure using [IBM Cloud Stencils](https://github.com/ibm-cloud-architecture/ibm-cloud-stencils).
 
-2. Customize the data according to your design.
+2. Copy files from provided json, ods, xlsx, or yaml directory to data directory.
 
-3. To display command options: terraformer -h
+3. Customize the data according to your design.
 
-4. Execute terraformer on your customized data:
+4. To display command options: terraformer -h
 
-- Use Gen2 with all files from data directory (json, ods, xlsx, or yaml) and output to resources directory:\
-terraformer data
+5. To generate Terraform with input from data directory and output to resources directory: terraform data
 
-4. Execute terraform in output directory to provision your VPC infrastructure:\
+6. Execute terraform in output directory to provision your VPC infrastructure:\
 terraform fmt\
 terraform init\
 terraform plan\

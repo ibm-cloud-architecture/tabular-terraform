@@ -18,7 +18,7 @@
 
 1. [Download Terraformer](/releases/releases.md).
 - Unzip Terraformer archive to extract terraformer executable and sample data.
-- Select which sample data to use (json, ods, xlsx, or yaml) and copy to directly under /data or other directory.
+- Select which sample files to use (json, ods, xlsx, or yaml) and copy to directly under /data or other directory.
 2. [Download and install Terraform](https://www.terraform.io/downloads.html).
 - Unzip Terraform archive to extract terraform binary and add location to PATH. 
 3. [Download and install IBM Cloud Terraform Provider](https://github.com/IBM-Cloud/terraform-provider-ibm/releases).
@@ -32,7 +32,7 @@
 
 1. Design your VPC infrastructure using [IBM Cloud Stencils](https://github.com/ibm-cloud-architecture/ibm-cloud-stencils).
 
-2. Copy files from provided json, ods, xlsx, or yaml folder to data folder.
+2. Copy sample files from provided json, ods, xlsx, or yaml folder to data folder.
 
 3. Customize the data according to your design.
 

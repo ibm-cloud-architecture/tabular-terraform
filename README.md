@@ -36,9 +36,10 @@
 
 3. Customize the data according to your design.
 
-4. To display command options: terraformer -h
+4. To display command options:  terraformer -h
 
-5. To generate Terraform with input from data directory and output to resources directory: terraform data
+5. To generate Terraform:  terraformer data
+- Input folder named data with output defaulting to resources folder
 
 6. Execute terraform in output directory to provision your VPC infrastructure:\
 terraform fmt\

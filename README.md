@@ -32,7 +32,7 @@
 
 1. Design your VPC infrastructure using [IBM Cloud Stencils](https://github.com/ibm-cloud-architecture/ibm-cloud-stencils).
 
-2. Copy files from provided json, ods, xlsx, or yaml directory to data directory.
+2. Copy files from provided json, ods, xlsx, or yaml folder to data folder.
 
 3. Customize the data according to your design.
 

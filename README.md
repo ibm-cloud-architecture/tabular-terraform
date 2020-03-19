@@ -18,7 +18,6 @@
 
 1. [Download Terraformer](/releases/releases.md) (Latest: v1.2.5.0).
 - Unzip Terraformer archive to extract terraformer executable and sample data.
-- Select which sample files to use (json, ods, xlsx, or yaml) and copy to directly under /data or other directory.
 2. [Download and install Terraform](https://www.terraform.io/downloads.html).
 - Unzip Terraform archive to extract terraform binary and add location to PATH. 
 3. [Download and install IBM Cloud Terraform Provider](https://github.com/IBM-Cloud/terraform-provider-ibm/releases).

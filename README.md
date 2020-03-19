@@ -10,13 +10,13 @@
 
 ## Requirements
 
-- IBM Cloud Terraform Provider v1.2.4
+- IBM Cloud Terraform Provider v1.2.5
 - Terraform v0.12.23
 - Python v3.8.2
 
 ## Installation
 
-1. [Download Terraformer](/releases/releases.md).
+1. [Download Terraformer](/releases/releases.md) (Latest: v1.2.5.0).
 - Unzip Terraformer archive to extract terraformer executable and sample data.
 - Select which sample files to use (json, ods, xlsx, or yaml) and copy to directly under /data or other directory.
 2. [Download and install Terraform](https://www.terraform.io/downloads.html).

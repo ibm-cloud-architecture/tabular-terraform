@@ -1,26 +1,15 @@
 # Terraformer Releases
 
-### Terraformer v1.2.4.2 (Latest)
+### Terraformer v1.2.5.0 (Latest)
 
 | Assets |
 | --- |
-| [macOS 64-bit](https://github.com/ibm-cloud-architecture/terraformer/raw/master/releases/download/v1.2.4.2/terraformer_1.2.4.2_darwin_amd64.zip) |
-| [Windows 64-bit](https://github.com/ibm-cloud-architecture/terraformer/raw/master/releases/download/v1.2.4.2/terraformer_1.2.4.2_windows_amd64.zip) |
+| [macOS 64-bit](https://github.com/ibm-cloud-architecture/terraformer/raw/master/releases/download/v1.2.5.0/terraformer_1.2.5.0_darwin_amd64.zip) |
+| [Windows 64-bit](https://github.com/ibm-cloud-architecture/terraformer/raw/master/releases/download/v1.2.5.0/terraformer_1.2.5.0_windows_amd64.zip) |
 
 Changes:
-- Added support for json.
-
----
-
-### Terraformer v1.2.4.1
-
-| Assets |
-| --- |
-| [macOS 64-bit](https://github.com/ibm-cloud-architecture/terraformer/raw/master/releases/download/v1.2.4.1/terraformer_1.2.4.1_darwin_amd64.zip) |
-| [Windows 64-bit](https://github.com/ibm-cloud-architecture/terraformer/raw/master/releases/download/v1.2.4.1/terraformer_1.2.4.1_windows_amd64.zip) |
-
-Changes:
-- Added support for ods and yaml.
+- Upgraded to Provider v1.2.5.
+- Added support for json, ods, and yaml.
 
 ---
 

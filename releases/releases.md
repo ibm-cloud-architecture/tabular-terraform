@@ -8,7 +8,10 @@
 | [Windows 64-bit](https://github.com/ibm-cloud-architecture/terraformer/raw/master/releases/download/v1.2.6.0/terraformer_1.2.6.0_windows_amd64.zip) |
 
 Changes:
-- Upgraded to Provider v1.2.6 - Opened CS1737111 where setting the address prefix to not assign default addresses leaves the VPC creation in Pending state.  Remove the manual in the address prefix in the data samples until CS1737111 has been resolved.
+- Upgraded to Provider v1.2.6.
+
+Note:
+Opened VPC issue CS1737111 where setting the address prefix to not assign default addresses leaves the VPC creation in Pending state.  Remove the manual in the address prefix in the data samples until CS1737111 has been resolved.
 
 ---
 

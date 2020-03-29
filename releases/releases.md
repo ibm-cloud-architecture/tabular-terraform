@@ -11,7 +11,7 @@ Changes:
 - Upgraded to Provider v1.2.6.
 
 Note:\
-Opened VPC issue CS1737111 where setting the address prefix to not assign default addresses leaves the VPC creation in Pending state.  Remove the manual in the address prefix in the data samples until CS1737111 has been resolved.
+Opened VPC case where setting the address prefix to not assign default addresses leaves the VPC creation in Pending state.  Remove manual setting for address prefix in data samples until this VPC case has been resolved.
 
 ---
 

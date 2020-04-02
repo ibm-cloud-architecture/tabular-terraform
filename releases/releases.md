@@ -1,5 +1,20 @@
 # Terraformer Releases
 
+### Terraformer v1.3.0.0 (Latest)
+
+| Assets |
+| --- |
+| [macOS 64-bit](https://github.com/ibm-cloud-architecture/terraformer/raw/master/releases/download/v1.3.0.0/terraformer_1.3.0.0_darwin_amd64.zip) |
+| [Windows 64-bit](https://github.com/ibm-cloud-architecture/terraformer/raw/master/releases/download/v1.3.0.0/terraformer_1.3.0.0_windows_amd64.zip) |
+
+Changes:
+- Upgraded to Provider v1.3.0.
+
+Note:\
+Address prefix in data samples is available again.
+
+---
+
 ### Terraformer v1.2.6.0 (Latest)
 
 | Assets |

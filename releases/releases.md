@@ -9,7 +9,7 @@
 
 Changes:
 - Upgraded to Provider v1.4.0 which added resource_group to ibm_is_network_acl.
-- Added resource_group column or field to access/aclheaders.
+- Added resource_group column and field to access/aclheaders.
 
 ### Terraformer v1.3.0.0
 

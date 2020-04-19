@@ -8,8 +8,8 @@
 | [Windows 64-bit](https://github.com/ibm-cloud-architecture/terraformer/raw/master/releases/download/v1.4.0.0/terraformer_1.4.0.0_windows_amd64.zip) |
 
 Changes:
-- Upgraded to Provider v1.4.0 which added resource_group to ibm_is_network_acl..
-- Added resource_group column/field to access/aclheaders.
+- Upgraded to Provider v1.4.0 which added resource_group to ibm_is_network_acl.
+- Added resource_group column or field to access/aclheaders.
 
 ### Terraformer v1.3.0.0
 

@@ -8,7 +8,7 @@
 | [Windows 64-bit](https://github.com/ibm-cloud-architecture/terraformer/raw/master/releases/download/v1.4.0.1/terraformer_1.4.0.1_windows_amd64.zip) |
 
 Changes:
-- Code prep to release source code soon.
+- Code prep/test to release source code soon.
 
 ### Terraformer v1.4.0.0
 

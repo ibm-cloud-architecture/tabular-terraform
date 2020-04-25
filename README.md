@@ -16,7 +16,7 @@
 
 ## Installation
 
-1. [Download Terraformer](/releases/releases.md) (Latest: v1.4.0.0).
+1. [Download Terraformer](/releases/releases.md) (Latest: v1.4.0.1).
 - Unzip Terraformer archive to extract terraformer executable and sample data.
 2. [Download and install Terraform](https://www.terraform.io/downloads.html).
 - Unzip Terraform archive to extract terraform binary and add location to PATH. 

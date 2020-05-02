@@ -8,6 +8,15 @@
 - Terraformer is provided with no formal support but problems can be reported by opening a GitHub issue.
 - Data format is subject to change but a future consideration is to migrate data when format changes.
 
+<details><summary>Examples</summary>
+<<p>
+
+![TerraformerInputExample](/images/terraformerinputexample.png)
+![TerraformerOutputExample](/images/terraformeroutputexample.png)
+
+</p>
+</details>
+
 ## Requirements
 
 - IBM Cloud Terraform Provider v1.4.0
@@ -27,7 +36,10 @@
 - Install numpy, pandas, xlrd (xlsx support), odfpy (ods support), and pyyaml (yaml support).
 - Note: Mac comes with Python 2 by default so Python 3 needs to be installed separately from python.org - installing with brew, pipenv, or pyenv installs libraries into different directories that won't work with Terraformer.
 
-## Usage
+## Notes
+
+<details><summary>Usage</summary>
+<p>
 
 1. Design your VPC infrastructure using [IBM Cloud Stencils](https://github.com/ibm-cloud-architecture/ibm-cloud-stencils).
 
@@ -45,7 +57,11 @@ terraform init\
 terraform plan\
 terraform apply
 
-## Regions
+</p>
+</details>
+
+<details><summary>Regions</summary>
+<p>
 
 | Regions | Zones | Notes |
 | --- | --- | --- |
@@ -56,7 +72,11 @@ terraform apply
 | Tokyo | Tokyo 1,2,3 | Gen1 only. |
 | Washington DC | Washington DC 1,2,3 | |
 
-## Images (IBM-provided)
+</p>
+</details>
+
+<details><summary>Images (IBM-provided)</summary>
+<p>
 
 | Name | Arch | Description | Notes |
 | --- | --- | --- | --- |
@@ -72,7 +92,11 @@ terraform apply
 | ibm-debian9-ppc64le | ppc64le | Debian GNU/Linux 9.x - Minimal Install | Gen2 only. |
 | ibm-ubuntu18-ppc64le | ppc64le | Ubuntu Linux 18.04 LTS - Minimal Install | Gen2 only. |
 
-## Implementation
+</p>
+</details>
+
+<details><summary>Implementation</summary>
+<p>
 
 | Component | Description |
 | --- | --- |
@@ -96,3 +120,6 @@ terraform apply
 | Volumes | Profile names are general-purpose, 5iops-tier, 10iops-tier, or custom. |
 | | Only name and encryption are valid for boot volumes. |
 | Zones | Names are UI style or internal name (e.g. Dallas 1 or us-south-1). |
+
+</p>
+</details>

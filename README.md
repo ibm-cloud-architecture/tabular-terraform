@@ -9,7 +9,7 @@
 - Data format is subject to change but a future consideration is to migrate data when format changes.
 
 <details><summary>Examples</summary>
-<<p>
+<p>
 
 ![TerraformerInputExample](/images/terraformerinputexample.png)
 ![TerraformerOutputExample](/images/terraformeroutputexample.png)

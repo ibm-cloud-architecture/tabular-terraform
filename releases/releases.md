@@ -9,7 +9,7 @@
 | [source](https://github.com/ibm-cloud-architecture/terraformer/raw/master/releases/download/v1.5.0.0/terraformer_source_1.5.0.0.zip) |
 
 Changes:
-- Upgraded to Provider v1.5.0 which added ibm_is_lb_listener_policy and ibm_is_lb_listener_policy_rule.
+- Upgraded to Provider v1.5.0 with new ibm_is_lb_listener_policy and ibm_is_lb_listener_policy_rule resources.
 - Added data for lbpolicies and lbrules but not enabled yet.
 - Added missing health_monitor_port optional column and field to lb/lbpools.
 - Corrected health_monitor_url from required to optional in lb/lbpools.

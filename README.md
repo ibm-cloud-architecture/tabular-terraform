@@ -19,7 +19,7 @@
 
 ## Requirements
 
-- IBM Cloud Terraform Provider v1.4.0
+- IBM Cloud Terraform Provider v1.5.0
 - Terraform v0.12.23
 - Python v3.8.2
 
@@ -36,10 +36,7 @@
 - Install numpy, pandas, xlrd (xlsx support), odfpy (ods support), and pyyaml (yaml support).
 - Note: Mac comes with Python 2 by default so Python 3 needs to be installed separately from python.org - installing with brew, pipenv, or pyenv installs libraries into different directories that won't work with Terraformer.
 
-## Notes
-
-<details><summary>Usage</summary>
-<p>
+## Usage
 
 1. Design your VPC infrastructure using [IBM Cloud Stencils](https://github.com/ibm-cloud-architecture/ibm-cloud-stencils).
 
@@ -57,8 +54,7 @@ terraform init\
 terraform plan\
 terraform apply
 
-</p>
-</details>
+## Notes
 
 <details><summary>Regions</summary>
 <p>

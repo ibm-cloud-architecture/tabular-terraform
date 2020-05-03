@@ -10,6 +10,7 @@
 
 Changes:
 - Added Frankfurt support to Gen2.
+- Added var spreadsheet/data but not enabled yet.
 
 ### Terraformer v1.5.0.0
 
@@ -21,7 +22,7 @@ Changes:
 
 Changes:
 - Upgraded to Provider v1.5.0 with new ibm_is_lb_listener_policy and ibm_is_lb_listener_policy_rule resources.
-- Added data for lbpolicies and lbrules but not enabled yet.
+- Added data for lbpolicies and lbrules to lb spreadsheet/data but not enabled yet.
 - Added missing health_monitor_port optional column and field to lb/lbpools.
 - Corrected health_monitor_url from required to optional in lb/lbpools.
 

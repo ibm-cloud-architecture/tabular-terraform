@@ -62,7 +62,7 @@ terraform apply
 | Regions | Zones | Notes |
 | --- | --- | --- |
 | Dallas | Dallas 1,2,3 | |
-| Frankfurt | Frankfurt 1,2,3 | Gen1 only. |
+| Frankfurt | Frankfurt 1,2,3 | |
 | London | London 1,2,3 | |
 | Sydney | Sydney 1,2,3 | Gen1 only. |
 | Tokyo | Tokyo 1,2,3 | Gen1 only. |

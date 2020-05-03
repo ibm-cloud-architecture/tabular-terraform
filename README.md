@@ -96,11 +96,9 @@ terraform apply
 
 | Component | Description |
 | --- | --- |
-| General |  All fields need further testing.
-| | Additional work needed on custom images, secondary NICs, Power, and additional fields in floatingips and publicgateways data. |
+| General | Additional work needed on custom images, secondary NICs, Power, and additional fields in floatingips and publicgateways data. |
 | | Additional resource-specific fields such as count are a future consideration. |
-| Files | Sample data includes access, lb, and vpc. |
-| | Related resources are grouped into generated files. |
+| Files | Related resources are grouped into generated files. |
 | | Rerun after changes and rely on Terraform to handle changes. |
 | Sheets | Use name of basename-groupname for copied data (e.g. instances-group1). |
 | | Columns are subject to change but no upgrade between data versions. |

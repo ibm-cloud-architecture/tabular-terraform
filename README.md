@@ -96,7 +96,7 @@ terraform apply
 
 | Component | Description |
 | --- | --- |
-| General | Additional work needed on custom images, secondary NICs, LB Policies/Rules, Power, floatingips, and publicgateways. |
+| General | Incomplete features are custom images, secondary NICs, LB Policies/Rules, Power, floatingips, and publicgateways. |
 | | Additional resource-specific fields such as count are a future consideration. |
 | Files | Related resources are grouped into generated files. |
 | | Rerun after changes and rely on Terraform to handle changes. |

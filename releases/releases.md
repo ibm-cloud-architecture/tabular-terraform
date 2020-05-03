@@ -18,7 +18,7 @@ Changes:
 | --- |
 | [macOS 64-bit](https://github.com/ibm-cloud-architecture/terraformer/raw/master/releases/download/v1.5.0.0/terraformer_1.5.0.0_darwin_amd64.zip) |
 | [windows 64-bit](https://github.com/ibm-cloud-architecture/terraformer/raw/master/releases/download/v1.5.0.0/terraformer_1.5.0.0_windows_amd64.zip) |
-| [source](https://github.com/ibm-cloud-architecture/terraformer/raw/master/releases/download/v1.5.0.0/terraformer_source_1.5.0.0.zip) |
+| [source](https://github.com/ibm-cloud-architecture/terraformer/raw/master/releases/download/v1.5.0.0/terraformer_1.5.0.0.zip) |
 
 Changes:
 - Upgraded to Provider v1.5.0 with new ibm_is_lb_listener_policy and ibm_is_lb_listener_policy_rule resources.

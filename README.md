@@ -22,6 +22,7 @@
 - IBM Cloud Terraform Provider v1.5.0
 - Terraform v0.12.23
 - Python v3.8.2
+- Cython v0.29.15 (optional)
 
 ## Installation
 

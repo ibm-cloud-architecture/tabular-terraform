@@ -1,0 +1,134 @@
+aclheaders:
+  - name*: acl1
+    vpc*: vpc1
+    resource_group: null
+aclrules:
+  - name*: inacl1rule100
+    acl*: acl1
+    action*: allow
+    source*: 0.0.0.0/0
+    destination*: 0.0.0.0/0
+    direction*: inbound
+    protocol: tcp
+    icmp_code: null
+    icmp_type: null
+    port_min: 80
+    port_max: 80
+    source_port_min: null
+    source_port_max: null
+  - name*: inacl1rule200
+    acl*: acl1
+    action*: allow
+    source*: 0.0.0.0/0
+    destination*: 0.0.0.0/0
+    direction*: inbound
+    protocol: udp
+    icmp_code: null
+    icmp_type: null
+    port_min: 805
+    port_max: 807
+    source_port_min: null
+    source_port_max: null
+  - name*: outacl1rule100
+    acl*: acl1
+    action*: allow
+    source*: 0.0.0.0/0
+    destination*: 0.0.0.0/0
+    direction*: outbound
+    protocol: udp
+    icmp_code: null
+    icmp_type: null
+    port_min: null
+    port_max: null
+    source_port_min: null
+    source_port_max: null
+sgheaders:
+  - name*: sg1
+    vpc*: vpc1
+    resource_group: null
+  - name*: sg2
+    vpc*: vpc1
+    resource_group: null
+sgrules:
+  - name*: insg1rule100
+    group*: sg1
+    direction*: inbound
+    remote*: 127.0.0.1
+    ip_version: null
+    protocol: tcp
+    icmp_code: null
+    icmp_type: null
+    port_min: 80
+    port_max: 80
+  - name*: outsg1rule200
+    group*: sg1
+    direction*: outbound
+    remote*: 127.0.0.1
+    ip_version: null
+    protocol: udp
+    icmp_code: null
+    icmp_type: null
+    port_min: 805
+    port_max: 807
+  - name*: insg2rule100
+    group*: sg2
+    direction*: inbound
+    remote*: 127.0.0.1
+    ip_version: null
+    protocol: null
+    icmp_code: null
+    icmp_type: null
+    port_min: null
+    port_max: null
+  - name*: outsg2rule200
+    group*: sg2
+    direction*: outbound
+    remote*: 127.0.0.1
+    ip_version: null
+    protocol: null
+    icmp_code: null
+    icmp_type: null
+    port_min: null
+    port_max: null
+sshkeys:
+  - name*: key1
+    public_key*: ~/id_rsa.pub
+    resource_group: null
+    tags: null
+vpngateways:
+  - name*: vg1
+    subnet*: subnet1
+    resource_group: null
+vpnconnections:
+  - name*: vpn1
+    vpn_gateway*: vg1
+    peer_address*: vg1
+    preshared_key*: VPNDemoPassword
+    local_cidrs: subnet1
+    peer_cidrs: subnet2
+    admin_state_up: null
+    dead_peer_action: null
+    dead_peer_interval: null
+    dead_peer_timeout: null
+    ike_policy: null
+    ipsec_policy: ipsecpolicy1
+    delete_timeout: 60m
+ipsecpolicies:
+  - name*: ipsecpolicy1
+    authentication_algorithm*: md5
+    encryption_algorithm*: 3des
+    pfs*: disabled
+    key_lifetime: 3600
+    resource_group: null
+ikepolicies:
+  - name*: ikepolicy1
+    authentication_algorithm*: md5
+    encryption_algorithm*: 3des
+    dh_group*: 2
+    ike_version: 1
+    key_lifetime: 28800
+    resource_group: null
+resourcegroups:
+  - name*: null
+    tags: null
+

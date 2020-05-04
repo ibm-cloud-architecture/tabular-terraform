@@ -1,0 +1,225 @@
+{
+  "vpcheaders": [
+    {
+      "name*": "vpc1",
+      "address_prefix_management": "manual",
+      "classic_access": null,
+      "resource_group": null,
+      "tags": null
+    }
+  ],
+  "vpcaddresses": [
+    {
+      "name*": "prefix1",
+      "vpc*": "vpc1",
+      "zone*": "Dallas 1",
+      "cidr*": "10.240.0.0/18"
+    },
+    {
+      "name*": "prefix2",
+      "vpc*": "vpc1",
+      "zone*": "Dallas 2",
+      "cidr*": "10.240.64.0/18"
+    }
+  ],
+  "vpcroutes": [
+    {
+      "name*": null,
+      "vpc*": null,
+      "zone*": null,
+      "destination*": null,
+      "next_hop*": null
+    }
+  ],
+  "subnets": [
+    {
+      "name*": "subnet1",
+      "vpc*": "vpc1",
+      "zone*": "Dallas 1",
+      "ipv4_cidr_block": "10.240.0.0/24",
+      "total_ipv4_address_count": null,
+      "ip_version": null,
+      "network_acl": null,
+      "public_gateway": "pg1",
+      "resource_group": null,
+      "create_timeout": "10m",
+      "update_timeout": "10m",
+      "delete_timeout": "10m"
+    },
+    {
+      "name*": "subnet2",
+      "vpc*": "vpc1",
+      "zone*": "Dallas 2",
+      "ipv4_cidr_block": "10.240.64.0/24",
+      "total_ipv4_address_count": null,
+      "ip_version": null,
+      "network_acl": null,
+      "public_gateway": null,
+      "resource_group": null,
+      "create_timeout": null,
+      "update_timeout": null,
+      "delete_timeout": null
+    }
+  ],
+  "instances": [
+    {
+      "name*": "vsi1",
+      "vpc*": "vpc1",
+      "zone*": "Dallas 1",
+      "profile*": "bx2-8x32",
+      "image*": "ibm-debian9-amd64",
+      "boot_volume": "vsi1boot",
+      "keys*": "key1",
+      "primary_network_interface*": "vsi1nic0",
+      "network_interfaces": "vsi1nic1",
+      "volumes": "vsi1data",
+      "user_data": null,
+      "resource_group": null,
+      "tags": null,
+      "create_timeout": "60m",
+      "delete_timeout": "60m"
+    },
+    {
+      "name*": "vsi2",
+      "vpc*": "vpc1",
+      "zone*": "Dallas 2",
+      "profile*": "bx2-8x32",
+      "image*": "ibm-debian9-amd64",
+      "boot_volume": "vsi2boot",
+      "keys*": "key1",
+      "primary_network_interface*": "vsi2nic0",
+      "network_interfaces": "vsi2nic1",
+      "volumes": "vsi2data",
+      "user_data": null,
+      "resource_group": null,
+      "tags": null,
+      "create_timeout": "60m",
+      "delete_timeout": "60m"
+    }
+  ],
+  "volumes": [
+    {
+      "name*": "vsi1boot",
+      "instance*": "vsi1",
+      "attachment_type*": "boot",
+      "zone*": "Dallas 1",
+      "profile*": "general-purpose",
+      "iops": null,
+      "capacity": 100,
+      "encryption_key": null,
+      "resource_group": null,
+      "resource_controller_url": null,
+      "tags": null,
+      "create_timeout": null,
+      "delete_timeout": null
+    },
+    {
+      "name*": "vsi1data",
+      "instance*": "vsi1",
+      "attachment_type*": "data",
+      "zone*": "Dallas 1",
+      "profile*": "10iops-tier",
+      "iops": null,
+      "capacity": 100,
+      "encryption_key": null,
+      "resource_group": null,
+      "resource_controller_url": null,
+      "tags": null,
+      "create_timeout": "60m",
+      "delete_timeout": "60m"
+    },
+    {
+      "name*": "vsi2boot",
+      "instance*": "vsi2",
+      "attachment_type*": "boot",
+      "zone*": "Dallas 2",
+      "profile*": "general-purpose",
+      "iops": null,
+      "capacity": 100,
+      "encryption_key": null,
+      "resource_group": null,
+      "resource_controller_url": null,
+      "tags": null,
+      "create_timeout": null,
+      "delete_timeout": null
+    },
+    {
+      "name*": "vsi2data",
+      "instance*": "vsi2",
+      "attachment_type*": "data",
+      "zone*": "Dallas 2",
+      "profile*": "10iops-tier",
+      "iops": null,
+      "capacity": 100,
+      "encryption_key": null,
+      "resource_group": null,
+      "resource_controller_url": null,
+      "tags": null,
+      "create_timeout": "60m",
+      "delete_timeout": "60m"
+    }
+  ],
+  "networkinterfaces": [
+    {
+      "name*": "vsi1nic0",
+      "instance*": "vsi1",
+      "interface_type*": "primary",
+      "subnet*": "subnet1",
+      "security_groups": "sg1",
+      "floating_ip": "fip1"
+    },
+    {
+      "name*": "vsi1nic1",
+      "instance*": "vsi1",
+      "interface_type*": "secondary",
+      "subnet*": "subnet1",
+      "security_groups": "sg1,sg2",
+      "floating_ip": null
+    },
+    {
+      "name*": "vsi2nic0",
+      "instance*": "vsi2",
+      "interface_type*": "primary",
+      "subnet*": "subnet2",
+      "security_groups": "sg1",
+      "floating_ip": null
+    },
+    {
+      "name*": "vsi2nic1",
+      "instance*": "vsi2",
+      "interface_type*": "secondary",
+      "subnet*": "subnet2",
+      "security_groups": "sg1,sg2",
+      "floating_ip": null
+    }
+  ],
+  "images": [
+    {
+      "name*": null,
+      "href*": null,
+      "operating_system*": null,
+      "resource_group": null,
+      "tags": null
+    }
+  ],
+  "floatingips": [
+    {
+      "name*": null,
+      "zone": null,
+      "resource_group": null,
+      "create_timeout": null,
+      "delete_timeout": null
+    }
+  ],
+  "publicgateways": [
+    {
+      "name*": null,
+      "vpc*": null,
+      "zone*": null,
+      "floating_ip": null,
+      "resource_controller_url": null,
+      "create_timeout": null,
+      "delete_timeout": null
+    }
+  ]
+}

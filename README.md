@@ -119,7 +119,7 @@ terraform apply
 </p>
 </details>
 
-<details><summary>Development</summary>
+<details><summary>[Development](DEVELOP.md)</summary>
 <p>
 
 DEVELOP.md

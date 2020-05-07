@@ -130,7 +130,7 @@ terraform apply
 | NICs | Test secondary NICs and fix as needed. | NICs are implemented but tested with primary NICs.  Secondary NICs need to be tested. |
 | LB | Complete coding for the new LB policies and rules. | Data has been added for the LB policies and rules but coding and testing needs to be done. |
 | Constants | Move static system data from constants.py to var data (var.xlsx, etc). | This includes regions, zones, image, image profiles, volume profiles. | 
-| Variables | Complete coding for var data. | Data fields have been added (var.xlsx, etc) but coding and testing needs to be done. |
+| Variables | Complete coding for var data (var.xlsx, etc). | Data fields have been added but coding and testing needs to be done. |
 
 </p>
 </details>

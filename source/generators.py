@@ -30,27 +30,65 @@ from extractors import *
 # Constants
 
 # Following static string is included in binary - update version here.
-COPYRIGHT = 'Terraformer 1.5.0.1 - Copyright IBM Corporation 2020'
+COPYRIGHT = 'Terraformer 1.5.2.0 - Copyright IBM Corporation 2020'
 
-#datavars = False
-#individual = False
-#generation = '2'
-#region = 'Dallas'
-#prepend = ''
-#genheader = '# Terraformer generated file'
-#genpath = 'resources'
-#datafolder = 'data'
-#datatype = 'xlsx'
-#propfile = ''
-#propname = '*'
-#propext = 'xlsx'
+genheader = '# Terraformer generated file\n'
+
+# Search functions (puml)
+
+def findrow(gettype, rowname, useroptions):
+   sheets = loadfile(useroptions)
+
+   for name, sheet in sheets.items():
+      name = name.replace(' ', '')
+      pos = name.find('-')
+      if pos >= 0:
+         sheettype = name[0:pos] 
+         sheetgroup = name[pos+1]
+      else:
+         sheettype = name
+         sheetgroup = ''
+
+      if sheettype == gettype:
+         df = loadframe(pd, sheet, useroptions)
+         columns = df.columns
+         for index, row in df.iterrows():
+            # Skip rows with no name - values in other columns are used for arrays.
+            name = row['name']
+            empty = novalue(name)
+            if empty:
+                continue
+
+            if row['name'] == rowname:
+               return row
+
+   return None
+
+def getsheets(gettype, useroptions):
+   sheetlist = []   
+   sheets = loadfile(useroptions)
+
+   for name, sheet in sheets.items():
+      name = name.replace(' ', '')
+      pos = name.find('-')
+      if pos >= 0:
+         sheettype = name[0:pos] 
+         sheetgroup = name[pos+1]
+      else:
+         sheettype = name
+         sheetgroup = ''
+
+      if sheettype == gettype:
+         sheetlist.append(sheet)
+
+   return sheetlist
 
 # Generate functions
 
 def provider(genpath, region, generation):
    file = os.path.join(genpath, providerfile%'ibm')
    tf = open(file, 'w')
-   tf.write('# Terraformer generated file\n')
+   tf.write(genheader)
    tf.write('terraform { required_version = ">= 0.12.0" }\n')
    tf.write('provider "ibm" {\n')
    #tf.write('bluemix_api_key = "${var.bluemixkey}"\n')
@@ -75,7 +113,10 @@ def provider(genpath, region, generation):
    tf.close()
    return
 
-def generatevariables(sheetname, name, sheet, df, details, genpath, prepend):
+def generatevariables(sheetname, name, sheet, df, details, useroptions):
+   genpath = useroptions['genpath']
+   prepend = useroptions['prepend']
+   
    print(processingsheetmessage % name)
 
    resourcetype = details['resource']
@@ -87,7 +128,7 @@ def generatevariables(sheetname, name, sheet, df, details, genpath, prepend):
 
    file = os.path.join(genpath, filetype)
    tf = open(file, 'w')
-   tf.write('# Terraformer generated file\n')
+   tf.write(genheader)
 
    columns = df.columns
    for index, row in df.iterrows():
@@ -122,7 +163,14 @@ def generatevariables(sheetname, name, sheet, df, details, genpath, prepend):
    tf.close()
    return
 
-def generatesheet(sheetname, name, sheet, df, details, datavars, propfile, propname, propext, individual, prepend, genpath, generation):
+def generatesheet(sheetname, name, sheet, df, details, useroptions):
+   datavars = useroptions['datavars']
+   generation = useroptions['generation']
+   genpath = useroptions['genpath']
+   individual = useroptions['individual']
+   prepend = useroptions['prepend']
+   propname = useroptions['propname']
+
    timeoutsave = ''
    protocolsave = ''
    protocolvaluesave = ''
@@ -146,7 +194,7 @@ def generatesheet(sheetname, name, sheet, df, details, datavars, propfile, propn
    else:
       varstf = None
 
-   df = loadframe(pd, sheet, propfile, propname, propext, datavars, individual)
+   df = loadframe(pd, sheet, useroptions)
 
    columns = df.columns
    for index, row in df.iterrows():
@@ -166,9 +214,9 @@ def generatesheet(sheetname, name, sheet, df, details, datavars, propfile, propn
       if (individual or parenttype == '') and not sheetname == 'aclrules': 
          file = os.path.join(genpath, filetype % name)
          tf = open(file, 'w')
-         tf.write('# Terraformer generated file\n')
+         tf.write(genheader)
       else:
-         parentname = getparent(originalname, row, parenttype, details, prepend, propfile, propname, propext, datavars, individual)
+         parentname = getparent(originalname, row, parenttype, details, useroptions)
          if parentname == '':
             return
          saveparentname = parentname
@@ -267,9 +315,9 @@ def generatesheet(sheetname, name, sheet, df, details, datavars, propfile, propn
                else:
                   closepubfip = False
                if isprimarynic(details):
-                  primarynic(varstf, tf, value, details, propfile, propname, propext, datavars, individual, prepend)
+                  primarynic(varstf, tf, value, details, useroptions)
                elif isnetworkinterfaces(details):
-                  networkinterfaces(tf, value, details, propfile, propname, propext, datavars, individual, prepend)
+                  networkinterfaces(tf, value, details, useroptions)
                elif not sheetname == 'aclrules' or field != 'acl':
                   if field != 'name':
                      field = getfield(details)
@@ -325,7 +373,14 @@ def generatesheet(sheetname, name, sheet, df, details, datavars, propfile, propn
    return
 
 
-def generateall(propfile, propname, propext, generation, datavars, genpath, region, individual, prepend):
+def generateall(useroptions):
+   datavars = useroptions['datavars']
+   generation = useroptions['generation']
+   genpath = useroptions['genpath']
+   propfile = useroptions['propfile']
+   propname = useroptions['propname']
+   region = useroptions['region']
+
    print(startmessage % (generation, propfile))
 
    os.makedirs(genpath, exist_ok=True)
@@ -335,10 +390,10 @@ def generateall(propfile, propname, propext, generation, datavars, genpath, regi
       print(processingsheetmessage % ("systemvariables-" + propname))
       varsfile = os.path.join(genpath, varsfilename % propname)
       varstf = open(varsfile, 'w')
-      varstf.write('# Terraformer generated file\n')
+      varstf.write(genheader)
       varstf.close()
 
-   sheets = loadfile(propfile, propname, propext, datavars, individual)
+   sheets = loadfile(useroptions)
    for name, sheet in sheets.items():
       name = name.replace(' ', '')
       pos = name.find('-')
@@ -351,28 +406,28 @@ def generateall(propfile, propname, propext, generation, datavars, genpath, regi
       if sheettype in ['floatingips', 'publicgateways', 'lbpolicies', 'lbrules', 'uservariables', 'systemvariables']:
          continue
 
-      df = loadframe(pd, sheet, propfile, propname, propext, datavars, individual)
+      df = loadframe(pd, sheet, useroptions)
 
       if sheettype == 'volumes':
          volumetable = extractvolumetable(sheet, df)
          if not volumetable.empty:
-            generatesheet(sheettype, name, volumetable, volumetable, alldetails[sheettype], datavars, propfile, propname, propext, individual, prepend, genpath, generation)
+            generatesheet(sheettype, name, volumetable, volumetable, alldetails[sheettype], useroptions)
       elif sheettype == 'networkinterfaces':
          fiptable = extractinstancefiptable(sheet, df)
          if not fiptable.empty:
-            generatesheet('fips', name+'-fips', fiptable, fiptable, alldetails['fips'], datavars, propfile, propname, propext, individual, prepend, genpath, generation)
+            generatesheet('fips', name+'-fips', fiptable, fiptable, alldetails['fips'], useroptions)
       elif sheettype == 'subnets':
-         generatesheet(sheettype, name, sheet, df, alldetails[sheettype], datavars, propfile, propname, propext, individual, prepend, genpath, generation)
+         generatesheet(sheettype, name, sheet, df, alldetails[sheettype], useroptions)
          fiptable = extractsubnetfiptable(sheet, df)
          if not fiptable.empty:
-            generatesheet('fips', name+'-fips', fiptable, fiptable, alldetails['fips'], datavars, propfile, propname, propext, individual, prepend, genpath, generation)
+            generatesheet('fips', name+'-fips', fiptable, fiptable, alldetails['fips'], useroptions)
          publicgatewaytable = extractsubnetgatewaytable(sheet, df)
          if not publicgatewaytable.empty:
-            generatesheet('publicgateways', name+'-publicgateways', publicgatewaytable, publicgatewaytable, alldetails['publicgateways'], datavars, propfile, propname, propext, individual, prepend, genpath, generation)
+            generatesheet('publicgateways', name+'-publicgateways', publicgatewaytable, publicgatewaytable, alldetails['publicgateways'], useroptions)
       elif sheettype == 'variables':
-         generatevariables(sheettype, name, sheet, df, alldetails[sheettype], genpath, prepend)
+         generatevariables(sheettype, name, sheet, df, alldetails[sheettype], useroptions)
       else: 
-         generatesheet(sheettype, name, sheet, df, alldetails[sheettype], datavars, propfile, propname, propext, individual, prepend, genpath, generation)
+         generatesheet(sheettype, name, sheet, df, alldetails[sheettype], useroptions)
 
    print(donemessage % (propname, genpath))
    return

@@ -135,7 +135,10 @@ def getresource(details):
 def doprepend(details):
    return details[5]
 
-def loadfile(propfile, propname, propext, datavars, individual):
+def loadfile(useroptions):
+   propext = useroptions['propext']
+   propfile = useroptions['propfile']
+
    if (propext.lower() == 'json'):
       # Unable to use pd.read_json as it returns error that all arrays must all be same length which is already the case. 
       sheets_raw = yaml.dump(json.load(open(propfile)))
@@ -156,7 +159,10 @@ def loadfile(propfile, propname, propext, datavars, individual):
 
    return sheets
 
-def loadframe(pd, sheet, propfile, propname, propext, datavars, individual):
+def loadframe(pd, sheet, useroptions):
+   propext = useroptions['propext']
+   propfile = useroptions['propfile']
+
    df = pd.DataFrame(sheet)
 
    if (propext.lower() == 'json'):
@@ -176,8 +182,8 @@ def loadframe(pd, sheet, propfile, propname, propext, datavars, individual):
 
    return df
 
-def getnic(nicname, details, propfile, propname, propext, datavars, individual):
-   sheets = loadfile(propfile, propname, propext, datavars, individual)
+def getnic(nicname, details, useroptions):
+   sheets = loadfile(useroptions)
    for sheetname, sheet in sheets.items():
       sheetname = sheetname.replace(' ', '')
       pos = sheetname.find('-')
@@ -190,7 +196,7 @@ def getnic(nicname, details, propfile, propname, propext, datavars, individual):
       if basename != 'networkinterfaces':
          continue
 
-      df = loadframe(pd, sheet, propfile, propname, propext, datavars, individual)
+      df = loadframe(pd, sheet, useroptions)
 
       details = alldetails[basename]
       resourcetype = details['resource']
@@ -213,7 +219,9 @@ def getnic(nicname, details, propfile, propname, propext, datavars, individual):
   
    return None
 
-def getparent(rowname, parentrow, parenttype, details, prepend, propfile, propname, propext, datavars, individual):
+def getparent(rowname, parentrow, parenttype, details, useroptions):
+   prepend = useroptions['prepend']  
+
    parentname = ''
    if parenttype.find(':') == -1:
       columnname = parenttype
@@ -246,7 +254,7 @@ def getparent(rowname, parentrow, parenttype, details, prepend, propfile, propna
 
       parentvalue = parentrow[parentcolumn]
 
-      sheets = loadfile(propfile, propname, propext, datavars, individual)
+      sheets = loadfile(useroptions)
       for name, sheet in sheets.items():
          name = name.replace(' ', '')
          pos = name.find('-')
@@ -259,7 +267,7 @@ def getparent(rowname, parentrow, parenttype, details, prepend, propfile, propna
          if type != sheettype:
             continue
 
-         df = loadframe(pd, sheet, propfile, propname, propext, datavars, individual)
+         df = loadframe(pd, sheet, useroptions)
 
          details = alldetails[type]
          resourcetype = details['resource']
@@ -424,8 +432,11 @@ def getvalue(field, column, row, fieldstype, prepend, generation):
       value = reference if reference != '' else cell
    return value
 
-def primarynic(varstf, tf, nicname, details, propfile,  propname, propext, datavars, individual, prepend):
-   row = getnic(nicname, details, propfile, propname, propext, datavars, individual)
+def primarynic(varstf, tf, nicname, details, useroptions):
+   datavars = useroptions['datavars']
+   prepend = useroptions['prepend']
+
+   row = getnic(nicname, details, useroptions)
 
    if row.empty:
       print(invalidnicmessage % nicname)
@@ -481,11 +492,13 @@ def primarynic(varstf, tf, nicname, details, propfile,  propname, propext, datav
       
    return
 
-def networkinterfaces(tf, niclist, details, propfile, propname, propext, datavars, individual, prepend):
+def networkinterfaces(tf, niclist, details, useroptions):
+   prepend = useroptions['prepend']
+
    nicarray = niclist.split(',')
 
    for nicname in nicarray: 
-      row = getnic(nicname, details, propfile, propname, propext, datavars, individual)
+      row = getnic(nicname, details, useroptions)
 
       if row.empty:
          print(invalidnicmessage % nicname)

@@ -19,14 +19,14 @@
 
 ## Requirements
 
-- IBM Cloud Terraform Provider v1.5.0
+- IBM Cloud Terraform Provider v1.5.2
 - Terraform v0.12.23
 - Python v3.8.2
 - Cython v0.29.15 (optional)
 
 ## Installation
 
-1. [Download Terraformer](/releases/releases.md) (Latest: v1.5.0.1).
+1. [Download Terraformer](/releases/releases.md) (Latest: v1.5.2.0).
 - Unzip Terraformer archive to extract terraformer executable and sample data.
 2. [Download and install Terraform](https://www.terraform.io/downloads.html).
 - Unzip Terraform archive to extract terraform binary and add location to PATH. 
@@ -128,7 +128,7 @@ terraform apply
 | All | Test all data fields and variations. | Testing is mostly done with the provided data which doesn't use all fields.  Testing needs to be done with all fields. |
 | Images | Test custom images and fix as needed. | Images are implemented but tested with provided images.  Custom images need to be tested. |
 | NICs | Test secondary NICs and fix as needed. | NICs are implemented but tested with primary NICs.  Secondary NICs need to be tested. |
-| LB | Complete coding for the new LB policies and rules. | Data has been added for the LB policies and rules but coding and testing needs to be done. |
+| LB | Complete coding/testing for the new LB policies and rules. | Data and structures have been added for the LB policies and rules but testing needs to be done. |
 | Constants | Move static system data from constants.py to var data (var.xlsx, etc). | This includes regions, zones, image, image profiles, volume profiles. | 
 | Variables | Complete coding for var data (var.xlsx, etc). | Data fields have been added but coding and testing needs to be done. |
 

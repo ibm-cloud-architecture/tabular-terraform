@@ -19,6 +19,22 @@ varsyntax = 'variable %s_%s { default = "%s" }\n'
 varsyntax2 = 'variable %s { default = "%s" }\n'
 refsyntax = 'var.%s_%s'
 
+# User options
+
+useroptions = {
+'datapath': 'data',
+'datavars': False,
+'generation': '2',
+'genpath': 'resources',
+'individual': False,
+'prepend': '',
+'propext': 'xlsx',
+'propfile': '',
+'propname': '*',
+'puml': False,
+'region': 'Dallas'
+}
+
 # Resource names
 
 providerresource = 'provider'
@@ -43,6 +59,8 @@ lbresource = 'ibm_is_lb'
 lbpoolresource = 'ibm_is_lb_pool'
 lbmemberresource = 'ibm_is_lb_pool_member'
 lblistenerresource = 'ibm_is_lb_listener'
+lbpolicyresource = 'ibm_is_lb_listener_policy'
+lbruleresource = 'ibm_is_lb_listener_policy_rule'
 aclresource = 'ibm_is_network_acl'
 aclruleresource = 'ibm_is_network_acl'
 sgresource = 'ibm_is_security_group'
@@ -75,6 +93,8 @@ lbfile = lbresource + '_%s.tf'
 lbpoolfile = lbpoolresource + '_%s.tf'
 lbmemberfile = lbmemberresource + '_%s.tf'
 lblistenerfile = lblistenerresource + '_%s.tf'
+lbpolicyfile = lbpolicyresource + '_%s.tf'
+lbrulefile = lbruleresource + '_%s.tf'
 aclfile = aclresource + '_%s.tf'
 aclrulefile = aclruleresource + '_%s.tf'
 sgfile = sgresource + '_%s.tf'
@@ -503,6 +523,50 @@ lblistenerfields = {
    ('delete', 'string', 'optional', 'nogen', '', False)
 }
 
+lbpolicyfields = {
+'name': 
+   ('name', 'string', 'required', 'nogen', '', True),
+'lb': 
+   ('lb', 'string', 'required', 'id', lbresource, True),
+'listener': 
+   ('listener', 'string', 'required', 'id', lblistenerresource, True),
+'action': 
+   ('action', 'string', 'required', 'value', '', True),
+'priority': 
+   ('priority', 'string', 'required', 'value', '', True),
+'target_id': 
+   ('target_id', 'string', 'optional', 'value', '', False),
+'target_http_status_code': 
+   ('target_http_status_code', 'string', 'optional', 'value', '', False),
+'target_url': 
+   ('target_url', 'string', 'optional', 'value', '', False)
+}
+
+lbrulefields = {
+'name': 
+   ('name', 'string', 'required', 'nogen', '', True),
+'lb': 
+   ('lb', 'string', 'required', 'id', lbresource, True),
+'listener': 
+   ('listener', 'string', 'required', 'id', lblistenerresource, True),
+'policy': 
+   ('policy', 'string', 'required', 'id', lbpolicyresource, True),
+'condition': 
+   ('condition', 'string', 'required', 'value', '', True),
+'type': 
+   ('type', 'string', 'required', 'value', '', True),
+'value': 
+   ('value', 'string', 'optional', 'value', '', False),
+'field': 
+   ('field', 'string', 'optional', 'value', '', False),
+'create_timeout': 
+   ('create', 'string', 'optional', 'nogen', '', False),
+'update_timeout': 
+   ('update', 'string', 'optional', 'nogen', '', False),
+'delete_timeout': 
+   ('delete', 'string', 'optional', 'nogen', '', False)
+}
+
 aclheaderfields = {
 'name': 
    ('name', 'string', 'required', 'value', '', True),
@@ -803,6 +867,26 @@ lblistenerdictionary = {
 'parentfile':lbfile 
 }
 
+lbpolicydictionary = {
+'resource':lbpolicyresource, 
+'file':lbpolicyfile, 
+'fields':lbpolicyfields, 
+'header':{},
+'structures':{'timeout':timeoutstructure},
+'parent':'lb', 
+'parentfile':lbfile 
+}
+
+lbruledictionary = {
+'resource':lbruleresource, 
+'file':lbrulefile, 
+'fields':lbrulefields, 
+'header':{},
+'structures':{'timeout':timeoutstructure},
+'parent':'lb', 
+'parentfile':lbfile 
+}
+
 aclheaderdictionary = {
 'resource':aclresource, 
 'file':aclfile, 
@@ -879,6 +963,8 @@ alldetails = {
 'lbpools':lbpooldictionary, 
 'lbmembers':lbmemberdictionary, 
 'lblisteners':lblistenerdictionary, 
+'lbpolicies':lbpolicydictionary, 
+'lbrules':lbruledictionary, 
 'aclheaders':aclheaderdictionary,
 'aclrules':aclruledictionary,
 'sgheaders':sgheaderdictionary,

@@ -1,6 +1,18 @@
 # Terraformer Releases
 
-### Terraformer v1.5.0.1 (Latest)
+### Terraformer v1.5.2.0 (Latest)
+
+| Assets |
+| --- |
+| [macOS 64-bit](https://github.com/ibm-cloud-architecture/terraformer/raw/master/releases/download/v1.5.2.0/terraformer_1.5.2.0_darwin_amd64.zip) |
+| [windows 64-bit](https://github.com/ibm-cloud-architecture/terraformer/raw/master/releases/download/v1.5.2.0/terraformer_1.5.2.0_windows_amd64.zip) |
+| [source](https://github.com/ibm-cloud-architecture/terraformer/raw/master/releases/download/v1.5.2.0/terraformer_1.5.2.0.zip) |
+
+Changes:
+- Upgraded to provider v1.5.2 - no changes to data.
+- Added structures for lbpolicies and lbrules but not enabled yet.
+
+### Terraformer v1.5.0.1
 
 | Assets |
 | --- |

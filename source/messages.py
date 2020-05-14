@@ -16,8 +16,10 @@
 # Messages
 
 terraformermessage = 'Terraformer for IBM Virtual Private Cloud\n'
-startmessage = 'Starting Terraformer for Gen%s with input from %s\n'
-donemessage = '\nCompleted Terraformer for %s with output to folder %s\n'
+startpumlmessage = 'Generating PUML for Gen%s with input from %s\n'
+donepumlmessage = '\nCompleted PUML for %s with output to folder %s\n'
+starttfmessage = 'Generating Resources for Gen%s with input from %s\n'
+donetfmessage = '\nCompleted Resources for %s with output to folder %s\n'
 invalidinputmessage = '(Error) Invalid path or file: %s'
 invalidgenmessage = '(Error) Only available for Gen2'
 invalidprotocolmessage = '(Error) Invalid protocol: %s'

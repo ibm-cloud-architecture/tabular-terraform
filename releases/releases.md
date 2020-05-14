@@ -1,6 +1,17 @@
 # Terraformer Releases
 
-### Terraformer v1.5.2.0 (Latest)
+### Terraformer v1.5.2.1 (Latest)
+
+| Assets |
+| --- |
+| [macOS 64-bit](https://github.com/ibm-cloud-architecture/terraformer/raw/master/releases/download/v1.5.2.1/terraformer_1.5.2.1_darwin_amd64.zip) |
+| [windows 64-bit](https://github.com/ibm-cloud-architecture/terraformer/raw/master/releases/download/v1.5.2.1/terraformer_1.5.2.1_windows_amd64.zip) |
+| [source](https://github.com/ibm-cloud-architecture/terraformer/raw/master/releases/download/v1.5.2.1/terraformer_1.5.2.1.zip) |
+
+Changes:
+- Upgraded to provider v1.5.2 - no changes to data.
+
+### Terraformer v1.5.2.0
 
 | Assets |
 | --- |

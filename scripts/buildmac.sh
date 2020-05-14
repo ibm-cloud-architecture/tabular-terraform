@@ -1,6 +1,6 @@
-cat ../source/constants.py ../source/messages.py ../source/structures.py ../source/helpers.py ../source/extractors.py ../source/generators.py ../source/terraformer.py > ../build/terraformerall.py
+cat ../source/copyright.py ../source/constants.py ../source/messages.py ../source/structures.py ../source/helpers.py ../source/extractors.py ../source/genpuml.py ../source/gentf.py ../source/terraformer.py > ../build/terraformerall.py
 
-sed -i'.bak' -e 's/from constants import */#/g' -e 's/from messages import */#/g' -e 's/from structures import */#/g' -e 's/from helpers import */#/g' -e 's/from extractors import */#/g' -e 's/from generators import */#/g' ../build/terraformerall.py
+sed -i'.bak' -e 's/from copyright import */#/g' -e 's/from constants import */#/g' -e 's/from messages import */#/g' -e 's/from structures import */#/g' -e 's/from helpers import */#/g' -e 's/from extractors import */#/g' -e 's/from genpuml import */#/g' -e 's/from gentf import */#/g' ../build/terraformerall.py
 
 sed -i'.bak2' -e 's/import os/#/g' -e 's/import sys/#/g' -e 's/import argparse/#/g' -e 's/import json/#/g' -e 's/import yaml/#/g' -e 's/import numpy as np/#/g' -e 's/import pandas as pd/#/g' ../build/terraformerall.py
 

@@ -21,9 +21,11 @@ import yaml
 import numpy as np
 import pandas as pd
 
+from copyright import *
 from messages import *
-from generators import *
 from structures import *
+from genpuml import *
+from gentf import *
 
 def main():
    print(terraformermessage)
@@ -32,9 +34,6 @@ def main():
 
    datapath = useroptions['datapath']
    parser.add_argument('inputvalue', nargs='?', default=datapath, help='input folder or input filename (default: ' + datapath + ')')
-
-   datavars = useroptions['datavars']
-   parser.add_argument('-d', action='store_true', dest='datavars', default=datavars, help='generate variables for data (default: ' + ('True' if datavars else 'False') + ')')
 
    generation = useroptions['generation']
    parser.add_argument('-g', dest='generation', default=generation, help='1 for VPC Gen1, 2 for VPC Gen2 (default: ' + generation + ')')
@@ -45,11 +44,14 @@ def main():
    prepend = useroptions['prepend']
    parser.add_argument('-p', dest='prepend', default=prepend, help='prepend string to resource names (default: ' + prepend + ')')
 
-   puml = useroptions['puml']
-   parser.add_argument('-u', dest='puml', default=puml, help='generate puml (default: ' + ('True' if puml else 'False') + ')')
-
    region = useroptions['region']
    parser.add_argument('-r', dest='region', default=region, help='region for VPC (default: ' + region + ')')
+
+   puml = useroptions['puml']
+   parser.add_argument('-d', action='store_true', dest='puml', default=puml, help='generate diagram (default: ' + ('True' if puml else 'False') + ')')
+
+   datavars = useroptions['datavars']
+   parser.add_argument('-v', action='store_true', dest='datavars', default=datavars, help='generate variables (default: ' + ('True' if datavars else 'False') + ')')
 
    parser.add_argument('--version', action='version', version='%(prog)s ' + COPYRIGHT.split(' ')[1])
 
@@ -79,7 +81,9 @@ def main():
             useroptions['propfile'] = propfile
             useroptions['propname'] = propname
             useroptions['propext'] = propext
-            generateall(useroptions)
+            gentf(useroptions)
+            if (useroptions['puml'] and propname == 'vpc'):
+               genpuml(useroptions)
       if (not found):
          print(missinginputmessage % results.inputvalue)
    elif (os.path.isfile(inputvalue)):
@@ -91,7 +95,9 @@ def main():
       useroptions['propfile'] = propfile
       useroptions['propname'] = propname
       useroptions['propext'] = propext
-      generateall(useroptions)
+      gentf(useroptions)
+      if (useroptions['puml'] and propname == 'vpc'):
+         genpuml(useroptions)
    elif (os.path.isfile(os.path.join(datapath, inputvalue))):
       # Add path to inputvalue and if found then process the file. 
       propfile = os.path.join(datapath, inputvalue)
@@ -101,7 +107,9 @@ def main():
       useroptions['propfile'] = propfile
       useroptions['propname'] = propname
       useroptions['propext'] = propext
-      generateall(useroptions)
+      gentf(useroptions)
+      if (useroptions['puml'] and propname == 'vpc'):
+         genpuml(useroptions)
    else:
       print(invalidinputmessage % results.inputvalue)
 

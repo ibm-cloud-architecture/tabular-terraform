@@ -29,59 +29,7 @@ from extractors import *
 
 # Constants
 
-# Following static string is included in binary - update version here.
-COPYRIGHT = 'Terraformer 1.5.2.0 - Copyright IBM Corporation 2020'
-
 genheader = '# Terraformer generated file\n'
-
-# Search functions (puml)
-
-def findrow(gettype, rowname, useroptions):
-   sheets = loadfile(useroptions)
-
-   for name, sheet in sheets.items():
-      name = name.replace(' ', '')
-      pos = name.find('-')
-      if pos >= 0:
-         sheettype = name[0:pos] 
-         sheetgroup = name[pos+1]
-      else:
-         sheettype = name
-         sheetgroup = ''
-
-      if sheettype == gettype:
-         df = loadframe(pd, sheet, useroptions)
-         columns = df.columns
-         for index, row in df.iterrows():
-            # Skip rows with no name - values in other columns are used for arrays.
-            name = row['name']
-            empty = novalue(name)
-            if empty:
-                continue
-
-            if row['name'] == rowname:
-               return row
-
-   return None
-
-def getsheets(gettype, useroptions):
-   sheetlist = []   
-   sheets = loadfile(useroptions)
-
-   for name, sheet in sheets.items():
-      name = name.replace(' ', '')
-      pos = name.find('-')
-      if pos >= 0:
-         sheettype = name[0:pos] 
-         sheetgroup = name[pos+1]
-      else:
-         sheettype = name
-         sheetgroup = ''
-
-      if sheettype == gettype:
-         sheetlist.append(sheet)
-
-   return sheetlist
 
 # Generate functions
 
@@ -372,8 +320,7 @@ def generatesheet(sheetname, name, sheet, df, details, useroptions):
 
    return
 
-
-def generateall(useroptions):
+def gentf(useroptions):
    datavars = useroptions['datavars']
    generation = useroptions['generation']
    genpath = useroptions['genpath']
@@ -381,7 +328,7 @@ def generateall(useroptions):
    propname = useroptions['propname']
    region = useroptions['region']
 
-   print(startmessage % (generation, propfile))
+   print(starttfmessage % (generation, propfile))
 
    os.makedirs(genpath, exist_ok=True)
    provider(genpath, region, generation)
@@ -429,5 +376,5 @@ def generateall(useroptions):
       else: 
          generatesheet(sheettype, name, sheet, df, alldetails[sheettype], useroptions)
 
-   print(donemessage % (propname, genpath))
+   print(donetfmessage % (propname, genpath))
    return

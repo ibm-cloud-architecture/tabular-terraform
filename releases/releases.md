@@ -9,7 +9,8 @@
 | [source](https://github.com/ibm-cloud-architecture/terraformer/raw/master/releases/download/v1.5.2.1/terraformer_1.5.2.1.zip) |
 
 Changes:
-- Upgraded to provider v1.5.2 - no changes to data.
+- No changes to data.
+- Started support for puml.
 
 ### Terraformer v1.5.2.0
 

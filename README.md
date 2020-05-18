@@ -133,7 +133,7 @@ terraform apply
 </p>
 </details>
 
-## Tools
+## References
 
 1. [IBM Cloud Stencils](https://github.com/ibm-cloud-architecture/ibm-cloud-stencils)
 2. [IBM Terraformer Provider](https://github.com/IBM-Cloud/terraform-provider-ibm)

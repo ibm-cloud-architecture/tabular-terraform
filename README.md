@@ -135,8 +135,8 @@ terraform apply
 
 ## Tools
 
-1. [IBM Terraformer Provider](https://github.com/IBM-Cloud/terraform-provider-ibm)
-2. [IBM Cloud Stencils](https://github.com/ibm-cloud-architecture/ibm-cloud-stencils)
+1. [IBM Cloud Stencils](https://github.com/ibm-cloud-architecture/ibm-cloud-stencils)
+2. [IBM Terraformer Provider](https://github.com/IBM-Cloud/terraform-provider-ibm)
 
 ## License
 

@@ -41,7 +41,7 @@
 
 1. Copy sample files from provided json, ods, xlsx, or yaml folder to your data folder. 
 
-2. Customize sample files according to your design.
+2. Customize sample files with the infrastructure to be provisioned.
 
 3. To display command options:  bin/terraformer -h
 

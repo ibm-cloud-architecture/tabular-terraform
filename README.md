@@ -39,17 +39,17 @@
 
 ## Usage
 
-1. Design your VPC infrastructure using [IBM Cloud Stencils](https://github.com/ibm-cloud-architecture/ibm-cloud-stencils).
+Recommend to design your VPC infrastructure using [IBM Cloud Stencils](https://github.com/ibm-cloud-architecture/ibm-cloud-stencils).
 
-2. Copy sample files from provided json, ods, xlsx, or yaml folder to your data folder. 
+1. Copy sample files from provided json, ods, xlsx, or yaml folder to your data folder. 
 
-3. Customize sample files according to your design.
+2. Customize sample files according to your design.
 
-4. To display command options:  bin/terraformer -h
+3. To display command options:  bin/terraformer -h
 
-5. To generate with input from data and output to resources:  bin/terraformer data
+4. To generate with input from data and output to resources:  bin/terraformer data
 
-6. Execute terraform in output directory to provision your VPC infrastructure:\
+5. Execute terraform in output directory to provision your VPC infrastructure:\
 terraform fmt\
 terraform init\
 terraform plan\
@@ -134,6 +134,11 @@ terraform apply
 
 </p>
 </details>
+
+## Tools
+
+1. [IBM Terraformer Provider](https://github.com/IBM-Cloud/terraform-provider-ibm)
+2. [IBM Cloud Stencils](https://github.com/ibm-cloud-architecture/ibm-cloud-stencils)
 
 ## License
 

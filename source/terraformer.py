@@ -30,7 +30,7 @@ from gentf import *
 def main():
    print(terraformermessage)
 
-   parser = argparse.ArgumentParser(description='Generates Terraform for IBM Virtual Private Cloud')
+   parser = argparse.ArgumentParser(description='Generates Terraform and PUML for IBM Virtual Private Cloud')
 
    datapath = useroptions['datapath']
    parser.add_argument('inputvalue', nargs='?', default=datapath, help='input folder or input filename (default: ' + datapath + ')')

@@ -14,4 +14,4 @@
 # limitations under the License.
 
 # Following static string is included in binary - update version here.
-COPYRIGHT = 'Terraformer 1.5.2.1 - Copyright IBM Corporation 2020'
+COPYRIGHT = 'Terraformer 1.6.0.0 - Copyright IBM Corporation 2020'

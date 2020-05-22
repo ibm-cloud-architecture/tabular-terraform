@@ -161,7 +161,7 @@
     {
       "name*": "ikepolicy1",
       "authentication_algorithm*": "md5",
-      "encryption_algorithm*": "3des",
+      "encryption_algorithm*": "aes256",
       "dh_group*": 2,
       "ike_version": 1,
       "key_lifetime": 28800,

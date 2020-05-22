@@ -9,7 +9,7 @@
 | [source](https://github.com/ibm-cloud-architecture/terraformer/raw/master/releases/download/v1.6.0.0/terraformer_1.6.0.0.zip) |
 
 Data Changes:
-- Changed encryption_algorithm value from 3des to aes256 on IKE/IPSec Policies.  Provider v1.6.0 changed 3des to triple_des but since the value had to be changed anyway it was changed to aes to be more secure.
+- Changed encryption_algorithm value from 3des to aes256 on IKE/IPSec Policies.  Provider v1.6.0 changed 3des to triple_des but since the default value in the data had to be changed anyway it was changed to aes to be more secure.
 
 Tool Changes:
 - Upgraded to provider v1.6.0.

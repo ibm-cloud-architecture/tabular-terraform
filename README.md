@@ -19,14 +19,14 @@
 
 ## Requirements
 
-- IBM Cloud Terraform Provider v1.6.0
+- IBM Cloud Terraform Provider v1.7.0
 - Terraform v0.12.23
 - Python v3.8.2
 - Cython v0.29.15 (optional)
 
 ## Installation
 
-1. [Download Terraformer](/releases/releases.md) (Latest: v1.6.0.0).
+1. [Download Terraformer](/releases/releases.md) (Latest: v1.7.0.0).
 - Unzip Terraformer archive to extract terraformer executable and sample data.
 2. [Download and install Terraform](https://www.terraform.io/downloads.html).
 - Unzip Terraform archive to extract terraform binary and add location to PATH. 

@@ -32,7 +32,8 @@ useroptions = {
 'propfile': '',
 'propname': '*',
 'puml': False,
-'region': 'Dallas'
+'region': 'Dallas',
+'tf': True
 }
 
 # Resource names

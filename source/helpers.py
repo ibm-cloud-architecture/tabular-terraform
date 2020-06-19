@@ -48,7 +48,10 @@ def novalue(value):
       return False
 
 def getdetails(field, fieldstype):
-   details = fieldstype[field]
+   if (field in fieldstype):    
+      details = fieldstype[field]
+   else:
+      details = None
    return details
 
 def getfield(details):

@@ -47,11 +47,11 @@ def main():
    region = useroptions['region']
    parser.add_argument('-r', dest='region', default=region, help='region for VPC (default: ' + region + ')')
 
-#  tf = useroptions['tf']
-#  parser.add_argument('-t', action='store_true', dest='tf', default=tf, help='generate terraform (default: ' + ('True' if tf else 'False') + ')')
+   #tf = useroptions['tf']
+   #parser.add_argument('-t', action='store_true', dest='tf', default=tf, help='generate terraform (default: ' + ('True' if tf else 'False') + ')')
 
-#  puml = useroptions['puml']
-#  parser.add_argument('-d', action='store_true', dest='puml', default=puml, help='generate diagram (default: ' + ('True' if puml else 'False') + ')')
+   puml = useroptions['puml']
+   parser.add_argument('-d', action='store_true', dest='puml', default=puml, help='generate diagram (default: ' + ('True' if puml else 'False') + ')')
 
    datavars = useroptions['datavars']
    parser.add_argument('-v', action='store_true', dest='datavars', default=datavars, help='generate variables (default: ' + ('True' if datavars else 'False') + ')')
@@ -65,9 +65,10 @@ def main():
    useroptions['generation'] = results.generation
    useroptions['genpath'] = results.outputfolder
    useroptions['prepend'] = results.prepend
-#  useroptions['puml'] = results.puml
+   useroptions['puml'] = results.puml
    useroptions['region'] = results.region
-#  useroptions['tf'] = results.tf
+   #useroptions['tf'] = results.tf
+   useroptions['tf'] = True
 
    inputvalue = results.inputvalue
    if (os.path.isdir(inputvalue)):
@@ -87,7 +88,7 @@ def main():
             useroptions['propext'] = propext
             if (useroptions['tf']):
                gentf(useroptions)
-            if (useroptions['puml'] and propname == 'vpc'):
+            if (useroptions['puml'] and propname == 'Account-Export'):
                genpuml(useroptions)
       if (not found):
          print(missinginputmessage % results.inputvalue)

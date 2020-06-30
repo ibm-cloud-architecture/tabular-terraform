@@ -18,6 +18,7 @@ import sys
 import argparse
 import json
 import yaml
+import ast
 import numpy as np
 import pandas as pd
 
@@ -80,6 +81,11 @@ def getsheets(gettype, useroptions):
 
    return sheetlist
 
+def getnormalized(data):
+   normalized = pd.json_normalize(data)
+   df = normalized.T.unstack()[0]
+   return df
+
 # Generate functions
 
 def genpuml(useroptions):
@@ -92,7 +98,48 @@ def genpuml(useroptions):
 
    print(startpumlmessage % (generation, propfile))
 
-   sheets = loadfile(useroptions)
+   data = loadfile(useroptions)
+   allframe = getnormalized(data)
+
+   vpcs = allframe['vpcs']
+   for vpc in vpcs:
+      vpcframe = getnormalized(vpc)
+      print('\n')
+      print('vpcName: ' + vpcframe['name'])
+      print('regionName: ' + vpcframe['region'])
+      print(vpcframe)
+
+   subnets = allframe['subnets']
+   for subnet in subnets:
+      subnetframe = getnormalized(subnet)
+      print('\n')
+      print('subnetName: ' + subnetframe['name'])
+      print('subnetCIDR: ' + subnetframe['subnet'])
+      print('vpcName: ' + subnetframe['vpc'])
+      print('regionName: ' + subnetframe['region'])
+      print('deploymentZone: ' + subnetframe['deploymentZone'])
+      publicGateway = subnetframe['publicGateway']
+      print('publicGateway: ' + (publicGateway if publicGateway != None else 'None'))
+      print(subnetframe)
+
+   instances = allframe['instances']
+   for instance in instances:
+      instanceframe = getnormalized(instance)
+      print('\n')
+      print('instanceName: ' + instanceframe['name'])
+      print('vpcName: ' + instanceframe['vpc.name'])
+      print(instanceframe)
+      nics = instanceframe['networkInterfaces']
+      for nic in nics:
+         nicframe = getnormalized(nic)
+         print('\n')
+         print('nicName: ' + nicframe['name'])
+         # TODO: Need subnet name or derive it.
+         fip = nicframe['floatingIPReference.name']
+         print('fipName: ' + (fip if fip != None else 'None'))
+         print(nicframe)
+
+   return
 
    sheetlist = getsheets('networkinterfaces', useroptions)
    #for sheet in sheetlist: 

@@ -29,12 +29,13 @@
 
 1. [Download Terraformer](/releases/releases.md) (Latest: v1.10.0.0).
 - Unzip Terraformer archive to extract terraformer executable and sample data.
-2. [Download and install Terraform](https://www.terraform.io/downloads.html).
+2. [Install Terraform](https://www.terraform.io/downloads.html).
 - Unzip Terraform archive to extract terraform binary and add location to PATH. 
-3. [Download and install IBM Cloud Terraform Provider](https://github.com/IBM-Cloud/terraform-provider-ibm/releases).
+3. [Install IBM Cloud Terraform Provider](https://github.com/IBM-Cloud/terraform-provider-ibm/releases).
 - Unzip provider archive to extract plugin binary and move to Terraform plugins directory.
 - Export API credential token as environment variable: export IC_API_KEY="IBM Cloud API Key"
-4. [Download and install Python 3](https://www.python.org/downloads/).
+4. [Install Ansible](https://docs.ansible.com/ansible/latest/index.html).
+5. [Install Python 3](https://www.python.org/downloads/).
 - Install numpy, pandas, xlrd (xlsx support), odfpy (ods support), and pyyaml (yaml support).
 - Note: Mac comes with Python 2 by default so Python 3 needs to be installed separately from python.org - installing with brew, pipenv, or pyenv installs libraries into different directories that won't work with Terraformer.
 

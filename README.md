@@ -14,12 +14,12 @@
 - [Terraform v0.12.23](https://www.terraform.io/downloads.html)
 - [Ansible 2.9.11](https://docs.ansible.com/ansible/latest/index.html)
 - [Python v3.8.2](https://www.python.org/downloads/) with libraries:
-    - cython
     - numpy
     - pandas
-    - xlrd (xlsx support)
-    - odfpy (ods support)
-    - pyyaml (yaml support)
+    - cython (for compiling)
+    - xlrd (for xlsx)
+    - odfpy (for ods)
+    - pyyaml (for yaml)
 
 Note: Mac default is Python 2 so Python 3 needs to be installed separately from python.org - installing with brew, pipenv, or pyenv installs libraries into different directories that won't work with Terraformer.
 

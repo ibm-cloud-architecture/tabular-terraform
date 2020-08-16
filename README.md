@@ -8,15 +8,6 @@
 - Terraformer is provided with no formal support but problems can be reported by opening a GitHub issue.
 - Data format is subject to change.
 
-<details><summary>Examples</summary>
-<p>
-
-![TerraformerInputExample](/images/terraformerinputexample.png)
-![TerraformerOutputExample](/images/terraformeroutputexample.png)
-
-</p>
-</details>
-
 ## Requirements
 
 - [IBM Cloud Terraform Provider v1.10.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases)
@@ -49,18 +40,13 @@ terraform apply
 
 ## Notes
 
-<details><summary>Implementation</summary>
-<p>
-
-| Component | Description |
-| --- | --- |
-| Sheets | Asterisk in column name denotes a required field. |
-| | Rerun Terraformer after changing data and rely on Terraform to handle changes. 
-| | Sheet names can be basename (e.g. instances) or basename-groupname (e.g. instances-group1) to organize data of same type into separate sheets.
-| | Sheet columns are subject to change. |
-
-</p>
-</details>
+| Implementation |
+| --- |
+| Asterisk in column name denotes a required field. |
+| Rerun Terraformer after changing data and rely on Terraform to handle changes. 
+| Sheet names can be either basename (e.g. instances) or basename-groupname (e.g. instances-group1) to organize data of same type into separate sheets.
+| Data is copied directly to generated Terraform (e.g. include quotes on data for strings, no quotes for numeric data, etc).
+| The variables-system sheet is provided either as reference or using with var to facilitate adding image IDs to instances.  If an image ID is changed in the VPC product or additional images added, this sheet can be updated directly or should be updated in a future Terraformer release.
 
 </p>
 </details>

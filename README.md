@@ -61,10 +61,10 @@ terraform apply
 
 | Component | Description |
 | --- | --- |
-| Files | Rerun after changes and rely on Terraform to handle changes. |
-| Sheets | Sheet names can be basename or  basename-groupname when copying sheets (e.g. instances, instances-group1, etc). |
-| | Asterisk in column name denotes a required field. |
-| | Columns are subject to change. |
+| Sheets | Asterisk in column name denotes a required field. |
+| | Rerun Terraformer after changing data and rely on Terraform to handle changes. 
+| | Sheet names can be basename (e.g. instances) or basename-groupname (e.g. instances-group1) to organize data of same type into separate sheets.
+| | Sheet columns are subject to change. |
 
 </p>
 </details>

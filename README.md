@@ -21,8 +21,9 @@
 
 - IBM Cloud Terraform Provider v1.10.0
 - Terraform v0.12.23
+- Ansible 2.9.11
 - Python v3.8.2
-- Cython v0.29.15 (optional)
+- Cython v0.29.15
 
 ## Installation
 
@@ -60,12 +61,10 @@ terraform apply
 
 | Component | Description |
 | --- | --- |
-| General | Incomplete features: custom images, secondary NICs, LB policies, Power, fips, public gateways. |
 | Files | Rerun after changes and rely on Terraform to handle changes. |
-| Sheets | Use name of basename-groupname for copied data (e.g. instances-group1). |
-| | Columns are subject to change but no upgrade between data versions. |
+| Sheets | Sheet names can be basename or  basename-groupname when copying sheets (e.g. instances, instances-group1, etc). |
 | | Asterisk in column name denotes a required field. |
-| Resource Groups | Terraform destroy only removes state information but does not delete resource group.
+| | Columns are subject to change. |
 
 </p>
 </details>

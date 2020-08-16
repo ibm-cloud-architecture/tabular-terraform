@@ -19,34 +19,29 @@
 
 ## Requirements
 
-- IBM Cloud Terraform Provider v1.10.0
-- Terraform v0.12.23
-- Ansible 2.9.11
-- Python v3.8.2
-- Cython v0.29.15
+- [IBM Cloud Terraform Provider v1.10.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases)
+- [Terraform v0.12.23](https://www.terraform.io/downloads.html)
+- [Ansible 2.9.11](https://docs.ansible.com/ansible/latest/index.html)
+- [Python v3.8.2](https://www.python.org/downloads/)
+- Python libraries for cython, numpy, pandas, xlrd (xlsx support), odfpy (ods support), and pyyaml (yaml support).
 
-## Installation
-
-1. [Download and extract Terraformer](/releases/releases.md) (Latest: v1.10.0.0).
-2. [Install Terraform](https://www.terraform.io/downloads.html).
-3. [Install IBM Cloud Terraform Provider](https://github.com/IBM-Cloud/terraform-provider-ibm/releases).
-4. [Install Ansible](https://docs.ansible.com/ansible/latest/index.html).
-5. [Install Python 3](https://www.python.org/downloads/).
-6. Install numpy, pandas, xlrd (xlsx support), odfpy (ods support), and pyyaml (yaml support).
-
-Note: Mac comes with Python 2 by default so Python 3 needs to be installed separately from python.org - installing with brew, pipenv, or pyenv installs libraries into different directories that won't work with Terraformer.
+Note: Mac default is Python 2 so Python 3 needs to be installed separately from python.org - installing with brew, pipenv, or pyenv installs libraries into different directories that won't work with Terraformer.
 
 ## Usage
 
-1. Copy sample files from provided data folder to your folder. 
+1. [Download Terraformer v1.10.0.0](/releases/releases.md)
 
-2. Customize sample files with the infrastructure to be provisioned.
+2. Unzip terraformer archive.
 
-3. To display command options:  bin/terraformer -h
+3. Copy sample files from provided data folder to your folder. 
 
-4. To generate Terraform with input from data folder and output to resources/vpc folder:  bin/terraformer -o resources/vpc data
+4. Customize sample files with the infrastructure to be provisioned.
 
-5. Execute terraform in output directory to provision your VPC infrastructure:\
+5. To display command options:  bin/terraformer -h
+
+6. To generate Terraform with input from data directory and output to resources/vpc directory:  bin/terraformer -o resources/vpc data
+
+7. Execute terraform in output directory to provision your VPC infrastructure:\
 terraform fmt\
 terraform init\
 terraform plan\

@@ -13,8 +13,13 @@
 - [IBM Cloud Terraform Provider v1.10.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases)
 - [Terraform v0.12.23](https://www.terraform.io/downloads.html)
 - [Ansible 2.9.11](https://docs.ansible.com/ansible/latest/index.html)
-- [Python v3.8.2](https://www.python.org/downloads/)
-- Python libraries for cython, numpy, pandas, xlrd (xlsx support), odfpy (ods support), and pyyaml (yaml support).
+- [Python v3.8.2](https://www.python.org/downloads/) with libraries:
+    - cython
+    - numpy
+    - pandas
+    - xlrd (xlsx support)
+    - odfpy (ods support)
+    - pyyaml (yaml support)
 
 Note: Mac default is Python 2 so Python 3 needs to be installed separately from python.org - installing with brew, pipenv, or pyenv installs libraries into different directories that won't work with Terraformer.
 
@@ -40,16 +45,13 @@ terraform apply
 
 ## Notes
 
-| Implementation |
+| Implementation Notes |
 | --- |
 | Asterisk in column name denotes a required field. |
 | Rerun Terraformer after changing data and rely on Terraform to handle changes. 
 | Sheet names can be either basename (e.g. instances) or basename-groupname (e.g. instances-group1) to organize data of same type into separate sheets.
 | Data is copied directly to generated Terraform (e.g. include quotes on data for strings, no quotes for numeric data, etc).
 | The variables-system sheet is provided either as reference or using with var to facilitate adding image IDs to instances.  If an image ID is changed in the VPC product or additional images added, this sheet can be updated directly or should be updated in a future Terraformer release.
-
-</p>
-</details>
 
 ## License
 

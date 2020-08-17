@@ -10,11 +10,12 @@
 
 Data Changes:
 - All tables have additional columns.
-- End-to-end webapp example with Ansible.
+- Added tables for Cloud Internet Services.
+- Added end-to-end webapp example with Ansible.
 
 Tool Changes:
 - Upgraded to provider v1.10.0.
-- Refactored, simplified, robust, extensible.
+- Refactored, streamlined, extensible.
 
 ### Terraformer v1.9.0.0 (Latest)
 

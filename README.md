@@ -2,7 +2,7 @@
 
 ## Overview
 
-- Handles creation of Terraform resources.
+- Create Terraform resources from user data.
 - Start learning Terraform for the first time. 
 - Expedite a Terraform implementation or parts such as network ACLs and Security Groups.
 - Provided with no formal support but problems can be reported by opening a GitHub issue.
@@ -15,12 +15,12 @@ The following needs to be installed:
 2. [IBM Cloud Terraform Provider v1.10.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases)
 3. [Ansible 2.9.11](https://docs.ansible.com/ansible/latest/index.html)
 4. [Python v3.8.2](https://www.python.org/downloads/) with libraries:
-- numpy
-- pandas
-- cython (for compiling)
-- xlrd (for xlsx)
-- odfpy (for ods)
-- pyyaml (for yaml)
+    - numpy
+    - pandas
+    - cython (for compiling)
+    - xlrd (for xlsx)
+    - odfpy (for ods)
+    - pyyaml (for yaml)
 
 Note: Mac default is Python 2 so Python 3 needs to be installed separately from python.org - installing with brew, pipenv, or pyenv installs libraries into different directories that won't work with Terraformer.
 

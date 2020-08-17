@@ -2,10 +2,10 @@
 
 ## Overview
 
-- Terraformer handles the creation of Terraform syntax leaving the user to focus on the data.
-- Terraformer helps to get on the Terraform bandwagon without focusing on the syntax. 
-- Terraformer helps to expedite a Terraform implementation or parts such as network ACLs and Security Groups.
-- Terraformer is provided with no formal support but problems can be reported by opening a GitHub issue.
+- Handles creation of Terraform syntax leaving the user to focus on the data.
+- Start learning Terraform for the first time without focusing on the syntax. 
+- Expedite a Terraform implementation or parts such as network ACLs and Security Groups.
+- Provided with no formal support but problems can be reported by opening a GitHub issue.
 - Data format is subject to change.
 
 ## Prerequisites

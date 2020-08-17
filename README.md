@@ -3,7 +3,7 @@
 ## Overview
 
 - Create Terraform resources from user data.
-- Start learning Terraform for the first time. 
+- Start learning Terraform with the help of Terraformer.
 - Expedite a Terraform implementation or parts such as network ACLs and Security Groups.
 - Provided with no formal support but problems can be reported by opening a GitHub issue.
 - Data format is subject to change.

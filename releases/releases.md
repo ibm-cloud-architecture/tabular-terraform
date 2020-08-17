@@ -9,7 +9,7 @@
 | [source](https://github.com/ibm-cloud-architecture/terraformer/raw/master/releases/download/v1.10.0.1/terraformer_1.10.0.1.zip) |
 
 Data Changes:
-- Added comments column as last column of each table.
+- Added comments as last column of each table.
 - Added outputs table to vars.
 
 Tool Changes:

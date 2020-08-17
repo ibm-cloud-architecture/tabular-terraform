@@ -31,13 +31,12 @@ Note: Install Python 3 from python.org separately from Mac default of Python - i
 
 ## Notes
 
-| Implementation Notes |
-| --- |
-| Asterisk in column name denotes a required field. |
-| Rerun Terraformer after changing data and rely on Terraform to handle changes. |
-| Sheet names can be either basename (e.g. instances) or basename-groupname (e.g. instances-group1) to organize data of same type into separate sheets. |
-| Data is copied directly to generated Terraform (e.g. include quotes on data for strings, no quotes for numeric data, etc). |
-| The variables-system sheet is provided either as reference or using with var to facilitate adding image IDs to instances.  If an image ID is changed in the VPC product or additional images added, this sheet can be updated directly or should be updated in a future Terraformer release or define your own variables for image IDs. |
+1. Asterisk in column name denotes a required field.
+2. Generate files to an empty folder since files are appended to.
+3. Rerun Terraformer after changing data and rely on Terraform to handle changes. 
+4. Sheet names can be either basename (e.g. instances) or basename-groupname (e.g. instances-group1) to organize data of same type into separate sheets.
+5. Data is copied directly to generated Terraform (e.g. include quotes on data for strings, no quotes for numeric data, etc).
+6. The variables-system sheet is provided either as reference or using with var to facilitate adding image IDs to instances.  If an image ID is changed in the VPC product or additional images added, this sheet can be updated directly or should be updated in a future Terraformer release or define your own variables for image IDs.
 
 ## License
 

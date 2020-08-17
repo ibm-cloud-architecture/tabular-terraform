@@ -25,19 +25,21 @@ import pandas as pd
 # Constants
 
 # Following static string is included in binary - update version here.
-COPYRIGHT = 'Terraformer 1.10.0.0 - Copyright IBM Corporation 2020'
+COPYRIGHT = 'Terraformer 1.10.0.1 - Copyright IBM Corporation 2020'
 
 genheader = '# Terraformer generated file'
 
 terraformheader = 'terraform { required_version = ">= 0.12.0" }'
 
+outputheader = 'output "%s" {'
+providerheader = 'provider "%s" {'
 resourceheader = 'resource "%s" "%s" {'
 variableheader = 'variable "%s" {'
-providerheader = 'provider "%s" {'
 
+endoutput = '}'
+endprovider = '}'
 endresource = '}'
 endvariable = '}'
-endprovider = '}'
 
 # Messages
 
@@ -124,7 +126,7 @@ def novalue(value):
       return True
    if type(value) == str:
       value = value.replace(' ', '')
-      if value == '' or value[0] == '#':
+      if value == '':
          return True
    if isinstance(value, str):
       value = value.replace(' ', '')
@@ -180,15 +182,6 @@ def printline(options, tfname, line):
 
    return
 
-def ruleprotocol(tf, value, acl, fieldstype):
-   if value == 'icmp':
-      tf.write('icmp {\n')
-   elif value == 'tcp':
-      tf.write('tcp {\n')
-   elif value == 'udp':
-      tf.write('udp {\n')
-   return
-
 # Generate functions
 
 def genprovider(options):
@@ -206,16 +199,17 @@ def genprovider(options):
 
    return
 
-def genvariables(options, name, sheet, df):
+def genoutputs(options, name, sheet, df):
    genpath = options['genpath']
    
    print(processingsheetmessage % name)
 
    columns = df.columns
 
+   # Loop thru rows.
    for rowindex, row in df.iterrows():
       tfname = row['file']
-      # Skip empty rows and comment rows.
+      # Skip empty rows.
       empty = novalue(tfname)
       if empty:
          continue
@@ -232,13 +226,56 @@ def genvariables(options, name, sheet, df):
          print(missingvaluemessage % ('value', rowindex))
          continue
 
+      comments = row['comments']
+      empty = novalue(comments)
+      if not empty:
+        printline(options, tfname, '# ' + comments)
+
+      printline(options, tfname, outputheader % name)
+      printline(options, tfname, 'value = ' + str(value))
+      printline(options, tfname, endoutput)
+
+   return
+
+def genvariables(options, name, sheet, df):
+   genpath = options['genpath']
+   
+   print(processingsheetmessage % name)
+
+   columns = df.columns
+
+   # Loop thru rows.
+   for rowindex, row in df.iterrows():
+      tfname = row['file']
+      # Skip empty rows.
+      empty = novalue(tfname)
+      if empty:
+         continue
+
+      name = row['name']
+      empty = novalue(name)
+      if empty:
+         print(missingvaluemessage % ('name', rowindex))
+         continue
+      
+      value = row['value']
+      empty = novalue(value)
+      if empty:
+         print(missingvaluemessage % ('value', rowindex))
+         continue
+
+      comments = row['comments']
+      empty = novalue(comments)
+      if not empty:
+        printline(options, tfname, '# ' + comments)
+
       printline(options, tfname, variableheader % name)
       printline(options, tfname, 'default = ' + str(value))
       printline(options, tfname, endvariable)
 
    return
 
-def genacls(options, name, sheet, df):
+def genaclresources(options, name, sheet, df):
    genpath = options['genpath']
    
    print(processingsheetmessage % name)
@@ -256,10 +293,11 @@ def genacls(options, name, sheet, df):
 
    header = True
 
+   # Loop thru rows.
    for rowindex, row in df.iterrows():
       if header:
          tfname = row['file']
-         # Skip empty rows and comment rows.
+         # Skip empty rows.
          empty = novalue(tfname)
          if empty:
             continue
@@ -272,9 +310,15 @@ def genacls(options, name, sheet, df):
 
          header = False
 
+         comments = row['comments']
+         empty = novalue(comments)
+         if not empty:
+           printline(options, tfname, '# ' + comments)
+
          printline(options, tfname, resourceheader % (resources[sheettype], resource))
 
-         for columnindex in range(columns.size):
+         # Loop through columns skipping first 2 columns (file and resource) and last column (comments).
+         for columnindex in range(columns.size-1):
             if columnindex < 2:
                continue
 
@@ -363,9 +407,10 @@ def genresources(options, name, sheet, df):
 
    columns = df.columns
 
+   # Loop thru rows.
    for rowindex, row in df.iterrows():
       tfname = row['file']
-      # Skip empty rows and comment rows.
+      # Skip empty rows.
       empty = novalue(tfname)
       if empty:
          continue
@@ -376,11 +421,17 @@ def genresources(options, name, sheet, df):
          print(missingvaluemessage % ('resource', rowindex))
          continue
 
+      comments = row['comments']
+      empty = novalue(comments)
+      if not empty:
+        printline(options, tfname, '# ' + comments)
+
       printline(options, tfname, resourceheader % (resources[sheettype], resource))
 
       savegroup = None
 
-      for columnindex in range(columns.size):
+      # Loop through columns skipping first 2 columns (file and resource) and last column (comments).
+      for columnindex in range(columns.size-1):
          if columnindex < 2:
             continue
 
@@ -440,8 +491,10 @@ def gentf(options):
 
       if name.find('variables', 0, 9) >= 0:
          genvariables(options, name, sheet, df)
+      elif name.find('outputs', 0, 7) >= 0:
+         genoutputs(options, name, sheet, df)
       elif name.find('aclrules', 0, 8) >= 0:
-         genacls(options, name, sheet, df)
+         genaclresources(options, name, sheet, df)
       else:
          genresources(options, name, sheet, df)
 

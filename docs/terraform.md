@@ -12,7 +12,7 @@
 6. Modify vars spreadsheet (variables.tf) for the following variables:
     - TBD
 7. Modify other spreadsheets as desired.
-8. Execute Terraformer with your data files and output folder:  
+8. Execute Terraformer with your input data folder and output resources folder:  
     - bin/terraformer -o resources data
 9. Execute Terraform in your resources folder:
     - terraform fmt

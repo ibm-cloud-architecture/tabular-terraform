@@ -22,7 +22,7 @@ Install the following software:
     - odfpy (for ods)
     - pyyaml (for yaml)
 
-Note: Install Python 3 from python.org separately from Mac default of Python - installing with brew, pipenv, or pyenv use different directories that won't work.
+Note: Install Python 3 from python.org separately from Mac default of Python 2 - installing with brew, pipenv, or pyenv use different directories that won't work.
 
 ## Deploy VPC Infrastructure using Terraform and Ansible
 

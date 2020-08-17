@@ -8,12 +8,13 @@
 2. [Download IBM Cloud provider plugin for Terraform](https://github.com/IBM-Cloud/terraform-provider-ibm/releases)
 3. Unzip the provider release archive and move the plugins binary into the Terraform plugins directory for the platform.
 4. [Download Terraformer for IBM Virtual Private Cloud](/releases/releases.md)
-5. Unzip the terraformer release archive into a location of your choosing.
-6. Modify the vars spreadsheet (variables.tf) for the following variables:
+5. Unzip the terraformer release archive into a location as desired.
+6. Modify vars spreadsheet (variables.tf) for the following variables:
     - TBD
-7. Execute Terraformer with your data files and output folder:  
+7. Modify other spreadsheets as desired.
+8. Execute Terraformer with your data files and output folder:  
     - bin/terraformer -o resources data
-8. Execute Terraform in your resources folder:
+9. Execute Terraform in your resources folder:
     - terraform fmt
     - terraform init
     - terraform plan

@@ -1,6 +1,21 @@
 # Terraformer Releases
 
-### Terraformer v1.10.0.0 (Latest)
+### Terraformer v1.10.0.1 (Latest)
+
+| Assets |
+| --- |
+| [macOS 64-bit](https://github.com/ibm-cloud-architecture/terraformer/raw/master/releases/download/v1.10.0.1/terraformer_1.10.0.1_darwin_amd64.zip) |
+| [windows 64-bit](https://github.com/ibm-cloud-architecture/terraformer/raw/master/releases/download/v1.10.0.1/terraformer_1.10.0.1_windows_amd64.zip) |
+| [source](https://github.com/ibm-cloud-architecture/terraformer/raw/master/releases/download/v1.10.0.1/terraformer_1.10.0.1.zip) |
+
+Data Changes:
+- Added comments column as last column of each table.
+- Added outputs table to vars.
+
+Tool Changes:
+- Added code generation of comments and outputs.
+
+### Terraformer v1.10.0.0
 
 | Assets |
 | --- |

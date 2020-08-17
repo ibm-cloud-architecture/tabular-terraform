@@ -25,7 +25,7 @@ Note: Mac default is Python 2 so Python 3 needs to be installed separately from 
 
 ## Usage
 
-1. [Download Terraformer v1.10.0.0](/releases/releases.md)
+1. [Download Terraformer v1.10.0.1](/releases/releases.md)
 
 2. Unzip terraformer archive.
 

@@ -10,7 +10,7 @@
 
 ## Prerequisites
 
-The following needs to be installed:
+Install the following software:
 1. [Terraform v0.12.23+](https://www.terraform.io/downloads.html)
 2. [IBM Cloud Terraform Provider v1.10.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases)
 3. [Ansible 2.9.11](https://docs.ansible.com/ansible/latest/index.html)
@@ -24,25 +24,10 @@ The following needs to be installed:
 
 Note: Install Python 3 from python.org separately from Mac default of Python - installing with brew, pipenv, or pyenv use different directories that won't work.
 
-## Usage
+## Deploy VPC Infrastructure using Terraform and Ansible
 
-1. [Download Terraformer v1.10.0.1](/releases/releases.md)
-
-2. Unzip terraformer archive.
-
-3. Copy sample files from provided data folder to your folder. 
-
-4. Customize sample files with the infrastructure to be provisioned.
-
-5. To display command options:  bin/terraformer -h
-
-6. To generate Terraform with input from data directory and output to resources/vpc directory:  bin/terraformer -o resources/vpc data
-
-7. Execute terraform in output directory to provision your VPC infrastructure:\
-terraform fmt\
-terraform init\
-terraform plan\
-terraform apply
+1. [Deploy Infrastructure using Terraform)(/docs/terraform.md)
+2. TBD
 
 ## Notes
 

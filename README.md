@@ -22,7 +22,7 @@ The following needs to be installed:
     - odfpy (for ods)
     - pyyaml (for yaml)
 
-Note: Mac default is Python 2 so Python 3 needs to be installed separately from python.org - installing with brew, pipenv, or pyenv installs libraries into different directories that won't work with Terraformer.
+Note: Install Python 3 from python.org separately from Mac default of Python - installing with brew, pipenv, or pyenv use different directories that won't work.
 
 ## Usage
 

@@ -13,7 +13,7 @@
     - TBD
 7. Execute Terraformer with your data files and output folder:  
     - bin/terraformer -o resources data
-8. Execute Terraform in resources folder:
+8. Execute Terraform in your resources folder:
     - terraform fmt
     - terraform init
     - terraform plan

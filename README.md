@@ -29,7 +29,7 @@ Note: Install Python 3 from python.org separately from Mac default of Python 2 -
 1. [Deploy Infrastructure using Terraform](/docs/terraform.md)
 2. TBD
 
-## Notes
+## Implementation Notes
 
 1. Asterisk in column name denotes a required field.
 2. Generate files to an empty folder since files are appended to.

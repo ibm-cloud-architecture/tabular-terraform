@@ -26,7 +26,7 @@ Note: Install Python 3 from python.org separately from Mac default of Python - i
 
 ## Deploy VPC Infrastructure using Terraform and Ansible
 
-1. [Deploy Infrastructure using Terraform)(/docs/terraform.md)
+1. [Deploy Infrastructure using Terraform](/docs/terraform.md)
 2. TBD
 
 ## Notes

@@ -2,6 +2,7 @@
 
 ## Overview
 
+- Latest release: [Terraformer 1.10.0.2](/releases/releases.md)
 - Create Terraform resources from user data.
 - Start learning Terraform with the help of Terraformer.
 - Expedite a Terraform implementation or parts such as network ACLs and Security Groups.

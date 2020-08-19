@@ -25,7 +25,7 @@ import pandas as pd
 # Constants
 
 # Following static string is included in binary - update version here.
-COPYRIGHT = 'Terraformer 1.10.0.1 - Copyright IBM Corporation 2020'
+COPYRIGHT = 'Terraformer 1.10.0.2 - Copyright IBM Corporation 2020'
 
 genheader = '# Terraformer generated file'
 
@@ -45,8 +45,11 @@ endvariable = '}'
 
 terraformermessage = 'Terraformer for IBM Virtual Private Cloud\n'
 starttfmessage = 'Generating Resources with input from %s\n'
+startprovidermessage = 'Generating Resource for provider\n'
 donetfmessage = '\nCompleted Resources for %s with output to folder %s\n'
-invalidinputmessage = '(Error) Invalid path or file: %s'
+backupdirectorymessage = 'Backed up existing output directory %s to %s\n'
+invalidinputdirectorymessage = '(Error) Invalid input directory: %s'
+invalidinputfilemessage = '(Error) Invalid input file: %s'
 invalidprotocolmessage = '(Error) Invalid protocol: %s'
 invalidgatewayspecmessage = '(Error) Invalid gateway specification: %s'
 invalidnicmessage = '(Error) Invalid nic: %s'
@@ -144,7 +147,7 @@ def loadfile(useroptions):
    if (propext.lower() == 'xls' or propext.lower() == 'xlsx'):
       sheets = pd.read_excel(propfile, sheet_name=None, dtype=object, header=0)
    else:
-      print(invalidinputmessage % propfile)
+      print(invalidinputfilemessage % propfile)
       sheets = None
 
    return sheets
@@ -159,7 +162,7 @@ def loadframe(pd, sheet, useroptions):
       # Remove leading asterisk from column names
       df.rename(columns=lambda x: x[1:] if x[0]=='*' else x, inplace=True)
    else:
-      print(invalidinputmessage % propfile)
+      print(invalidinputfilemessage % propfile)
       sheets = None
 
    return df
@@ -507,9 +510,9 @@ def main():
 
    parser = argparse.ArgumentParser(description='Generates Terraform for IBM Virtual Private Cloud')
 
-   parser.add_argument('inputvalue', nargs='?', default=options['datapath'], help='input folder or input filename (default: ' + options['datapath'] + ')')
+   parser.add_argument('inputvalue', nargs='?', default=options['datapath'], help='input folder (default: ' + options['datapath'] + ')')
 
-   parser.add_argument('-o', action='store', dest='outputfolder', default=options['genpath'], help='output folder for generated Terraform files (default: ' + options['genpath'] + ')')
+   parser.add_argument('-o', action='store', dest='outputfolder', default=options['genpath'], help='output folder (default: ' + options['genpath'] + ')')
 
    parser.add_argument('-r', dest='region', default=options['region'], help='region for VPC (default: ' + options['region'] + ')')
 
@@ -524,61 +527,70 @@ def main():
    options['genpath'] = results.outputfolder
    options['region'] = results.region
 
+   datapath = options['datapath']
+   datatype = options['datatype']
    genpath = options['genpath']
-   os.makedirs(genpath, exist_ok=True)
+  
+   # Check for existing input directory and exit if not valid.
+   if not os.path.isdir(os.path.join(datapath, datatype)):
+      print(invalidinputdirectorymessage % os.path.join(datapath, datatype))
+      return
+
+   genbackup = None
+   # Check for existing output directory and backup if exists.
+   if os.path.exists(genpath):
+      backup = 1
+      found = False
+      genbackup = None
+      # Find a new backup directory.
+      while not found:
+         genbackup = genpath + '.backup' + str(backup)
+         if os.path.exists(genbackup):
+            backup += 1
+         else:
+            found = True
+      # Move existing output directory to backup directory.
+      shutil.move(genpath, genbackup)
+      print(backupdirectorymessage % (genpath, genbackup))
+
+   # Create new empty output directory.
+   os.makedirs(genpath)
+
+   # Copy existing terraform.tfstate to output directory.
+   if genbackup != None and os.path.isfile(os.path.join(genbackup, 'terraform.tfstate')):
+      shutil.copy(os.path.join(genbackup, 'terraform.tfstate'), os.path.join(genpath, 'terraform.tfstate'))
 
    datapath = options['datapath']
    datatype = options['datatype']
 
+   # Copy terraform-cloudinits to output directory.
+   filelist = os.listdir(os.path.join(datapath, datatype))
+   terraformfiles = os.listdir(os.path.join(datapath, 'terraform-cloudinits'))
+   for terraformfile in terraformfiles:
+      shutil.copy(os.path.join(datapath, 'terraform-cloudinits', terraformfile), genpath)         
+
+   # Copy ansible-playbooks to output directory.
+   shutil.copytree(os.path.join(datapath, 'ansible-playbooks'), os.path.join(genpath, 'ansible-playbooks'))         
+
+   # Generate provider.
+   print(startprovidermessage)
    genprovider(options)
 
-   inputvalue = results.inputvalue
-   if (os.path.isdir(inputvalue)):
-      # If inputvalue is existing dir then process all files.
-      datapath = inputvalue
-      filelist = os.listdir(os.path.join(datapath, datatype))
-      terraformfiles = os.listdir(os.path.join(datapath, 'terraform-cloudinits'))
-      for terraformfile in terraformfiles:
-         shutil.copy(os.path.join(datapath, 'terraform-cloudinits/') + terraformfile, genpath)         
-
-      shutil.copytree(os.path.join(datapath, 'ansible-playbooks'), os.path.join(genpath, 'ansible-playbooks'))         
-
-      found = False
-      for afile in filelist:
-         propfile = os.path.join(datapath, datatype, afile)
-         propfilenopath = os.path.basename(propfile)
-         propname = os.path.splitext(propfilenopath)[0]
-         propext = os.path.splitext(propfilenopath)[1][1:]
-         if (os.path.isfile(propfile)):
-            found = True
-            options['propfile'] = propfile
-            options['propname'] = propname
-            options['propext'] = propext
-            gentf(options)
-      if (not found):
-         print(missinginputmessage % results.inputvalue)
-   elif (os.path.isfile(inputvalue)):
-      # If inputvalue is existing file then process file.
-      propfile = inputvalue
+   # Process all files in specified directory.
+   found = False
+   for afile in filelist:
+      propfile = os.path.join(datapath, datatype, afile)
       propfilenopath = os.path.basename(propfile)
       propname = os.path.splitext(propfilenopath)[0]
       propext = os.path.splitext(propfilenopath)[1][1:]
-      options['propfile'] = propfile
-      options['propname'] = propname
-      options['propext'] = propext
-      gentf(options)
-   elif (os.path.isfile(os.path.join(datapath, datapath, inputvalue))):
-      # Add path to inputvalue then process file. 
-      propfile = os.path.join(datapath, datatype, inputvalue)
-      propfilenopath = os.path.basename(propfile)
-      propname = os.path.splitext(propfilenopath)[0]
-      propext = os.path.splitext(propfilenopath)[1][1:]
-      options['propfile'] = propfile
-      options['propname'] = propname
-      options['propext'] = propext
-      gentf(options)
-   else:
-      print(invalidinputmessage % results.inputvalue)
+      if (os.path.isfile(propfile)):
+         found = True
+         options['propfile'] = propfile
+         options['propname'] = propname
+         options['propext'] = propext
+         gentf(options)
+   if (not found):
+      print(missinginputmessage % results.inputvalue)
 
    return
       

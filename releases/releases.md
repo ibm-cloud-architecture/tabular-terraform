@@ -1,6 +1,20 @@
 # Terraformer Releases
 
-### Terraformer v1.10.0.1 (Latest)
+### Terraformer v1.10.0.2 (Latest)
+
+| Assets |
+| --- |
+| [macOS 64-bit](https://github.com/ibm-cloud-architecture/terraformer/raw/master/releases/download/v1.10.0.2/terraformer_1.10.0.2_darwin_amd64.zip) |
+| [windows 64-bit](https://github.com/ibm-cloud-architecture/terraformer/raw/master/releases/download/v1.10.0.2/terraformer_1.10.0.2_windows_amd64.zip) |
+| [source](https://github.com/ibm-cloud-architecture/terraformer/raw/master/releases/download/v1.10.0.2/terraformer_1.10.0.2.zip) |
+
+Data Changes:
+- Added port 22 to ACL rules.
+
+Tool Changes:
+- Added backup of existing output directory.
+
+### Terraformer v1.10.0.1
 
 | Assets |
 | --- |

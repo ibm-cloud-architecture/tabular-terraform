@@ -32,8 +32,8 @@ Note: Install Python 3 from python.org separately from Mac default of Python 2 -
 
 ## Implementation Notes
 
-1. Asterisk in column name denotes a required field.
-2. Generate files to an empty folder since files are appended to.
+1. Existing output directories are backed up to a directory with ".backupNNN' appended to the directory name. 
+2. Asterisk in column name denotes a required field.
 3. Rerun Terraformer after changing data and rely on Terraform to handle changes. 
 4. Sheet names can be either basename (e.g. instances) or basename-groupname (e.g. instances-group1) to organize data of same type into separate sheets.
 5. Data is copied directly to generated Terraform (e.g. include quotes on data for strings, no quotes for numeric data, etc).

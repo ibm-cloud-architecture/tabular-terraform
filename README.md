@@ -1,4 +1,4 @@
-# Tabularize Terraform Resources for IBM Cloud
+# Tabularize Terraform Resources
 
 ## Overview
 

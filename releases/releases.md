@@ -1,6 +1,21 @@
 # Terraformer Releases
 
-### Terraformer v1.10.0.2 (Latest)
+### Terraformer v1.11.0.0 (Latest)
+
+| Assets |
+| --- |
+| [macOS 64-bit](https://github.com/ibm-cloud-architecture/terraformer/raw/master/releases/download/v1.11.0.0/terraformer_1.11.0.0_darwin_amd64.zip) |
+| [windows 64-bit](https://github.com/ibm-cloud-architecture/terraformer/raw/master/releases/download/v1.11.0.0/terraformer_1.11.0.0_windows_amd64.zip) |
+| [source](https://github.com/ibm-cloud-architecture/terraformer/raw/master/releases/download/v1.11.0.0/terraformer_1.11.0.0.zip) |
+
+Data Changes:
+- None.
+
+Tool Changes:
+- Upgraded to provider v1.11.0.
+- Added support for complex lists.
+
+### Terraformer v1.10.0.2
 
 | Assets |
 | --- |

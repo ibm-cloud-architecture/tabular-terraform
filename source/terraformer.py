@@ -25,7 +25,7 @@ import pandas as pd
 # Constants
 
 # Following static string is included in binary - update version here.
-COPYRIGHT = 'Terraformer 1.10.0.2 - Copyright IBM Corporation 2020'
+COPYRIGHT = 'Terraformer 1.11.0.0 - Copyright IBM Corporation 2020'
 
 genheader = '# Terraformer generated file'
 
@@ -370,10 +370,14 @@ def genaclresources(options, name, sheet, df):
                if savegroup == None:
                   # No group yet so start group.
                   savegroup = subgroup
+                  # Remove trailing digits from duplicated columns of arrays.
+                  subgroup = subgroup.rstrip('0123456789')
                   printline(options, tfname, subgroup + ' {')
                elif savegroup != subgroup:
                   # Adjacent groups so close previous group and start next group.
                   savegroup = subgroup
+                  # Remove trailing digits from duplicated columns of arrays.
+                  subgroup = subgroup.rstrip('0123456789')
                   printline(options, tfname, '}')
                   printline(options, tfname, subgroup + ' {')
             elif savegroup != None:
@@ -457,10 +461,14 @@ def genresources(options, name, sheet, df):
             if savegroup == None:
                # No group yet so start group.
                savegroup = subgroup
+               # Remove trailing digits from duplicated columns of arrays.
+               subgroup = subgroup.rstrip('0123456789')
                printline(options, tfname, subgroup + ' {')
             elif savegroup != subgroup:
                # Adjacent groups so close previous group and start next group.
                savegroup = subgroup
+               # Remove trailing digits from duplicated columns of arrays.
+               subgroup = subgroup.rstrip('0123456789')
                printline(options, tfname, '}')
                printline(options, tfname, subgroup + ' {')
          elif savegroup != None:
@@ -563,14 +571,14 @@ def main():
    datapath = options['datapath']
    datatype = options['datatype']
 
-   # Copy terraform-cloudinits to output directory.
+   # Copy terraform to output directory.
    filelist = os.listdir(os.path.join(datapath, datatype))
-   terraformfiles = os.listdir(os.path.join(datapath, 'terraform-cloudinits'))
+   terraformfiles = os.listdir(os.path.join(datapath, 'terraform'))
    for terraformfile in terraformfiles:
-      shutil.copy(os.path.join(datapath, 'terraform-cloudinits', terraformfile), genpath)         
+      shutil.copy(os.path.join(datapath, 'terraform', terraformfile), genpath)         
 
-   # Copy ansible-playbooks to output directory.
-   shutil.copytree(os.path.join(datapath, 'ansible-playbooks'), os.path.join(genpath, 'ansible-playbooks'))         
+   # Copy ansible to output directory.
+   shutil.copytree(os.path.join(datapath, 'ansible'), os.path.join(genpath, 'ansible'))         
 
    # Generate provider.
    print(startprovidermessage)

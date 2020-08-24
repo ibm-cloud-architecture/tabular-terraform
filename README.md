@@ -2,18 +2,30 @@
 
 ## Overview
 
-- Latest release: [Terraformer 1.10.0.2](/releases/releases.md)
-- Create Terraform resources from user data.
-- Start learning Terraform with the help of Terraformer.
-- Expedite a Terraform implementation or parts such as network ACLs and Security Groups.
+- Latest release: [Terraformer 1.11.0.0](/releases/releases.md)
+- Create Terraform resources from easily viewable tabular data.
+- For simple usage, use constants and resource references in data.
+- For complex usage, also include functional references in data.
+- For partial usage, only include specific components in data (e.g. network ACLs, Security Groups, etc).
+- Tabular data may not be possible for every resource or field but can be useful where possible.
 - Provided with no formal support but problems can be reported by opening a GitHub issue.
 - Data format is subject to change.
+
+## Implementation
+
+1. Existing output directories are backed up to output.backupNNN. 
+2. Asterisk in column name denotes a required field.
+3. Complex lists are handled by replicating an existing column and adding a number to the name (e.g. in instances sheet replicate network_interfaces.name to network_interfaces2.name, etc, for each field of network_interfaces). 
+4. Data fields are copied directly to generated Terraform.
+5. Rerun after changing data and rely on Terraform to handle changes. 
+6. Sheet names can be either basename (e.g. instances) or basename-groupname (e.g. instances-group1) to organize data of same type into separate sheets.
+7. The variables-system sheet is provided for reference or direct usage but is subject to change.
 
 ## Prerequisites
 
 Install the following software:
 1. [Terraform v0.12.23+](https://www.terraform.io/downloads.html)
-2. [IBM Cloud Terraform Provider v1.10.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases)
+2. [IBM Cloud Terraform Provider v1.11.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases)
 3. [Ansible 2.9.11](https://docs.ansible.com/ansible/latest/index.html)
 4. [Python v3.8.2](https://www.python.org/downloads/) with libraries:
     - numpy
@@ -29,15 +41,6 @@ Note: Install Python 3 from python.org separately from Mac default of Python 2 -
 
 1. [Deploy Infrastructure using Terraform](/docs/terraform.md)
 2. TBD
-
-## Implementation Notes
-
-1. Existing output directories are backed up to a directory with ".backupNNN' appended to the directory name. 
-2. Asterisk in column name denotes a required field.
-3. Rerun Terraformer after changing data and rely on Terraform to handle changes. 
-4. Sheet names can be either basename (e.g. instances) or basename-groupname (e.g. instances-group1) to organize data of same type into separate sheets.
-5. Data is copied directly to generated Terraform (e.g. include quotes on data for strings, no quotes for numeric data, etc).
-6. The variables-system sheet is provided either as reference or using with var to facilitate adding image IDs to instances.  If an image ID is changed in the VPC product or additional images added, this sheet can be updated directly or should be updated in a future Terraformer release or define your own variables for image IDs.
 
 ## License
 

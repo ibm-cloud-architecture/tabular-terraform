@@ -13,13 +13,13 @@
 
 ## Implementation
 
-1. Existing output directories are backed up to output.backupNNN. 
-2. Asterisk in column name denotes a required field.
-3. Complex lists are handled by replicating an existing column and adding a number to the name (e.g. in instances sheet replicate network_interfaces.name to network_interfaces2.name, etc, for each field of network_interfaces). 
-4. Data fields are copied directly to generated Terraform.
-5. Rerun after changing data and rely on Terraform to handle changes. 
-6. Sheet names can be either basename (e.g. instances) or basename-groupname (e.g. instances-group1) to organize data of same type into separate sheets.
-7. The variables-system sheet is provided for reference or direct usage but is subject to change.
+1. Asterisk in column name denotes a required field.
+2. Complex lists are handled by replicating an existing column and adding a number to the name (e.g. in instances sheet replicate network_interfaces.name to network_interfaces2.name, etc, for each field of network_interfaces). 
+3. Data fields are copied directly to generated Terraform.
+4. Rerun after changing data and rely on Terraform to handle changes. 
+5. Sheet names can be either basename (e.g. instances) or basename-groupname (e.g. instances-group1) to organize data of same type into separate sheets.
+6. The variables-system sheet is provided for reference or direct usage but is subject to change.
+7. Existing output directories are backed up to output.backupNNN. 
 
 ## Prerequisites
 

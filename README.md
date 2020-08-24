@@ -16,7 +16,7 @@
 1. For column names, asterisk denotes a required field.
 2. For complex lists, copy existing column and add a number to group name (e.g. network_interfaces.subnet becomes network_interfaces2.subnet).
 3. For data fields, values are copied directly to generated Terraform.
-4. For changed data, regenerate data and let Terraform handle changes. 
+4. For changed data, regenerate Terraform and let Terraform handle changes. 
 5. For sheet names, use either basename (e.g. instances) or basename-groupname (e.g. instances-group1).
 6. For OS images, variables-system sheet is provided for reference but is subject to change.
 7. For generated backups, existing output directories are backed up to directory.backupNNN. 

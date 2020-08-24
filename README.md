@@ -3,7 +3,7 @@
 ## Overview
 
 - Latest release: [Terraformer 1.11.0.0](/releases/releases.md)
-- Create Terraform resources from easily viewable tabular data.
+- Improve viewability and maintainability with tabular data to represent Terraform resources.
 - For simple usage, use constants and resource references in data.
 - For complex usage, also include functional references in data.
 - For partial usage, only include specific components in data (e.g. network ACLs, Security Groups, etc).

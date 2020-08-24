@@ -19,7 +19,7 @@
 4. Rerun after changing data and rely on Terraform to handle changes. 
 5. Sheet names can be either basename (e.g. instances) or basename-groupname (e.g. instances-group1) to organize data of same type into separate sheets.
 6. The variables-system sheet is provided for reference or direct usage but is subject to change.
-7. Existing output directories are backed up to output.backupNNN. 
+7. Existing output directories are backed up to directory.backupNNN. 
 
 ## Prerequisites
 

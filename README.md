@@ -3,11 +3,11 @@
 ## Overview
 
 - Latest release: [Terraformer 1.11.0.0](/releases/releases.md)
-- Improve viewability and maintainability with tabular data to represent Terraform resources.
+- Improve viewability and maintainability by representating some Terraform resources as data.
 - For simple usage, use constants and resource references in data.
 - For complex usage, also include functional references in data.
-- For partial usage, only include specific components in data (e.g. network ACLs, Security Groups, etc).
-- Tabular data may not be possible for every resource or field but can be useful where possible.
+- For partial usage, only represent specific components in data (e.g. network ACLs, Security Groups, etc).
+- Data representation may not be possible for every resource or field but can be useful where possible.
 - Provided with no formal support but problems can be reported by opening a GitHub issue.
 - Data format is subject to change.
 

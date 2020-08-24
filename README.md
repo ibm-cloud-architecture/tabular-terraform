@@ -1,4 +1,4 @@
-# Terraformer for IBM Virtual Private Cloud
+# Tabularize Terraform Resources for IBM Cloud
 
 ## Overview
 

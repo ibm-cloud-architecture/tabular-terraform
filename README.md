@@ -19,7 +19,7 @@
 4. For sheet names, use either basename (e.g. instances) or basename-groupname (e.g. instances-group1).
 5. For OS images, variables-system sheet is provided for reference but is subject to change.
 6. For changed data, regenerate Terraform and let Terraform handle changes. 
-7. For directory backups, when generating Terraform to an existing directory the directory is first backed up to directory.backupNNN. 
+7. For directory backups, when generating Terraform an existing directory is backed up to directory.backupNNN. 
 
 ## Prerequisites
 

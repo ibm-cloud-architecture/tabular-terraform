@@ -14,7 +14,7 @@
 ## Implementation
 
 1. For column names, asterisk denotes a required field.
-2. For complex lists, copy existing column and add a number to group name (e.g. network_interfaces.subnet becomes network_interfaces2.subnet).
+2. For complex lists, add number to group name in new column (e.g. network_interfaces2.subnet).
 3. For data fields, values are copied directly to generated Terraform.
 4. For sheet names, use either basename (e.g. instances) or basename-groupname (e.g. instances-group1).
 5. For OS images, variables-system sheet is provided for reference but is subject to change.

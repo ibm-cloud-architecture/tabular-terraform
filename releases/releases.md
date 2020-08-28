@@ -1,6 +1,21 @@
 # Terraformer Releases
 
-### Terraformer v1.11.0.0 (Latest)
+### Terraformer v1.11.1.0 (Latest)
+
+| Assets |
+| --- |
+| [macOS 64-bit](https://github.com/ibm-cloud-architecture/terraformer/raw/master/releases/download/v1.11.1.0/terraformer_1.11.1.0_darwin_amd64.zip) |
+| [windows 64-bit](https://github.com/ibm-cloud-architecture/terraformer/raw/master/releases/download/v1.11.1.0/terraformer_1.11.1.0_windows_amd64.zip) |
+| [source](https://github.com/ibm-cloud-architecture/terraformer/raw/master/releases/download/v1.11.1.0/terraformer_1.11.1.0.zip) |
+
+Data Changes:
+- Added Transit Gateway sheets.
+
+Tool Changes:
+- Upgraded to provider v1.11.1.
+- Added support for Transit Gateway.
+
+### Terraformer v1.11.0.0
 
 | Assets |
 | --- |

@@ -2,7 +2,7 @@
 
 ## Overview
 
-- Latest release: [Terraformer 1.11.0.0](/releases/releases.md)
+- Latest release: [Terraformer 1.11.1.0](/releases/releases.md)
 - Improve viewability and maintainability by representating some Terraform resources as data.
 - For simple usage, use constants and resource references in data.
 - For complex usage, also include functional references in data.
@@ -24,7 +24,7 @@
 ## Prerequisites
 
 Install the following software:
-1. [IBM Cloud Terraform Provider v1.11.0](https://github.com/IBM-Cloud/terraform-provider-ibm/releases)
+1. [IBM Cloud Terraform Provider v1.11.1](https://github.com/IBM-Cloud/terraform-provider-ibm/releases)
 2. [Terraform v0.12.23+](https://www.terraform.io/downloads.html)
 3. [Ansible 2.9.11](https://docs.ansible.com/ansible/latest/index.html)
 4. [Python v3.8.2](https://www.python.org/downloads/) with libraries:

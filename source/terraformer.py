@@ -25,7 +25,7 @@ import pandas as pd
 # Constants
 
 # Following static string is included in binary - update version here.
-COPYRIGHT = 'Terraformer 1.11.0.0 - Copyright IBM Corporation 2020'
+COPYRIGHT = 'Terraformer 1.11.1.0 - Copyright IBM Corporation 2020'
 
 genheader = '# Terraformer generated file'
 
@@ -79,39 +79,43 @@ options = {
 
 # Resource names
 
+# Translate sheet names to resource names.
+# Resource names are not used as sheet names due to sheet name limit.
 resources = {
-'resourcegroups': 'ibm_resource_group',
-'vpcs': 'ibm_is_vpc',
-'vpcaddresses': 'ibm_is_vpc_address_prefix',
-'vpcroutes': 'ibm_is_vpc_route',
-'subnets': 'ibm_is_subnet',
-'instances': 'ibm_is_instance',
-'networkinterfaces': 'ibm_is_instance_nic',
-'volumes': 'ibm_is_volume',
-'floatingips': 'ibm_is_floating_ip',
-'publicgateways': 'ibm_is_public_gateway',
-'vpngateways': 'ibm_is_vpn_gateway',
-'vpnconnections': 'ibm_is_vpn_gateway_connection',
-'ikepolicies': 'ibm_is_ike_policy',
-'ipsecpolicies': 'ibm_is_ipsec_policy',
-'images': 'ibm_is_image',
-'sshkeys': 'ibm_is_ssh_key',
-'loadbalancers': 'ibm_is_lb',
-'lbpools': 'ibm_is_lb_pool',
-'lbmembers': 'ibm_is_lb_pool_member',
-'lblisteners': 'ibm_is_lb_listener',
-'lbpolicies': 'ibm_is_lb_listener_policy',
-'lbrules': 'ibm_is_lb_listener_policy_rule',
 'aclheaders': 'ibm_is_network_acl',
 'aclrules': 'ibm_is_network_acl',
-'sgheaders': 'ibm_is_security_group',
-'sgrules': 'ibm_is_security_group_rule',
-'sgnics': 'ibm_is_security_group_network_interface_attachment',
-'cisinstances': 'ibm_cis',
 'cisdomains': 'ibm_cis_domain',
+'cisglbs': 'ibm_cis_global_load_balancer',
 'cishealthchecks': 'ibm_cis_healthcheck',
+'cisinstances': 'ibm_cis',
 'cisoriginpools': 'ibm_cis_origin_pool',
-'cisglbs': 'ibm_cis_global_load_balancer'
+'floatingips': 'ibm_is_floating_ip',
+'ikepolicies': 'ibm_is_ike_policy',
+'images': 'ibm_is_image',
+'instances': 'ibm_is_instance',
+'ipsecpolicies': 'ibm_is_ipsec_policy',
+'loadbalancers': 'ibm_is_lb',
+'lblisteners': 'ibm_is_lb_listener',
+'lbmembers': 'ibm_is_lb_pool_member',
+'lbpolicies': 'ibm_is_lb_listener_policy',
+'lbpools': 'ibm_is_lb_pool',
+'lbrules': 'ibm_is_lb_listener_policy_rule',
+'networkinterfaces': 'ibm_is_instance_nic',
+'publicgateways': 'ibm_is_public_gateway',
+'resourcegroups': 'ibm_resource_group',
+'sgheaders': 'ibm_is_security_group',
+'sgnics': 'ibm_is_security_group_network_interface_attachment',
+'sgrules': 'ibm_is_security_group_rule',
+'sshkeys': 'ibm_is_ssh_key',
+'subnets': 'ibm_is_subnet',
+'transitconnections': 'ibm_tg_connection',
+'transitgateways': 'ibm_tg_gateway',
+'volumes': 'ibm_is_volume',
+'vpcaddresses': 'ibm_is_vpc_address_prefix',
+'vpcroutes': 'ibm_is_vpc_route',
+'vpcs': 'ibm_is_vpc',
+'vpnconnections': 'ibm_is_vpn_gateway_connection',
+'vpngateways': 'ibm_is_vpn_gateway'
 }
 
 # Utility functions
@@ -140,9 +144,9 @@ def novalue(value):
    else:
       return False
 
-def loadfile(useroptions):
-   propext = useroptions['propext']
-   propfile = useroptions['propfile']
+def loadfile(options):
+   propext = options['propext']
+   propfile = options['propfile']
 
    if (propext.lower() == 'xls' or propext.lower() == 'xlsx'):
       sheets = pd.read_excel(propfile, sheet_name=None, dtype=object, header=0)
@@ -152,9 +156,9 @@ def loadfile(useroptions):
 
    return sheets
 
-def loadframe(pd, sheet, useroptions):
-   propext = useroptions['propext']
-   propfile = useroptions['propfile']
+def loadframe(options, pd, sheet):
+   propext = options['propext']
+   propfile = options['propfile']
 
    df = pd.DataFrame(sheet)
 
@@ -498,7 +502,7 @@ def gentf(options):
    for name, sheet in sheets.items():
       name = name.replace(' ', '')
 
-      df = loadframe(pd, sheet, options)
+      df = loadframe(options, pd, sheet)
 
       if name.find('variables', 0, 9) >= 0:
          genvariables(options, name, sheet, df)

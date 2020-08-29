@@ -1,9 +1,8 @@
-# Tabularize Terraform Resources
+# Tabularize Terraform resources for improved maintability
 
 ## Overview
 
 - Latest release: [Terraformer 1.11.1.0](/releases/releases.md)
-- Improve viewability and maintainability by representating some Terraform resources as data.
 - For simple usage, use constants and resource references in data.
 - For complex usage, also include functional references in data.
 - For partial usage, only represent specific components in data (e.g. network ACLs, Security Groups, etc).

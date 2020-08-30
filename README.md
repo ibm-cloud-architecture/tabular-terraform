@@ -1,8 +1,9 @@
-# Tabularize Terraform resources for improved maintability
+# Tabular Terraform - Transform tabularized Terraform to Terraform resources.
 
 ## Overview
 
 - Latest release: [Terraformer 1.11.1.0](/releases/releases.md)
+- Improves viewability and maintainability of Terraform.
 - For simple usage, use constants and resource references in data.
 - For complex usage, also include functional references in data.
 - For partial usage, only represent specific components in data (e.g. network ACLs, Security Groups, etc).

@@ -1,4 +1,4 @@
-# Tabular Terraform - Transform tabularized Terraform to Terraform resources.
+# Tabular Terraform - Transform tabularized Terraform into Terraform resources.
 
 ## Overview
 

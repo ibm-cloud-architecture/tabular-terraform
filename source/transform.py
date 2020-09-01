@@ -1,4 +1,4 @@
-# Terraformer for IBM Virtual Private Cloud
+# Transform tabularized Terraform data into Terraform resources
 #
 # Copyright IBM Corporation 2020
 #
@@ -25,9 +25,9 @@ import pandas as pd
 # Constants
 
 # Following static string is included in binary - update version here.
-COPYRIGHT = 'Terraformer 1.11.1.0 - Copyright IBM Corporation 2020'
+COPYRIGHT = 'tabular-terraform 1.11.2.0 - Copyright IBM Corporation 2020'
 
-genheader = '# Terraformer generated file'
+genheader = '# Auto-generated Terraform file'
 
 terraformheader = 'terraform { required_version = ">= 0.12.0" }'
 
@@ -43,7 +43,7 @@ endvariable = '}'
 
 # Messages
 
-terraformermessage = 'Terraformer for IBM Virtual Private Cloud\n'
+toolheader = 'Transform tabularized Terraform data into Terraform resources\n'
 starttfmessage = 'Generating Resources with input from %s\n'
 startprovidermessage = 'Generating Resource for provider\n'
 donetfmessage = '\nCompleted Resources for %s with output to folder %s\n'
@@ -518,9 +518,10 @@ def gentf(options):
    return
 
 def main():
-   print(terraformermessage)
+   print(COPYRIGHT)
+   print(toolheader)
 
-   parser = argparse.ArgumentParser(description='Generates Terraform for IBM Virtual Private Cloud')
+   parser = argparse.ArgumentParser(description=toolheader)
 
    parser.add_argument('inputvalue', nargs='?', default=options['datapath'], help='input folder (default: ' + options['datapath'] + ')')
 

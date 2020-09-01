@@ -1,4 +1,4 @@
-data "template_cloudinit_config" "cloud-init-dbtier" {
+data "template_cloudinit_config" "cloudinit-dbtier" {
   base64_encode = false
   gzip          = false
 

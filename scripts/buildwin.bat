@@ -1,1 +1,1 @@
-pyinstaller --onefile --console --workpath ..\build --distpath ..\bin ..\source\terraformer.py
+pyinstaller --onefile --console --workpath ..\build --distpath ..\bin ..\source\transform.py

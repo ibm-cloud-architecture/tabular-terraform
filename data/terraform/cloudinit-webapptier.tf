@@ -1,4 +1,4 @@
-data "template_cloudinit_config" "cloud-init-webapptier" {
+data "template_cloudinit_config" "cloudinit-webapptier" {
   base64_encode = false
   gzip          = false
 

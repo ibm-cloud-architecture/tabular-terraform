@@ -23,7 +23,7 @@
 ## Prerequisites
 
 Install the following software:
-1. [IBM Cloud Terraform Provider v1.11.1](https://github.com/IBM-Cloud/terraform-provider-ibm/releases)
+1. [IBM Cloud Terraform Provider v1.11.2](https://github.com/IBM-Cloud/terraform-provider-ibm/releases)
 2. [Terraform v0.12.23+](https://www.terraform.io/downloads.html)
 3. [Ansible 2.9.11](https://docs.ansible.com/ansible/latest/index.html)
 4. [Python v3.8.2](https://www.python.org/downloads/) with libraries:

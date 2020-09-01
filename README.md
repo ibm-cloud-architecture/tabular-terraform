@@ -1,4 +1,4 @@
-# Transform tabularized Terraform into Terraform resources
+# Transform tabularized Terraform data into Terraform resources
 
 ## Overview
 

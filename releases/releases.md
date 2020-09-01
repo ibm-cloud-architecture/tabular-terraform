@@ -13,9 +13,9 @@ Data Changes:
 
 Tool Changes:
 - Upgraded to provider v1.11.2.
-- Renamed tool to tabular-terraform.
+- Renamed tool to tabular-terraform to make way for a different use case with Google's terraformer tool.
 
-### Terraformer v1.11.1.0 (Latest)
+### Terraformer v1.11.1.0
 
 | Assets |
 | --- |

@@ -2,7 +2,7 @@
 
 ## Overview
 
-- Latest release: [Terraformer 1.11.1.0](/releases/releases.md)
+- Latest release: [tabular-terraform 1.11.2.0](/releases/releases.md)
 - Improves viewability and maintainability of Terraform.
 - For simple usage, use constants and resource references in data.
 - For complex usage, also include functional references in data.

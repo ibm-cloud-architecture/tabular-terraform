@@ -3,11 +3,10 @@
 ## Overview
 
 - Latest release: [tabular-terraform 1.11.2.0](/releases/releases.md)
-- Improves viewability and maintainability of Terraform.
+- Improves viewability and maintainability of Terraform where tabular is possible.
 - For simple usage, use constants and resource references in data.
 - For complex usage, also include functional references in data.
 - For partial usage, only represent specific components in data (e.g. network ACLs, Security Groups, etc).
-- Tabular representation may not be possible for every resource or field but can be useful where possible.
 - Provided with no formal support but problems can be reported by opening a GitHub issue.
 - Data format is subject to change.
 

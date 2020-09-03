@@ -1,14 +1,11 @@
 # Terraform Steps
 
-## Install Terraform executables
+## Install tabular-terraform files
 
-1. [Download and install Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli)
-2. [Download IBM Cloud provider plugin for Terraform](https://github.com/IBM-Cloud/terraform-provider-ibm/releases)
-3. Unzip the provider release archive and move the plugins binary into the Terraform plugins directory for the platform.
-4. [Download tabular-terraform](/releases/releases.md)
-5. Unzip the tabular-terraform release archive into a location as desired.
+1. [Download tabular-terraform](/releases/releases.md)
+2. Unzip the tabular-terraform release archive into a location as desired.
 
-## Customize Terraform data
+## Customize tabular-terraform data
 
 1. Modify vars spreadsheet as desired including:
     - vpc-name

@@ -2,10 +2,12 @@
 
 ## Install prerequisite software
 
-1. [IBM Cloud Terraform Provider v1.11.2](https://github.com/IBM-Cloud/terraform-provider-ibm/releases)
-2. [Terraform v0.12.23+](https://www.terraform.io/downloads.html)
-3. [Ansible 2.9.11](https://docs.ansible.com/ansible/latest/index.html)
-4. [Python v3.8.2](https://www.python.org/downloads/) with libraries:
+1. [Download and install Terraform](https://www.terraform.io/downloads.html)
+2. [Download IBM Cloud Terraform Provider](https://github.com/IBM-Cloud/terraform-provider-ibm/releases)
+3. Unzip the provider release archive and move the plugins binary into the Terraform plugins directory for the platform.
+4. [Download and install Ansible](https://docs.ansible.com/ansible/latest/index.html)
+5. [Download and install Python 3](https://www.python.org/downloads/)
+6. Install Python 3 libraries:
     - numpy
     - pandas
     - cython (for compiling)

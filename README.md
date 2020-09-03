@@ -3,6 +3,7 @@
 ## Overview
 
 - Latest release: [tabular-terraform 1.11.2.0](/releases/releases.md)
+- Current prerequisites: IBM Cloud Terraform Provider v1.11.2, 
 - Terraform data is maintained in spreadsheets and transformed from spreadsheets to Terraform resources.
 - Using spreadsheets improves viewability and maintainability of Terraform where tabular is possible.
 - Provided with no formal support but problems can be reported by opening a GitHub issue.
@@ -17,6 +18,13 @@
 5. For OS images, variables-system sheet is provided for reference but is subject to change.
 6. For changed data, regenerate Terraform and let Terraform handle changes. 
 7. For directory backups, when generating Terraform an existing directory is backed up to directory.backupNNN. 
+
+# Prerequisites
+
+1. IBM Cloud Terraform Provider 1.11.2
+2. Terraform 0.12.23+
+3. Ansible 2.9.11
+4. Python 3.8.2
 
 ## Usage
 

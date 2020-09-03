@@ -17,7 +17,7 @@
     - cis-instance-name 
 7. Modify other spreadsheets as desired.
 8. Execute the tabular-terraform transform executable with your input data folder and output resources folder:  
-    - bin/terraform -o resources data
+    - bin/transform -o resources data
 9. Execute Terraform in your resources folder:
     - terraform fmt
     - terraform init

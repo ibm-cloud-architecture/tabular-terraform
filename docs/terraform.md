@@ -1,6 +1,6 @@
 # Transform tabularized Terraform data into Terraform resources
 
-## Install Terraform-related files
+## Install Terraform files
 
 1. [Download and install Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli)
 2. [Download IBM Cloud provider plugin for Terraform](https://github.com/IBM-Cloud/terraform-provider-ibm/releases)

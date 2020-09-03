@@ -1,4 +1,4 @@
-# Transform tabularized Terraform data into Terraform resources
+# Terraform Steps
 
 ## Install Terraform executables
 

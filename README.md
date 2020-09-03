@@ -36,7 +36,7 @@ Install the following software:
 
 Note: Install Python 3 from python.org separately from Mac default of Python 2 - installing with brew, pipenv, or pyenv use different directories that won't work.
 
-## Deploy and configure infrastructure using Terraform and Ansible
+## Deploy and configure using Terraform and Ansible
 
 1. [Deploy Infrastructure using Terraform](/docs/terraform.md)
 2. [Configure applications using Ansible](/docs/ansible.md)

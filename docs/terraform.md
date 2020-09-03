@@ -18,7 +18,7 @@
 
 ## Create Terraform resources and apply
 
-1. Execute the transform executable with your input data folder and output resources folder:  
+1. Execute the tabular-terraform transform executable with your input data folder and output resources folder:  
     - bin/transform -o resources data
 2. Execute Terraform in your resources folder:
     - terraform fmt

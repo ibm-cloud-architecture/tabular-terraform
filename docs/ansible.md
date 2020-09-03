@@ -1,9 +1,5 @@
 # Ansible Steps
 
-## Install Ansible executable
-
-1. [Download and install Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
-
 ## Customize Ansible files 
 
 1. Modify path of terraform.tfstate in ansible/inventory/terraform_inv.ini to match your location.

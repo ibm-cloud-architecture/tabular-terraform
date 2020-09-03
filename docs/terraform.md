@@ -9,8 +9,12 @@
 3. Unzip the provider release archive and move the plugins binary into the Terraform plugins directory for the platform.
 4. [Download tabular-terraform](/releases/releases.md)
 5. Unzip the tabular-terraform release archive into a location as desired.
-6. Modify vars spreadsheet (variables.tf) for the following variables:
-    - TBD
+6. Modify vars spreadsheet as desired including:
+    - vpc-name
+    - resource-group
+    - cis-resource-group
+    - domain
+    - cis-instance-name 
 7. Modify other spreadsheets as desired.
 8. Execute the tabular-terraform transform executable with your input data folder and output resources folder:  
     - bin/terraform -o resources data

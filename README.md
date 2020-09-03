@@ -18,7 +18,7 @@
 6. For changed data, regenerate Terraform and let Terraform handle changes. 
 7. For directory backups, when generating Terraform an existing directory is backed up to directory.backupNNN. 
 
-## Deploy and configure using Terraform and Ansible
+## Usage
 
 1. [Install prerequisites](docs/prereqs.md)
 2. [Deploy Infrastructure using Terraform](/docs/terraform.md)

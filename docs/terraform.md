@@ -1,19 +1,19 @@
-# Terraformer for IBM Virtual Private Cloud
+# Transform tabularized Terraform data into Terraform resources
 
 ## Deploying VPC Infrastructure using Terraform
 
-## Modify sample Terraform resources
+## Modify sample Terraform data
 
 1. [Download and install Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli)
 2. [Download IBM Cloud provider plugin for Terraform](https://github.com/IBM-Cloud/terraform-provider-ibm/releases)
 3. Unzip the provider release archive and move the plugins binary into the Terraform plugins directory for the platform.
-4. [Download Terraformer for IBM Virtual Private Cloud](/releases/releases.md)
-5. Unzip the terraformer release archive into a location as desired.
+4. [Download tabular-terraform](/releases/releases.md)
+5. Unzip the tabular-terraform release archive into a location as desired.
 6. Modify vars spreadsheet (variables.tf) for the following variables:
     - TBD
 7. Modify other spreadsheets as desired.
-8. Execute Terraformer with your input data folder and output resources folder:  
-    - bin/terraformer -o resources data
+8. Execute the tabular-terraform transform executable with your input data folder and output resources folder:  
+    - bin/terraform -o resources data
 9. Execute Terraform in your resources folder:
     - terraform fmt
     - terraform init

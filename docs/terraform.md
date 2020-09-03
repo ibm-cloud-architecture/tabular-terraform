@@ -8,7 +8,7 @@
 4. [Download tabular-terraform](/releases/releases.md)
 5. Unzip the tabular-terraform release archive into a location as desired.
 
-## Customize tabular-terraform data
+## Customize Terraform data
 
 1. Modify vars spreadsheet as desired including:
     - vpc-name

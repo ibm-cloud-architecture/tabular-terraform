@@ -3,10 +3,8 @@
 ## Overview
 
 - Latest release: [tabular-terraform 1.11.2.0](/releases/releases.md)
-- Improves viewability and maintainability of Terraform where tabular is possible.
-- For simple usage, use constants and resource references in data.
-- For complex usage, also include functional references in data.
-- For partial usage, only represent specific components in data (e.g. network ACLs, Security Groups, etc).
+- Terraform data is maintained in spreadsheets and transformed from spreadsheets to Terraform resources.
+- Using spreadsheets improves viewability and maintainability of Terraform where tabular is possible.
 - Provided with no formal support but problems can be reported by opening a GitHub issue.
 - Data format is subject to change.
 
@@ -20,26 +18,11 @@
 6. For changed data, regenerate Terraform and let Terraform handle changes. 
 7. For directory backups, when generating Terraform an existing directory is backed up to directory.backupNNN. 
 
-## Prerequisites
-
-Install the following software:
-1. [IBM Cloud Terraform Provider v1.11.2](https://github.com/IBM-Cloud/terraform-provider-ibm/releases)
-2. [Terraform v0.12.23+](https://www.terraform.io/downloads.html)
-3. [Ansible 2.9.11](https://docs.ansible.com/ansible/latest/index.html)
-4. [Python v3.8.2](https://www.python.org/downloads/) with libraries:
-    - numpy
-    - pandas
-    - cython (for compiling)
-    - xlrd (for xlsx)
-    - odfpy (for ods)
-    - pyyaml (for yaml)
-
-Note: Install Python 3 from python.org separately from Mac default of Python 2 - installing with brew, pipenv, or pyenv use different directories that won't work.
-
 ## Deploy and configure using Terraform and Ansible
 
-1. [Deploy Infrastructure using Terraform](/docs/terraform.md)
-2. [Configure applications using Ansible](/docs/ansible.md)
+1. [Install prerequisites](docs/prereqs.md)
+2. [Deploy Infrastructure using Terraform](/docs/terraform.md)
+3. [Configure applications using Ansible](/docs/ansible.md)
 
 ## License
 

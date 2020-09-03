@@ -1,1 +1,1 @@
-..\bin\transform.exe -o ..\resources\%1 -t xlsx ..\data
+..\bin\transform.exe -o ..\resources\%2 -t xlsx ..\examples\%1

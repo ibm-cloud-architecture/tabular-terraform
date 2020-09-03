@@ -2,10 +2,10 @@
 
 ## Customize Ansible files 
 
-1. Modify path of terraform.tfstate in ansible/inventory/terraform_inv.ini to match your location:
+1. Modify path of terraform.tfstate in ansible-playbooks/inventory/terraform_inv.ini to match your location:
 - TFSTATE_FILE = /terraform_plan_directory/terraform.tfstate
 
-2. Copy ansible/inventory/group_vars/all-sample.yaml to all.yaml and modify:
+2. Copy ansible-playbooks/inventory/group_vars/all-sample.yaml to all.yaml and modify:
 - dbpassword
 - logdna_key
 - sysgig_key 

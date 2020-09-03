@@ -14,7 +14,7 @@
 - domain
 - cis-instance-name 
 2. Modify other spreadsheets as desired.
-3. Modify terraform/cloudinits as desired.
+3. Modify terraform-cloudinits as desired.
 
 ## Create Terraform resources and apply
 

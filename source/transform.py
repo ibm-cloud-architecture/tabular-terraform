@@ -25,7 +25,7 @@ import pandas as pd
 # Constants
 
 # Following static string is included in binary - update version here.
-COPYRIGHT = 'tabular-terraform 1.11.2.0 - Copyright IBM Corporation 2020'
+COPYRIGHT = 'tabular-terraform 1.11.2.1 - Copyright IBM Corporation 2020'
 
 genheader = '# Auto-generated Terraform file'
 
@@ -299,6 +299,7 @@ def genaclresources(options, name, sheet, df):
    columns = df.columns
 
    header = True
+   tfname = None
 
    # Loop thru rows.
    for rowindex, row in df.iterrows():
@@ -398,7 +399,8 @@ def genaclresources(options, name, sheet, df):
 
          printline(options, tfname, '}')
 
-   printline(options, tfname, endresource)
+   if tfname != None:
+      printline(options, tfname, endresource)
 
    return
 
@@ -575,15 +577,17 @@ def main():
 
    datapath = options['datapath']
    datatype = options['datatype']
-
-   # Copy terraform to output directory.
    filelist = os.listdir(os.path.join(datapath, datatype))
-   terraformfiles = os.listdir(os.path.join(datapath, 'terraform'))
-   for terraformfile in terraformfiles:
-      shutil.copy(os.path.join(datapath, 'terraform', terraformfile), genpath)         
 
-   # Copy ansible to output directory.
-   shutil.copytree(os.path.join(datapath, 'ansible'), os.path.join(genpath, 'ansible'))         
+   # Copy terraform-cloudinits if exists to output directory.
+   if os.path.isdir(os.path.join(datapath, 'terraform-cloudinits')):
+      terraformfiles = os.listdir(os.path.join(datapath, 'terraform-cloudinits'))
+      for terraformfile in terraformfiles:
+         shutil.copy(os.path.join(datapath, 'terraform-cloudinits', terraformfile), genpath)
+
+   # Copy ansible-playbooks if exists to output directory.
+   if os.path.isdir(os.path.join(datapath, 'ansible-playbooks')):
+      shutil.copytree(os.path.join(datapath, 'ansible-playbooks'), os.path.join(genpath, 'ansible-playbooks'))         
 
    # Generate provider.
    print(startprovidermessage)

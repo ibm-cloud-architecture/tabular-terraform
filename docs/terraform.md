@@ -1,6 +1,6 @@
 # Terraform Steps
 
-## Install tabular-terraform files
+## Setup tabular-terraform files
 
 1. [Download tabular-terraform](/releases/releases.md)
 2. Unzip the tabular-terraform release archive into a location as desired.

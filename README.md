@@ -3,7 +3,6 @@
 ## Overview
 
 - Latest release: [tabular-terraform 1.11.2.0](/releases/releases.md)
-- Current prerequisites: IBM Cloud Terraform Provider v1.11.2, 
 - Terraform data is maintained in spreadsheets and transformed from spreadsheets to Terraform resources.
 - Using spreadsheets improves viewability and maintainability of Terraform where tabular is possible.
 - Provided with no formal support but problems can be reported by opening a GitHub issue.

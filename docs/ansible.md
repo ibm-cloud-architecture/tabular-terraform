@@ -23,7 +23,7 @@ sysgig_key
 
 1. Verify execution of dynamic inventory script with output that shows hosts and groups:
 
-ansible-plabook -i inventory site.yaml --list-hosts
+ansible-playbook -i inventory site.yaml --list-hosts
 
 2. Verify execution of tasks to be applied in each play (common, web, and db):
 
@@ -39,7 +39,7 @@ If using VPN:  ansible-playbook -i inventory site.yaml
 
 If using Bastion:  ansible-playbook -i inventory --ssh-extra-args='-J root@your-bastion-IP' site.yaml
 
-5. After the playbook has completed successfully, open a browser and enter the URLspecified in the vars spreadsheet for Terraform.
+5. After the playbook has completed, open a browser and enter the URLspecified in the variables for Terraform.
 
 ## License
 

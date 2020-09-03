@@ -1,6 +1,21 @@
 # tabular-terraform releases
 
-### tabular-terraform v1.11.2.0 (Latest)
+### tabular-terraform v1.11.2.1 (Latest)
+
+| Assets |
+| --- |
+| [macOS 64-bit](https://github.com/ibm-cloud-architecture/tabular-terraform/raw/master/releases/download/v1.11.2.1/tabular-terraform_1.11.2.1_darwin_amd64.zip) |
+| [windows 64-bit](https://github.com/ibm-cloud-architecture/tabular-terraform/raw/master/releases/download/v1.11.2.1/tabular-terraform_1.11.2.1_windows_amd64.zip) |
+| [source](https://github.com/ibm-cloud-architecture/tabular-terraform/raw/master/releases/download/v1.11.2.1/tabular-terraform_1.11.2.1.zip) |
+
+Data Changes:
+- Moved previous data directory to examples/vpcwebapp directory.
+- Added examples/basetables (empty tables) and examples/vpcsimple.
+
+Tool Changes:
+- Few fixes to work with examples directory.
+
+### tabular-terraform v1.11.2.0
 
 | Assets |
 | --- |

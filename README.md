@@ -3,8 +3,8 @@
 ## Overview
 
 - Latest release: [tabular-terraform 1.11.2.0](/releases/releases.md)
-- Terraform data is maintained in spreadsheets and transformed from spreadsheets to Terraform resources.
-- Using spreadsheets improves viewability and maintainability of Terraform where tabular is possible.
+- Terraform data is maintained in spreadsheets where possible and transformed from spreadsheets to Terraform resources.
+- Using spreadsheets improves viewability and maintainability of Terraform.
 - Provided with no formal support but problems can be reported by opening a GitHub issue.
 - Data format is subject to change.
 

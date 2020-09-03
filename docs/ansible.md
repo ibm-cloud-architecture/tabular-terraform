@@ -1,22 +1,18 @@
 # Transform tabularized Terraform data into Terraform resources
 
-## Install Terraform executables
+## Install Ansible executables
 
-1. [Download and install Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli)
-2. [Download IBM Cloud provider plugin for Terraform](https://github.com/IBM-Cloud/terraform-provider-ibm/releases)
-3. Unzip the provider release archive and move the plugins binary into the Terraform plugins directory for the platform.
-4. [Download tabular-terraform](/releases/releases.md)
-5. Unzip the tabular-terraform release archive into a location as desired.
+1. [Download and install Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
 
-## Customize Terraform data
+## Customize Ansible files 
 
-1. Modify vars spreadsheet as desired including:
-    - vpc-name
-    - resource-group
-    - cis-resource-group
-    - domain
-    - cis-instance-name 
-2. Modify other spreadsheets as desired.
+1. Modify path of terraform.tfstate in ansible/inventory/terraform_inv.ini to match your location.
+[TFSTATE]
+TFSTATE_FILE = /terraform_plan_directory/terraform.tfstate
+2. Copy ansible/inventory/group_vars/all-sample.yaml to all.yaml and modify:
+dbpassword
+logdna_key
+sysgig_key 
 
 ## Create Terraform resources and apply
 

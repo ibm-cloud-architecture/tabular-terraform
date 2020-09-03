@@ -1,6 +1,6 @@
 # Transform tabularized Terraform data into Terraform resources
 
-## Install Ansible executables
+## Install Ansible executable
 
 1. [Download and install Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
 
@@ -39,7 +39,7 @@ If using VPN:  ansible-playbook -i inventory site.yaml
 
 If using Bastion:  ansible-playbook -i inventory --ssh-extra-args='-J root@your-bastion-IP' site.yaml
 
-5. After the playbook has completed, open a browser and enter the URLspecified in the variables for Terraform.
+5. After the playbook has completed, open a browser and enter the URL specified in the Terraform variables.
 
 ## License
 

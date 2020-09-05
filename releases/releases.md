@@ -9,11 +9,11 @@
 | [source](https://github.com/ibm-cloud-architecture/tabular-terraform/raw/master/releases/download/v1.11.2.2/tabular-terraform_1.11.2.2.zip) |
 
 Data Changes:
-- Updated filenames in examples/vpcwebapp to use main.tf for Schematics.
-- Updated outputs in examples/vpcwebapp to use master_db and slave_db for Ansible.
+- Updated generated filenames in examples/vpcwebapp.
+- Updated outputs in examples/vpcwebapp.
 
 Tool Changes:
-- Generate versions to a separate file for Schematics.
+- Generate provisioner and versions into separate files.
 
 ### tabular-terraform v1.11.2.1 (Latest)
 

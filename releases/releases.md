@@ -1,5 +1,20 @@
 # tabular-terraform releases
 
+### tabular-terraform v1.11.2.2
+
+| Assets |
+| --- |
+| [macOS 64-bit](https://github.com/ibm-cloud-architecture/tabular-terraform/raw/master/releases/download/v1.11.2.2/tabular-terraform_1.11.2.2_darwin_amd64.zip) |
+| [windows 64-bit](https://github.com/ibm-cloud-architecture/tabular-terraform/raw/master/releases/download/v1.11.2.2/tabular-terraform_1.11.2.2_windows_amd64.zip) |
+| [source](https://github.com/ibm-cloud-architecture/tabular-terraform/raw/master/releases/download/v1.11.2.2/tabular-terraform_1.11.2.2.zip) |
+
+Data Changes:
+- Updated filenames in examples/vpcwebapp to use main.tf for Schematics.
+- Updated outputs in examples/vpcwebapp to use master_db and slave_db for Ansible.
+
+Tool Changes:
+- Generate versions to a separate file for Schematics.
+
 ### tabular-terraform v1.11.2.1 (Latest)
 
 | Assets |

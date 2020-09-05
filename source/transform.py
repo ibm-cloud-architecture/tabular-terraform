@@ -25,7 +25,7 @@ import pandas as pd
 # Constants
 
 # Following static string is included in binary - update version here.
-COPYRIGHT = 'tabular-terraform 1.11.2.1 - Copyright IBM Corporation 2020'
+COPYRIGHT = 'tabular-terraform 1.11.2.2 - Copyright IBM Corporation 2020'
 
 genheader = '# Auto-generated Terraform file'
 
@@ -46,6 +46,7 @@ endvariable = '}'
 toolheader = 'Transform tabularized Terraform data into Terraform resources\n'
 starttfmessage = 'Generating Resources with input from %s\n'
 startprovidermessage = 'Generating Resource for provider\n'
+startversionsmessage = 'Generating Resource for versions\n'
 donetfmessage = '\nCompleted Resources for %s with output to folder %s\n'
 backupdirectorymessage = 'Backed up existing output directory %s to %s\n'
 invalidinputdirectorymessage = '(Error) Invalid input directory: %s'
@@ -196,13 +197,23 @@ def genprovider(options):
    genpath = options['genpath']
    region = options['region']
 
-   tfname = "provider-ibm.tf"
+   tfname = "provider.tf"
 
-   printline(options, tfname, terraformheader)
    printline(options, tfname, providerheader % "ibm")
    printline(options, tfname, 'region = "' + region + '"')
    printline(options, tfname, 'generation = "' + generation + '"')
    printline(options, tfname, endprovider)
+
+   return
+
+def genversions(options):
+   generation = options['generation']
+   genpath = options['genpath']
+   region = options['region']
+
+   tfname = "versions.tf"
+
+   printline(options, tfname, terraformheader)
 
    return
 
@@ -592,6 +603,10 @@ def main():
    # Generate provider.
    print(startprovidermessage)
    genprovider(options)
+
+   # Generate provider.
+   print(startversionsmessage)
+   genversions(options)
 
    # Process all files in specified directory.
    found = False

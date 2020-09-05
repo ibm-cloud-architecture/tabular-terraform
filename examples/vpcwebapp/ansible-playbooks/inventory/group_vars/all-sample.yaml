@@ -1,7 +1,5 @@
 # Update passwords and API keys
 
-master_db: master IP goes here
-slave_db: slave IP goes here
 dbpassword: securepassw0rd
 logdna_key: logdna key goes here
 sysdig_key: sysdig key goes here

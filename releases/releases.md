@@ -1,6 +1,6 @@
 # tabular-terraform releases
 
-### tabular-terraform v1.11.2.2
+### tabular-terraform v1.11.2.2 (Latest)
 
 | Assets |
 | --- |
@@ -15,7 +15,7 @@ Data Changes:
 Tool Changes:
 - Generate provisioner and versions into separate files.
 
-### tabular-terraform v1.11.2.1 (Latest)
+### tabular-terraform v1.11.2.1
 
 | Assets |
 | --- |

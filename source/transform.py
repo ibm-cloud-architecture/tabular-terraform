@@ -25,7 +25,7 @@ import pandas as pd
 # Constants
 
 # Following static string is included in binary - update version here.
-COPYRIGHT = 'tabular-terraform 1.11.2.2 - Copyright IBM Corporation 2020'
+COPYRIGHT = 'tabular-terraform 1.12.0.0 - Copyright IBM Corporation 2020'
 
 genheader = '# Auto-generated Terraform file'
 
@@ -91,9 +91,14 @@ resources = {
 'cisinstances': 'ibm_cis',
 'cisoriginpools': 'ibm_cis_origin_pool',
 'floatingips': 'ibm_is_floating_ip',
+'flowlogs': 'ibm_is_flow_log',
 'ikepolicies': 'ibm_is_ike_policy',
 'images': 'ibm_is_image',
 'instances': 'ibm_is_instance',
+'instancegroups': 'ibm_is_instance_group',
+'instancemanagers': 'ibm_is_instance_group_manager',
+'instancepolicies': 'ibm_is_instance_group_manager_policy',
+'instancetemplates': 'ibm_is_instance_template',
 'ipsecpolicies': 'ibm_is_ipsec_policy',
 'loadbalancers': 'ibm_is_lb',
 'lblisteners': 'ibm_is_lb_listener',

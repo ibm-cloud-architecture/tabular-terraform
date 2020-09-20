@@ -2,7 +2,7 @@
 
 ## Overview
 
-- Latest release: [tabular-terraform 1.11.2.2](/releases/releases.md)
+- Latest release: [tabular-terraform 1.12.0.0](/releases/releases.md)
 - Terraform data is maintained in spreadsheets where possible and transformed from spreadsheets into Terraform resources.
 - Using spreadsheets improves viewability and maintainability of Terraform.
 - Examples also include use of Terraform cloudinits and Ansible Playbooks to configure applications.
@@ -21,7 +21,7 @@
 
 # Prerequisites
 
-1. IBM Cloud Terraform Provider 1.11.2
+1. IBM Cloud Terraform Provider 1.12.0
 2. Terraform 0.12.23+
 3. Ansible 2.9.11
 4. Python 3.8.2

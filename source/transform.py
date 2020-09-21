@@ -25,7 +25,7 @@ import pandas as pd
 # Constants
 
 # Following static string is included in binary - update version here.
-COPYRIGHT = 'tabular-terraform 1.12.0.0 - Copyright IBM Corporation 2020'
+COPYRIGHT = 'tabular-terraform 1.12.0.1 - Copyright IBM Corporation 2020'
 
 genheader = '# Auto-generated Terraform file'
 

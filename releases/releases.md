@@ -9,7 +9,7 @@
 | [source](https://github.com/ibm-cloud-architecture/tabular-terraform/raw/master/releases/download/v1.12.0.1/tabular-terraform_1.12.0.1.zip) |
 
 Data Changes:
-- Reorganized sheets and files.
+- Reorganized some sheets and files.
 
 Tool Changes:
 - None.

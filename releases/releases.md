@@ -1,6 +1,21 @@
 # tabular-terraform releases
 
-### tabular-terraform v1.12.0.1 (Latest)
+### tabular-terraform v1.13.1.0 (Latest)
+
+| Assets |
+| --- |
+| [macOS 64-bit](https://github.com/ibm-cloud-architecture/tabular-terraform/raw/master/releases/download/v1.13.0.1/tabular-terraform_1.13.0.1_darwin_amd64.zip) |
+| [windows 64-bit](https://github.com/ibm-cloud-architecture/tabular-terraform/raw/master/releases/download/v1.13.0.1/tabular-terraform_1.13.0.1_windows_amd64.zip) |
+| [source](https://github.com/ibm-cloud-architecture/tabular-terraform/raw/master/releases/download/v1.13.0.1/tabular-terraform_1.13.0.1.zip) |
+
+Data Changes:
+- None.
+
+Tool Changes:
+- Upgraded to provider 1.13.1 and terraform 0.13.5.
+- Added provider name and version to versions.tf.
+
+### tabular-terraform v1.12.0.1
 
 | Assets |
 | --- |

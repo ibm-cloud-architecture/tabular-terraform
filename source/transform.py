@@ -25,11 +25,12 @@ import pandas as pd
 # Constants
 
 # Following static string is included in binary - update version here.
-COPYRIGHT = 'tabular-terraform 1.12.0.1 - Copyright IBM Corporation 2020'
+COPYRIGHT = 'tabular-terraform 1.13.1.0 - Copyright IBM Corporation 2020'
+
+terraformversion = '0.13.5'
+providerversion = '1.13.1'
 
 genheader = '# Auto-generated Terraform file'
-
-terraformheader = 'terraform { required_version = ">= 0.12.0" }'
 
 outputheader = 'output "%s" {'
 providerheader = 'provider "%s" {'
@@ -218,7 +219,15 @@ def genversions(options):
 
    tfname = "versions.tf"
 
-   printline(options, tfname, terraformheader)
+   printline(options, tfname, 'terraform {')
+   printline(options, tfname, 'required_version = ">= ' + terraformversion + '"')
+   printline(options, tfname, 'required_providers {')
+   printline(options, tfname, 'ibm = {')
+   printline(options, tfname, 'source = "ibm-cloud/ibm"')
+   printline(options, tfname, 'version = "' + providerversion + '"')
+   printline(options, tfname, '}')
+   printline(options, tfname, '}')
+   printline(options, tfname, '}')
 
    return
 
@@ -549,7 +558,7 @@ def main():
 
    parser.add_argument('-t', dest='datatype', default=options['datatype'], help='type of input files (default: ' + options['datatype'] + ')')
 
-   parser.add_argument('--version', action='version', version='%(prog)s ' + COPYRIGHT.split(' ')[1])
+   parser.add_argument('--version', action='version', version='tabular-terraform ' + COPYRIGHT.split(' ')[1] + ', ibm-provider ' + providerversion + ', terraform ' + terraformversion)
 
    results = parser.parse_args()
 

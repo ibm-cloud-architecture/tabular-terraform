@@ -4,9 +4,9 @@
 
 | Assets |
 | --- |
-| [macOS 64-bit](https://github.com/ibm-cloud-architecture/tabular-terraform/raw/master/releases/download/v1.13.0.1/tabular-terraform_1.13.0.1_darwin_amd64.zip) |
-| [windows 64-bit](https://github.com/ibm-cloud-architecture/tabular-terraform/raw/master/releases/download/v1.13.0.1/tabular-terraform_1.13.0.1_windows_amd64.zip) |
-| [source](https://github.com/ibm-cloud-architecture/tabular-terraform/raw/master/releases/download/v1.13.0.1/tabular-terraform_1.13.0.1.zip) |
+| [macOS 64-bit](https://github.com/ibm-cloud-architecture/tabular-terraform/raw/master/releases/download/v1.13.1.0/tabular-terraform_1.13.1.0_darwin_amd64.zip) |
+| [windows 64-bit](https://github.com/ibm-cloud-architecture/tabular-terraform/raw/master/releases/download/v1.13.1.0/tabular-terraform_1.13.1.0_windows_amd64.zip) |
+| [source](https://github.com/ibm-cloud-architecture/tabular-terraform/raw/master/releases/download/v1.13.1.0/tabular-terraform_1.13.1.0.zip) |
 
 Data Changes:
 - None.

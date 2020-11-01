@@ -2,10 +2,10 @@
 
 ## Customize Ansible files 
 
-1. Modify path of terraform.tfstate in ansible-playbooks/inventory/terraform_inv.ini to match your location:
+1. Modify path of terraform.tfstate in playbooks/inventory/terraform_inv.ini to match your location:
 - TFSTATE_FILE = /terraform_plan_directory/terraform.tfstate
 
-2. Copy ansible-playbooks/inventory/group_vars/all-sample.yaml to all.yaml and modify:
+2. Copy playbooks/inventory/group_vars/all-sample.yaml to all.yaml and modify:
 - dbpassword
 - logdna_key
 - sysgig_key 
@@ -23,8 +23,7 @@
 - cloud-init status
 
 4. Execute the plays:
-- VPN:  ansible-playbook -i inventory site.yaml
-- Bastion:  ansible-playbook -i inventory --ssh-extra-args='-J root@your-bastion-IP' site.yaml
+- ansible-playbook -i inventory --ssh-extra-args='-J root@your-bastion-IP' site.yaml
 
 5. After the playbook has completed, open a browser and enter the URL specified in the Terraform variables.
 

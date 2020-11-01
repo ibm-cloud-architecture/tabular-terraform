@@ -1,6 +1,23 @@
 # tabular-terraform releases
 
-### tabular-terraform v1.13.1.0 (Latest)
+### tabular-terraform v1.14.0.1 (Latest)
+
+| Assets |
+| --- |
+| [macOS 64-bit](https://github.com/ibm-cloud-architecture/tabular-terraform/raw/master/releases/download/v1.14.0.1/tabular-terraform_1.14.0.1_darwin_amd64.zip) |
+| [windows 64-bit](https://github.com/ibm-cloud-architecture/tabular-terraform/raw/master/releases/download/v1.14.0.1/tabular-terraform_1.14.0.1_windows_amd64.zip) |
+| [source](https://github.com/ibm-cloud-architecture/tabular-terraform/raw/master/releases/download/v1.14.0.1/tabular-terraform_1.14.0.1.zip) |
+
+Data Changes:
+- Added module column to all tables.
+- Added modules spreadsheet.
+- Rearranged example data to use modules.
+
+Tool Changes:
+- Upgraded to provider 1.14.0.
+- Added support for modules.
+
+### tabular-terraform v1.13.1.0
 
 | Assets |
 | --- |

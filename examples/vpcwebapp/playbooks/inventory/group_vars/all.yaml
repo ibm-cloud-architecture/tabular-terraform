@@ -1,0 +1,5 @@
+# Update passwords and API keys
+
+dbpassword: securepassw0rd
+logdna_key: 143c30a06ac6dfae03b3a84259bf1b9e
+sysdig_key: 55e7f496-af78-4e0d-89f7-fa040e259ebd

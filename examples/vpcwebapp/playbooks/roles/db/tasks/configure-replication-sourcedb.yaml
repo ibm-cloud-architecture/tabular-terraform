@@ -1,7 +1,7 @@
 ---
-# Configure the master mysql database for replication
+# Configure the source mysql database for replication
 
-- name: Add replication settings to server-id my.cnf for master
+- name: Add replication settings to server-id my.cnf for source db
   ini_file:
     path: /etc/mysql/my.cnf
     section: mysqld
@@ -9,7 +9,7 @@
     value: "1"
     backup: yes
 
-- name: Add replication settings to log_bin my.cnf for master
+- name: Add replication settings to log_bin my.cnf for source db
   ini_file:
     path: /etc/mysql/my.cnf
     section: mysqld
@@ -17,7 +17,7 @@
     value: /var/log/mysql/mysql-bin.log
     backup: yes
 
-- name: Add replication settings to binlog_do_db my.cnf for master
+- name: Add replication settings to binlog_do_db my.cnf for source db
   ini_file:
     path: /etc/mysql/my.cnf
     section: mysqld
@@ -33,11 +33,11 @@
     value: NO_ENGINE_SUBSTITUTION
     backup: yes
 
-- name: Create slave user
+- name: Create replica db user
   mysql_user:
     login_user: root
     login_unix_socket: /var/run/mysqld/mysqld.sock
-    name: slave
+    name: replica
     password: "{{ dbpassword}}"
     priv: '*.*:ALL,GRANT'
     host: '%'

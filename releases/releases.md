@@ -1,6 +1,19 @@
 # tabular-terraform releases
 
-### tabular-terraform v1.17.0.0 (Latest)
+### tabular-terraform v1.19.0.0 (Latest)
+
+| Assets |
+| --- |
+| [macOS 64-bit](https://github.com/ibm-cloud-architecture/tabular-terraform/raw/master/releases/download/v1.19.0.0/tabular-terraform_1.19.0.0_darwin_amd64.zip) |
+| [source](https://github.com/ibm-cloud-architecture/tabular-terraform/raw/master/releases/download/v1.19.0.0/tabular-terraform_1.19.0.0.zip) |
+
+Data Changes:
+- None.
+
+Tool Changes:
+- Upgraded to provider 1.19.0.
+
+### tabular-terraform v1.17.0.0
 
 | Assets |
 | --- |

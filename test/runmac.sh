@@ -1,0 +1,1 @@
+../bin/tabularterraform ../$1

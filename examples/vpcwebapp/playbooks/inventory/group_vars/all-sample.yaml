@@ -1,5 +1,0 @@
-# Update passwords and API keys
-
-dbpassword: securepassw0rd
-logdna_key: logdna key goes here
-sysdig_key: sysdig key goes here

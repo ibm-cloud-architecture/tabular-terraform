@@ -1,0 +1,76 @@
+---
+# Configure the source mysql database for replication
+
+- name: Add replication settings to server-id my.cnf for replica db
+  ini_file:
+    path: /etc/mysql/my.cnf
+    section: mysqld
+    option: server-id
+    value: "2"
+    backup: yes
+
+- name: Add replication settings to relay-log my.cnf for source db
+  ini_file:
+    path: /etc/mysql/my.cnf
+    section: mysqld
+    option: relay-log
+    value: /var/log/mysql/mysql-relay-bin.log
+    backup: yes
+
+- name: Add replication settings to log_bin my.cnf for source db
+  ini_file:
+    path: /etc/mysql/my.cnf
+    section: mysqld
+    option: log_bin
+    value: /var/log/mysql/mysql-bin.log
+    backup: yes
+
+- name: Add replication settings to binlog_do_db my.cnf for source db
+  ini_file:
+    path: /etc/mysql/my.cnf
+    section: mysqld
+    option: binlog_do_db
+    value: wordpress
+    backup: yes
+
+- name: Add sql_mode
+  ini_file:
+    path: /etc/mysql/my.cnf
+    section: mysqld
+    option: sql_mode
+    value: NO_ENGINE_SUBSTITUTION
+    backup: yes
+
+- name: restart mysql
+  shell: service mysql restart
+
+- name: Create replica user
+  mysql_user:
+    login_user: root
+    login_unix_socket: /var/run/mysqld/mysqld.sock
+    name: replica
+    password: "{{ dbpassword}}"
+    priv: '*.*:ALL,GRANT'
+    host: '%'
+    state: present
+
+- name: Stop replica
+  mysql_replication:
+    login_user: root
+    login_unix_socket: /var/run/mysqld/mysqld.sock
+    mode: stopslave
+
+- name: Configure Replica Replication
+  mysql_replication:
+    login_user: root
+    login_unix_socket: /var/run/mysqld/mysqld.sock
+    mode: changemaster
+    master_user: replica
+    master_password: "{{ dbpassword }}"
+    master_host: "10.240.2.4"
+
+- name: Start Slave
+  mysql_replication:
+    login_user: root
+    login_unix_socket: /var/run/mysqld/mysqld.sock
+    mode: startslave

@@ -1,0 +1,7 @@
+- name: Configure and deploy the web and application code to webapptier
+  hosts: webapptier
+  remote_user: root
+  gather_facts: no
+
+  roles:
+    - web

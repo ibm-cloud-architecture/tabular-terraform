@@ -1,1 +1,1 @@
-../bin/tabularterraform ../$1
+python3 ../src/main.py -i ../webappvpc -o ~/Documents/tabular-terraform -nogui

@@ -2,10 +2,10 @@
 
 ## Overview
 
-- Latest release: [tabular-terraform 1.19.0.0](/releases/releases.md)
+- Latest release: 2.0.0](/releases/releases.md)
 - Terraform data is maintained in spreadsheets where possible and transformed from spreadsheets into Terraform resources.
 - Using spreadsheets improves viewability and maintainability of Terraform.
-- Examples also include use of Terraform cloudinits and Ansible Playbooks to configure applications.
+- Example webappvpc includes use of Terraform cloudinits and Ansible Playbooks to configure applications.
 - Provided with no formal support but problems can be reported by opening a GitHub issue.
 - Data format is subject to change.
 
@@ -26,7 +26,7 @@
 3. Ansible 2.9.11
 4. Python 3.8.2
 
-## Usage
+## Usage (Transitioning to Schematics)
 
 1. [Install prerequisites](docs/prereqs.md)
 2. [Deploy Infrastructure using Terraform](/docs/terraform.md)
